@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="general-set.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">  
+    <style>
+        /* .homepage {
+            width: 100%;
+            height: 80px;
+            background-image: url("個專圖片素材/new3.jpg"); */
+        
+        .main-wrapper {
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        h1,h2,h3,h4,p,a {
+            font-family:'AvantGarde Md BT';
+        }
+        /* .logo {
+            display: flex;
+            justify-content: center;
+            width: 180px;
+            padding: 10px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        .logo img {
+            width: 120px;
+        }
+        .main-nav {
+            width: 760px;
+            padding: 10px;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+            word-spacing: 50px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        .main-nav a {
+            text-decoration: none;
+            color: #3a3a3a;
+            font-size: 18px;
+        }
+        .login {
+            display: flex;
+            justify-content: space-evenly;
+            width: 180px;
+        }
+        .header-hr {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 20px;
+            margin-bottom: 10px;
+        } */
+
+        /* ===========page-1=================== */
+        .slogan h1 {
+            text-align: center; 
+            padding: 20px;
+            margin-top: 50px;
+            text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+            margin: 100px 0 30px;
+        }
+
+        .homepage-wrap {
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        .product-pop-pic img {
+            width: 80%;
+        }
+        .product-pop {
+            width: 1200px;
+            display: flex;
+            background-color: #EBECF0;
+            height: 400px;
+            margin: 10px;
+            border-radius: 20px;
+        }
+        .homepage-wrap .product-pop:nth-child(2n){
+            flex-direction: row-reverse;
+        }
+        .product-pop .product-pop-pic {
+            width: 600px;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        .product-pop .product-pop-pic img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        .product-pop .product-pop-txt {
+            width: 600px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            background-color: #EBECF0;
+        }
+        .homepage-wrap .cowboy3,.cowboy3 .product-pop-txt {
+            background-color: #D7D0BD;
+        }
+        .product-pop-txt h2 {
+            padding: 20px 40px;
+            font-weight: 500;
+        }
+        .product-pop-txt p {
+            padding: 0 40px;
+            line-height: 30px;
+        }
+        .product-pop-txt .btn-42 {
+            margin-left: 40px;
+        }
+
+        /* =================page-2======================== */
+        .product-sub {
+            width: 360px;
+            margin: auto;
+            background-color: #F2F2F2;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .product-sub .product-sub-txt {
+            margin: 30px 10px 50px;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .product-sub-txt p {
+            margin-top: 15px;
+        }
+        .product-sub .product-sub-txt button{
+            margin: 20px;
+        }
+        .product-sub {
+            display: flex;
+            flex-direction: column;
+        }
+        .product-sub .product-sub-pic {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-sub .product-sub-pic img {
+            width: 90%;
+        }
+        /* =====================Page-3======================== */
+        .app-wrap {
+            width: 1200px;
+            height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            background-color: #101617;
+        }
+        .app-wrap .homepage-app-txt {
+            width: 380px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            padding: 10px;
+        }
+        .homepage-app-txt h2,.homepage-app-txt p {
+            color: #ffffff;
+            margin: 20px;
+        }
+        .app-wrap .homepage-app-pic {
+            width: 800px;
+            height: 600px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        .homepage-app-function {
+            width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .homepage-app-pic img {
+            width: 120px;
+        }
+        .homepage-app-pic .phone-center  {
+            width: 30%;
+            position: absolute;
+            left: 285px;
+            bottom: 60px;
+        }
+        /*=========================swpier-blog==========================*/
+        .blog-swiper{
+            width:100%;
+            padding-top: 100px;
+            text-align:left;
+            margin: auto;
+
+        }
+        .blog-swiper h1{
+            color:#3a3a3a;
+            text-align: center;
+            margin: 30px;
+            text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .carousel{
+            width:90%;
+            margin:0px auto;
+            display: flex;
+        }
+        .carousel p,.carousel h4 {
+            text-align: left;
+            padding: 5px 10px;
+            /* text-decoration: none; */
+        }
+        .carousel p {
+            color: #ABA6A6;
+        }
+        .carousel-card {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            background-color: #F5F5F5;
+            border-radius: 10px;
+            height: 350px;
+            cursor: pointer;
+        }
+        .carousel-card a {
+            text-decoration: none;
+        }
+        .slick-slide{
+            margin:10px;
+        }
+        .slick-slide img{
+            width:100%;
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+        }
+        .blog-swiper .slick-dots li button:before {
+            font-size: 15px;
+            color:#3a3a3a;
+            width: 100%;
+        }
+/*========================================page-5=======================*/
+        .home-support-wrap {
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        .home-support-card {
+            width: 360px;
+            margin: 20px;
+        }
+        .home-support-card img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .home-support-card h4 {
+            color: #3a3a3a;
+            font-size: 24px;
+            padding: 10px;
+        }
+        .home-support-card p {
+            color: #4a4a4a;
+            /* font-size: 18px; */
+            padding: 10px;
+        }
+       
+       /*=======================video===============================*/
+       .video {
+            overflow: hidden;
+            /* margin-top: 100px; */
+        }
+        .video-section {
+            width: 100%;
+            vertical-align: middle;
+            margin-top: 70px;
+            position: relative;
+            z-index: -1;
+        }
+        video {
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="UR首頁.html">
+                    <img src="個專圖片素材/logo ur.jpg" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <nav class="navbar">
+                    <div class="d">
+                        <button class="d-btn">E-BIKE</button>
+                        <div class="d-content">
+                            <div class="d-brands">
+                                <div class="column">
+                                    <h3>Brands</h3>
+                                    <a href="">Vanmoof</a>
+                                    <a href="">Cowboy</a>
+                                    <a href="">Gogoro</a>
+                                    <a href="">Musashi Velo</a>
+                                </div>
+                                <div class="column">
+                                    <h3>E-bikes</h3>
+                                    <a href="產品EBIKE.html">Vanmoof V</a>
+                                    <a href="產品EBIKE.html">Vanmoof S5</a>
+                                    <a href="產品EBIKE.html">Vanmoof X5</a>
+                                    <a href="產品EBIKE.html">Vanmoof S3</a>
+                                </div>
+                                <div class="column column-pic">
+                                    <img src="個專圖片素材/vf v-1去被.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="app功能介紹.html">APP</a>
+                    <a href="關於我們.html">ABOUT</a>
+                    <a href="BLOG.html">BLOG</a>
+                    <a href="支援服務.html">SUPPORT</a>
+                </nav>
+            </div>
+            <div class="header-cart">
+                <img src="個專圖片素材/4.png" alt="">
+                <img src="個專圖片素材/2.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div class="video">
+        <div class="video-section">
+            <a href="#">
+                <video autoplay="" muted="" loop="" playsinline="" id="">
+                    <source src="個專圖片素材/VanMoof Electrified S2 X2 – Ride the future.mp4" type="video/mp4">
+                    </video>
+            </a>
+        </div>
+    </div>
+
+   
+    
+    <section class="homepage-section">
+        <div class="slogan">
+            <h1>CHOOSE YOUR <span class="orange">EBIKE</span></h1>
+        </div>
+
+        <div class="homepage-wrap">
+            <div class="product-pop">
+                <div class="product-pop-pic">
+                    <img src="個專圖片素材/musashi velo.png" alt="">
+                </div>
+                <div class="product-pop-txt">
+                    <h2>Musashi Velo</h2>
+                    <p>Equipped with unique technology,
+                        Driving performance, design and safety are met at a high level.</p>
+                    <a href="產品購買頁面.html">
+                        <button class="btn-42"><span>Buy now</span></button>
+                    </a>
+                </div>
+            </div>
+            <div class="product-pop cowboy3">
+                <div class="product-pop-pic">
+                    <img src="個專圖片素材/v5.png" alt="">
+                </div>
+                <div class="product-pop-txt">
+                    <h2>Cowboy 3</h2>
+                    <p>Find the fastest way to move in the city as the bike adapts intuitively to power the speed you need.</p>
+                    <a href="產品購買頁面.html">
+                        <button class="btn-42"><span>Buy now</span></button>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="homepage-wrap">
+            <div class="product-sub">
+                <div class="product-sub-txt">
+                    <h2>Vanmoof S3</h2>
+                    <p>Classic straight-frame geometry</p>
+                    <a href="產品EBIKE.html"><button class="learn-more">Learn more
+                    </button></a>
+                </div>
+                <div class="product-sub-pic">
+                    <img src="個專圖片素材/vf a5-1去被.png" alt="">
+                </div>
+            </div>
+            <div class="product-sub">
+                <div class="product-sub-txt">
+                    <h2>Gogoro eeyo</h2>
+                    <p>Eeyo 1s</p>
+                    <a href="產品EBIKE.html"><button class="learn-more">Learn more
+                    </button></a>
+                </div>
+                <div class="product-sub-pic">
+                    <img src="個專圖片素材/gogoro首頁.jpg" alt="">
+                </div>
+            </div>
+            <div class="product-sub">
+                <div class="product-sub-txt">
+                    <h2>Cowboy 4</h2>
+                    <p>The Oringinal</p>
+                    <a href="產品EBIKE.html"><button class="learn-more">Learn more
+                    </button></a>
+                </div>
+                <div class="product-sub-pic">
+                    <img src="個專圖片素材/COWBOY4.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="homepage-section">
+        <div class="slogan">
+            <h1>UNLOCK OUR <span class="orange">APP</span></h1>
+        </div>
+
+        <div class="app-wrap">
+            <div class="homepage-app-txt">
+                <h2>URBAN RIDING APP</h2>
+                <p>Track your rides, configure your bike, get help on demand, and much more with the app.
+                </p>
+                <a href="app功能介紹.html"> 
+                    <button class="explore">Explore</button>
+                </a>
+            </div>
+            <div class="homepage-app-pic">
+                <div class="homepage-app-function">
+                    <img src="個專圖片素材/APPHONEPAGE1.png" alt="">
+                    <img src="個專圖片素材/APPHONEPAGE2.png" alt="">
+                </div>
+                <div class="homepage-app-function">
+                    <img src="個專圖片素材/APPHONEPAGE3.png" alt="">
+                    <img src="個專圖片素材/APPHONEPAGE4.png" alt="">
+                </div>
+                <img class="phone-center" src="個專圖片素材/app1.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="blog-swiper">
+        <h1>DISCOVER LASTEST <span class="orange">BLOG</span><h2>
+            <div class="carousel">
+                <div class="carousel-card">
+                    <img src="個專圖片素材/hp-blog1.jpg">
+                    <a href="BLOG.html">
+                        <p>September 11,2022</p>
+                        <h4>Musashi Velo GS 01 start  to take orders</h4>
+                    </a>
+                </div>
+                <div class="carousel-card">
+                    <img src="個專圖片素材/hp-blog2.jpg">
+                    <a href="BLOG.html">
+                        <p>June 07,2022</p>
+                        <h4>Behind the workshop doors:
+                        a day in the life of a VanMoof Bike     Doctor</h4>
+                    </a>
+                </div>
+                <div class="carousel-card">
+                    <img src="個專圖片素材/hp-blog3.jpg">
+                    <a href="BLOG.html">
+                        <p>April 14,2022</p>
+                        <h4>How to hack the city:
+                        tips and tricks for urban e-bike riders</h4>
+                    </a>
+                </div>
+                <div class="carousel-card">
+                    <img src="個專圖片素材/hp-blog4.jpg">
+                    <a href="BLOG.html">
+                        <p>February 11,2022</p>
+                        <h4>Introducing the VanMoof S5 & A5</h4>
+                    </a>
+                </div>
+                <div class="carousel-card">
+                    <img src="個專圖片素材/hp-blog5.jpg">
+                    <a href="BLOG.html">
+                        <p>October 24,2021</p>
+                        <h4>Expanding our Service Hubs and certified workshops</h4>
+                    </a>
+                </div>
+                <div class="carousel-card">
+                    <img src="個專圖片素材/hp-blog6.jpg">
+                    <a href="BLOG.html">
+                        <p>September 01,2021</p>
+                        <h4>In Pursuit:How our Bike Hunters Bust Bike Thieves</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+
+        <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                slidesToShow: 3,
+                dots:true,
+                centerMode: true,
+            });
+        });
+        </script>
+
+
+    <section class="homepage-section">
+        <div class="slogan">
+            <h1><span class="orange">SUPPORT</span>&CONTACT US</h1>
+        </div>
+
+        <div class="support-wrap home-support-wrap">
+            <div class="card home-support-card">
+                <img src="個專圖片素材/support1.jpg" alt="">
+                <h4>Start fixing</h4>
+                <p>We’ll guide you step by step to help solve the problem. </p>
+                <a href="支援服務.html">
+                    <button class="learn-more">Learn more</button>
+                </a>
+            </div>
+            <div class="card home-support-card">
+                <img src="個專圖片素材/support2.jpg" alt="">
+                <h4>Contact us</h4>
+                <p>Our virtual assistant Boost is always available for instant answers. </p>
+                <a href="支援服務.html">
+                    <button class="learn-more">Learn more</button>
+                </a>
+            </div>
+            <div class="card home-support-card">
+                <img src="個專圖片素材/support3.jpg" alt="">
+                <h4>Book appointment</h4>
+                <p>Need a repair or a maintenance check-up? Plan an appointment with a Bike Doctor first.</p>
+                <a href="支援服務.html">
+                    <button class="learn-more">Learn more</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="main-footer">
+            <div class="footer-logo">
+                <img src="個專圖片素材/footer-logo.png" alt="">
+            </div>
+            <div class="footer-container">
+                <div class="footer-item">
+                    <h4>E-BIKE</h4>
+                    <nav>
+                        <a href="產品EBIKE.html">Vanmoof</a>
+                        <a href="產品EBIKE.html">Cowboy</a>
+                        <a href="產品EBIKE.html">Gogoro eeyo</a>
+                        <a href="產品EBIKE.html">Musashi Velo</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <a href="app功能介紹.html">
+                        <h4>APP</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="關於我們.html">
+                        <h4>ABOUT</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="BLOG.html">
+                        <h4>BLOG</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <h4>SUPPORT</h4>
+                    <nav>
+                        <a href="支援服務.html">Fixing</a>
+                        <a href="支援服務.html">Contact us</a>
+                        <a href="支援服務.html">Appointment</a>
+                        <a href="支援服務.html">Q&A</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <h4>FOLLOW US</h4>
+                    <nav>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Youtube</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy;  This platform protects learning policies and displays. If you have any doubts about translation, you can send a private message to TibaMe, and you will be assisted by a dedicated person.
+        </div>
+    </div>
+
+
+
+    
+</body>
+</html>
