@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="general-set.css">
+    <style>
+                /* ===========page-1=================== */
+/* 
+        /* .cookie {
+            width: 1200px;
+            /* margin: auto; */
+            /* display: block; */
+        /* }
+        .cookie p {
+            font-size: 18px;
+            color: #4a4a4a;
+            padding: 10px;
+            margin: 10px;
+        } */
+        /*=============================filter==========================*/
+        .filter {
+            background-color: #EBECF0;
+            padding: 20px;
+            border-radius: 10px;
+            height: 300px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        /* .porduct-height {
+            margin-top: 80px;
+        } */
+        .filter a {
+            text-decoration: none;
+            color: #4a4a4a;
+        }
+        .filter h2,.filter a {
+            line-height: 24px;
+            margin: 10px 0;
+        }
+        .pick-product {
+            padding-top: 100px;
+        }
+        
+        .product-card {
+            margin:  10px;
+            padding: 10px;
+            background-color: #EBECF0;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .04);
+            transition: 0.4s ease;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card .card-image {
+            height: 250px;
+            padding: 0 20px;
+            text-align: center;
+            background-color: #EBECF0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .product-card .card-image img {
+            /* height: 250px; */
+            width: 100%;
+            cursor: pointer;
+        }
+        .product-card .product-card-content h3 {
+            color: #3a3a3a;
+            margin: 10px;
+        }
+        .product-card .product-card-content p {
+            color: #4a4a4a;
+            font-weight: 500;
+            margin: 8px 10px 22px;
+            text-align: justify;
+        }
+
+        .product-card .product-card-content button {
+            cursor: pointer;
+            color: #fff;
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #F8A151;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="UR首頁.html">
+                    <img src="個專圖片素材/logo ur.jpg" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <nav class="navbar">
+                    <div class="d">
+                        <button class="d-btn">E-BIKE</button>
+                        <div class="d-content">
+                            <div class="d-brands">
+                                <div class="column">
+                                    <h3>Brands</h3>
+                                    <a href="">Vanmoof</a>
+                                    <a href="">Cowboy</a>
+                                    <a href="">Gogoro</a>
+                                    <a href="">Musashi Velo</a>
+                                </div>
+                                <div class="column">
+                                    <h3>E-bikes</h3>
+                                    <a href="產品EBIKE.html">Vanmoof V</a>
+                                    <a href="產品EBIKE.html">Vanmoof S5</a>
+                                    <a href="產品EBIKE.html">Vanmoof X5</a>
+                                    <a href="產品EBIKE.html">Vanmoof S3</a>
+                                </div>
+                                <div class="column column-pic">
+                                    <img src="個專圖片素材/vf v-1去被.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="app功能介紹.html">APP</a>
+                    <a href="關於我們.html">ABOUT</a>
+                    <a href="BLOG.html">BLOG</a>
+                    <a href="支援服務.html">SUPPORT</a>
+                </nav>
+            </div>
+            <div class="header-cart">
+                <img src="個專圖片素材/4.png" alt="">
+                <img src="個專圖片素材/2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- <hr class="header-hr"> -->
+
+    <!-- <div class="cookie">
+        <p>Home / E-BIKE</p>
+    </div> -->
+
+    <section class="pick-product">
+        <div class="container porduct-height">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <div class="filter">
+                        <h2>Brands</h2>
+                        <hr>
+                        <a href="#">Vanmoof</a>
+                        <a href="#">Cowboy</a>
+                        <a href="#">Gogoro</a>
+                        <a href="#">Musashi Velo</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9 product">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <a href="產品購買頁面.html">
+                                        <img src="個專圖片素材/vf v-1去被.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-card-content">
+                                    <h3>Vanmoof V</h3>
+                                    <p>For riders 5'5''-6'8''</p>
+                                    <h3>$2,429</h3>
+                                    <button class="cart">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <a href="產品購買頁面.html">
+                                        <img src="個專圖片素材/vf a5-1去被.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-card-content">
+                                    <h3>Vanmoof V</h3>
+                                    <p>For riders 5'5''-6'8''</p>
+                                    <h3>$2,429</h3>
+                                    <button class="cart">Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-6">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <a href="產品購買頁面.html">
+                                        <img src="個專圖片素材/vf s3-1去被.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-card-content">
+                                    <h3>Vanmoof V</h3>
+                                    <p>For riders 5'5''-6'8''</p>
+                                    <h3>$2,429</h3>
+                                    <button class="cart">Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="col-12 col-md-6">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <a href="產品購買頁面.html">
+                                        <img src="個專圖片素材/vf x3去被.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-card-content">
+                                    <h3>Vanmoof V</h3>
+                                    <p>For riders 5'5''-6'8''</p>
+                                    <h3>$2,429</h3>
+                                    <button class="cart">Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-6">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <a href="產品購買頁面.html">
+                                        <img src="個專圖片素材/vf x3去被.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-card-content">
+                                    <h3>Vanmoof V</h3>
+                                    <p>For riders 5'5''-6'8''</p>
+                                    <h3>$2,429</h3>
+                                    <button class="cart">Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="product-card">
+                                <div class="card-image">
+                                    <a href="產品購買頁面.html">
+                                        <img src="個專圖片素材/vf x3去被.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-card-content">
+                                    <h3>Vanmoof V</h3>
+                                    <p>For riders 5'5''-6'8''</p>
+                                    <h3>$2,429</h3>
+                                    <button class="cart">Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <div class="main-footer">
+            <div class="footer-logo">
+                <img src="個專圖片素材/footer-logo.png" alt="">
+            </div>
+            <div class="footer-container">
+                <div class="footer-item">
+                    <h4>E-BIKE</h4>
+                    <nav>
+                        <a href="產品EBIKE.html">Vanmoof</a>
+                        <a href="產品EBIKE.html">Cowboy</a>
+                        <a href="產品EBIKE.html">Gogoro eeyo</a>
+                        <a href="產品EBIKE.html">Musashi Velo</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <a href="app功能介紹.html">
+                        <h4>APP</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="關於我們.html">
+                        <h4>ABOUT</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="BLOG.html">
+                        <h4>BLOG</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <h4>SUPPORT</h4>
+                    <nav>
+                        <a href="支援服務.html">Fixing</a>
+                        <a href="支援服務.html">Contact us</a>
+                        <a href="支援服務.html">Appointment</a>
+                        <a href="支援服務.html">Q&A</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <h4>FOLLOW US</h4>
+                    <nav>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Youtube</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy;  This platform protects learning policies and displays. If you have any doubts about translation, you can send a private message to TibaMe, and you will be assisted by a dedicated person.
+        </div>
+    </div>
+
+
+
+
+    
+</body>
+</html>

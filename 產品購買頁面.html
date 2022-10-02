@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="general-set.css">
+    <style>
+        .product-wrap {
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            padding-top: 120px;
+        }
+        .product-photo {
+            width: 600px;
+            background-color: #EEEAE7;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .product-photo img {
+            width: 100%;
+        }
+        .product-photo-side ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .product-photo-side li {
+            color: #4a4a4a;
+            text-decoration: none;
+            font-size: 24px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .product-photo-side li:hover {
+            text-decoration: underline;
+            color: #3A3A3A;
+        } 
+        .product-detail {
+            width: 560px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .prodcut-detail-title {
+            margin-bottom: 20px;
+        }
+        .prodcut-detail-title h1 {
+            margin: 10px;
+        }
+        .prodcut-detail-title p,.prodcut-detail-title h3 {
+            margin: 10px;
+        }
+        .prodcut-detail-color {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around   ;
+        }
+        .prodcut-detail-color .color {
+            background-color: #ffffff;
+            border: 2px solid rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            padding: 10px 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        /* .color:visited {
+            background-color: #D9D9D9;
+            border-color: #3a3a3a;
+        } */
+        .color:hover {
+            border: 2px solid #3A3A3A;
+        }
+        .color:active {
+            background-color: #D9D9D9;
+        }
+        .product-detail-purchase {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .product-detail-total h2 {
+            margin: 5px 10px;
+        }
+
+        /*===============================================*/
+        .product-explore {
+            width: 1200px;
+            background-color: #BADBF3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+        }
+        .product-explore h1 {
+            margin: 10px;
+        }
+        .product-explore img {
+            width: 60%;
+        }
+        .description .description1:nth-child(2n){
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .description1 {
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        .description1-pic {
+            width: 580px;
+            margin: 10px;
+        }
+        .description1-txt {
+            width: 580px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin: 10px;
+        }
+        .description1-txt-down {
+            justify-content: space-between;
+        }
+        .description1-pic img {
+            width: 80%;
+        }
+        .description2 .description1-pic{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .description2 .description1-txt img {
+            width: 100%;
+        }
+        /*=======================product-specify================*/
+        .product-specify {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column; 
+            padding: 40px 0;      
+        }
+        .product-specification {
+            width: 1200px;
+            display: flex;
+            align-items: center;
+        }
+        .specification-main {
+            width: 600px;
+        }
+        .specification-main h3 {
+            margin: 10px;
+        }
+        .specification-sub {
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="UR首頁.html">
+                    <img src="個專圖片素材/logo ur.jpg" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <nav class="navbar">
+                    <div class="d">
+                        <button class="d-btn">E-BIKE</button>
+                        <div class="d-content">
+                            <div class="d-brands">
+                                <div class="column">
+                                    <h3>Brands</h3>
+                                    <a href="">Vanmoof</a>
+                                    <a href="">Cowboy</a>
+                                    <a href="">Gogoro</a>
+                                    <a href="">Musashi Velo</a>
+                                </div>
+                                <div class="column">
+                                    <h3>E-bikes</h3>
+                                    <a href="產品EBIKE.html">Vanmoof V</a>
+                                    <a href="產品EBIKE.html">Vanmoof S5</a>
+                                    <a href="產品EBIKE.html">Vanmoof X5</a>
+                                    <a href="產品EBIKE.html">Vanmoof S3</a>
+                                </div>
+                                <div class="column column-pic">
+                                    <img src="個專圖片素材/vf v-1去被.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="app功能介紹.html">APP</a>
+                    <a href="關於我們.html">ABOUT</a>
+                    <a href="BLOG.html">BLOG</a>
+                    <a href="支援服務.html">SUPPORT</a>
+                </nav>
+            </div>
+            <div class="header-cart">
+                <img src="個專圖片素材/4.png" alt="">
+                <img src="個專圖片素材/2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- <hr class="header-hr">
+
+    <div class="cookie">
+        <p>Home / E-BIKE / Vanmoof / V</p>
+    </div> -->
+
+    <section class="product-wrap">
+        <div class="product-photo">
+            <img src="個專圖片素材/vf v去被.png" alt="">
+            <div class="product-photo-side ">
+                <ul>
+                    <li>正面</li>
+                    <li>背面</li>
+                    <li>側面</li>
+                    <li>3/4</li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-detail">
+            <div class="prodcut-detail-title">
+                <h1>Vanmoof V</h1>
+                <p>Rule the road with the Cow boy 4. Perfect for controlled cruising and longer rides.</p>
+                <hr class="content-hr">
+                <h3>Choose your color：</h3>
+            </div>
+            <div class="prodcut-detail-color">
+                <button class="color" name="color">
+                    <img src="個專圖片素材/black-1.png" alt="">
+                </button>
+                <button class="color" name="color">
+                    <img src="個專圖片素材/sand.png" alt="">
+                </button>
+                <button class="color" name="color">
+                    <img src="個專圖片素材/green.png" alt="">
+                </button>
+                
+            </div>
+            <hr class="content-hr">
+            <div class="product-detail-purchase">
+                <div class="product-detail-total">
+                    <h2>Total：</h2>
+                    <button class="add-cart">Add to cart</button>
+                </div>
+                <div class="product-detail-total">
+                    <h2>$2,427</h2>
+                    <button class="explore">Buy now</button>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <section class="product-explore">
+        <h1>Explore every details</h1>
+        <img src="個專圖片素材/vf v去被.png" alt="">
+    </section>
+
+
+    <section class="description">
+        <div class="description1">
+            <div class="description1-pic">
+                <img src="個專圖片素材/product description1.webp" alt="">
+            </div>
+            <div class="description1-txt ">
+                <h2>Mount your phone to the handlebars and use the VanMoof app while you’re on the move.
+                </h2>
+                <p>Track every ride
+                    Track your current speed, ride duration, and distance while you ride – and look back at your ride history to see how many kilometers you’ve crunched that month. Oh, and you can keep your phone nicely charged up here, too.</p>
+            </div>
+        </div>
+        <div class="description1 description2">
+            <div class="description1-pic">
+                <img src="個專圖片素材/product description2.webp" alt="">
+            </div>
+            <div class="description1-txt description1-txt-down">
+                <p>Gen 5 Kick Lock</p>
+                <h2>Forget your bike keys. No, really.</h2>
+                <p>With our Kick Lock you can secure your bike with the tap of a toe.
+                And when you’re ready to ride again? Your bike automatically unlocks.</p>
+                <img src="個專圖片素材/product description3.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="product-wrap">
+        <h2>Specifications</h2>
+        <div class="product-specify">
+            <div class="product-specification">
+                <div class="specification-main">
+                    <h3>Weight</h3>
+                </div>
+                <div class="specification-sub">
+                    <p>18.9 kg total weight, including battery</p>
+                </div>
+            </div>
+            <hr class="content-hr">
+            <div class="product-specification">
+                <div class="specification-main">
+                    <h3>Battery</h3>
+                </div>
+                <div class="specification-sub">
+                    <p>Up to 70 km autonomy</p>
+                    <p>Removable Lithium ion battery</p>
+                </div>
+            </div>
+            <hr class="content-hr">
+            <div class="product-specification">
+                <div class="specification-main">
+                    <h3>Charging time</h3>
+                </div>
+                <div class="specification-sub">
+                    <p>100% recharged in 3h20min</p>
+                </div>
+            </div>
+            <hr class="content-hr">
+            <div class="product-specification">
+                <div class="specification-main">
+                    <h3>Assist speed</h3>
+                </div>
+                <div class="specification-sub">
+                    <p>25 km/h</p>
+                </div>
+            </div>
+            <hr class="content-hr">
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="main-footer">
+            <div class="footer-logo">
+                <img src="個專圖片素材/footer-logo.png" alt="">
+            </div>
+            <div class="footer-container">
+                <div class="footer-item">
+                    <h4>E-BIKE</h4>
+                    <nav>
+                        <a href="產品EBIKE.html">Vanmoof</a>
+                        <a href="產品EBIKE.html">Cowboy</a>
+                        <a href="產品EBIKE.html">Gogoro eeyo</a>
+                        <a href="產品EBIKE.html">Musashi Velo</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <a href="app功能介紹.html">
+                        <h4>APP</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="關於我們.html">
+                        <h4>ABOUT</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="BLOG.html">
+                        <h4>BLOG</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <h4>SUPPORT</h4>
+                    <nav>
+                        <a href="支援服務.html">Fixing</a>
+                        <a href="支援服務.html">Contact us</a>
+                        <a href="支援服務.html">Appointment</a>
+                        <a href="支援服務.html">Q&A</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <h4>FOLLOW US</h4>
+                    <nav>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Youtube</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy;  This platform protects learning policies and displays. If you have any doubts about translation, you can send a private message to TibaMe, and you will be assisted by a dedicated person.
+        </div>
+    </div>
+
+    
+</body>
+</html>

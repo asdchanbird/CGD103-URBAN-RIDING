@@ -1,0 +1,437 @@
+/* =========================================header============================================*/
+.header {
+    width: 100vw;
+    height: 70px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10;
+}
+.header-container {
+    width: 1200px;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+.header-logo {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header-logo img {
+    width: 50%;
+    /* cursor: url("UR首頁.html"), pointer; */
+}
+.navbar {
+    width: 800px;
+}
+.header-cart {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header-cart img {
+    width: 15%;
+    cursor: pointer;
+}
+.menu {
+    display: flex;
+    align-items: flex-end;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #fff;
+}
+.navbar a {
+    float: left;
+    font-size: 18px;
+    color: #3a3a3a;
+    text-align: center;
+    margin: 0 10px;
+    padding: 16px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.d {
+    float: left;
+    overflow: hidden;
+}
+.d .d-btn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: #3a3a3a;
+    margin: 0 10px;
+    padding: 14px 16px;
+    background: inherit;
+    text-transform: uppercase;
+}
+.navbar a:hover, .d:hover .d-btn {
+    background-color: #101617;
+    border-radius: 20px;
+    color: #fff;
+}
+.d-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border-left: 1px solid #ccc;
+}
+.d:hover .d-content {
+    display: block;
+}
+.d-brands {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    position: relative;
+    
+}
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background-color: #fff;
+    height: 250px;
+}
+.column-pic {
+    width: 40%;
+}
+.column a {
+    display: block;
+    float: none;
+    color: #4a4a4a;
+    text-align: left;
+    font-size: 16px;
+}
+.column h3 {
+    color: #3a3a3a;
+    padding: 10px;
+}
+.column img {
+    width: 90%;
+}
+.column a:hover {
+    color: #fff;
+    background-color: #373737;
+}
+.d-brands::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+@media(max-width: 650px){
+    .column {
+        width: 100%;
+        height: auto;
+    }
+}
+/*=====================================字型===================================*/
+h1,h2,h3,h4,p,a,li,button {
+    font-family:'AvantGarde Md BT';
+}
+.orange {
+    color: #F8A151;
+}
+/*==================================hr設定===========================================================*/
+.header-hr {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 20px;
+    margin-bottom: 10px;
+    
+}
+.content-hr {
+    color: rgba(0, 0, 0, 0.25);
+    margin: 10px;
+}
+/*========================================================h2.h3.h4.p 文字大小設定=====================================*/
+h1 {font-size: 48px;color: #3a3a3a;letter-spacing: 2px;}
+h2 {font-size: 32px;color: #3a3a3a;line-height: 32px;}
+h3 {font-size: 24px;color: #3a3a3a;line-height: 32px;}
+h4 {font-size: 18px;color: #3a3a3a;line-height: 32px;}
+p {font-size: 16px;color: #4a4a4a;line-height: 32px;}
+/*===================================================button級別================================================= */
+.learn-more {
+    background-color: transparent;
+    border: 3px solid #ABA6A6;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    padding: 14px 28px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: #3a3a3a;
+    transition: 0.5s;
+}
+.learn-more:hover {
+    border: 3px solid #3a3a3a;
+}
+.button1 {/*橘色按鈕*/
+    background-color: rgba(237, 164, 21, 0.8);
+    color: #ffffff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+}
+.button2 {
+    background-color: #434343;
+    color: #ffffff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+}
+.btn-42,
+.btn-42 *,
+.btn-42 :after,
+.btn-42 :before,
+.btn-42:after,
+.btn-42:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-42 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #2D3033;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  -webkit-mask-image: -webkit-radial-gradient(#2D3033, #fff);
+  padding: 0;
+  margin: 20px 0    ;
+}
+.btn-42:disabled {
+  cursor: default;
+}
+.btn-42:-moz-focusring {
+  outline: auto;
+}
+.btn-42 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-42 [hidden] {
+  display: none;
+}
+.btn-42 {
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  padding: 0.5rem 2rem;
+  position: relative;
+  text-transform: uppercase;
+}
+.btn-42 span {
+  mix-blend-mode: difference;
+}
+.btn-42:before {
+  --thickness: 4px;
+  border: var(--thickness) solid #F8A151;
+  border-radius: 999px;
+  content: "";
+  inset: calc(var(--thickness) * -1);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: scale(1.3);
+  transition: transform 0.2s, opacity 0.2s;
+}
+.btn-42:hover:before {
+  opacity: 1;
+  transform: scale(1);
+}
+.btn-42:hover {
+  background-color: transparent;
+}
+/*button-read*/
+.button-read {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    color: #3a3a3a;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button-read span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.8s;
+    /* text-decoration: underline; */
+}
+
+.button-read span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+    transition: 0.8s;
+}
+
+.button-read:hover span {
+    padding-left: 25px;
+}
+
+.button-read:hover span:after {
+    opacity: 1;
+    right: -50;
+}
+/*====explore===*/
+.explore {
+    background-color: #F8A151;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: left;
+    padding: 14px 28px;
+    margin: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.5s;
+    text-decoration: none;
+    border: none;
+}
+.explore:hover {
+    background-color: #F97F0E;
+}
+
+/*========add to cart=======*/
+.add-cart {
+    background-color: #434343;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: left;
+    padding: 14px 28px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.5s;
+    text-decoration: none;
+    border: none;
+}
+.add-cart:hover {
+    background-color: #2D3033;
+}
+
+/*=========================================置中設定=========================================================*/
+.abc {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+/*================================餅乾屑==============================*/
+.cookie {
+    width: 1200px;
+    margin-top: 70px;
+    display: inline-block;
+    
+}
+.cookie p {
+    font-size: 18px;
+    color: #4a4a4a;
+    padding: 10px;
+    margin: 10px;
+}
+/*===========================section設定======================*/
+section {
+    padding: 40px 0;
+}
+ /*=======================footer===============================*/
+
+.footer {
+    width: 100%;
+    background-color: #101617;
+}
+.main-footer {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-logo {
+    width: 200px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.footer-logo img {
+    width: 80%;
+}
+.footer-container {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+.footer-item {
+    width: 0;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+.footer-item h4 {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 18px;
+}
+.footer-item a {
+    text-decoration: none;
+}
+.footer-item nav {
+    display: flex;
+    flex-direction: column;
+}
+.footer-item nav a {
+    text-decoration: none;
+    color: #ccc;
+    line-height: 1.4;
+    padding: 5px 0;
+    font-size: 16px;
+}
+.footer-item nav a:hover {
+    color: #fff;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0 0;
+    padding: 10px 0;
+    border-top: 1px dotted #fff;
+    color: #fff;
+    font-size: 12px;
+}
+       
+
+/*=======*/

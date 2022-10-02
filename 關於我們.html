@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="general-set.css">
+    <style>
+        /*=================================banner=====================*/
+        .about-banner {
+            width: 100%;
+            background-color: #0C1212;   
+        }
+        .width {
+            max-width: 100%;
+        }
+        .about-banner-pic img {
+            width: 100%;
+        }
+        .about-banner-txt h1,.about-banner-txt h2 {
+            color: #ffffff;
+            margin: 50px 0;
+        }
+        .about-banner-center {
+            display: flex;
+            align-items: center;
+        }
+        /*==============================*/
+        .about {
+            width: 1200px;
+            margin: auto;
+        }
+        .about h1 {
+            padding: 5px;
+            font-weight: 600;
+            margin: 10px;
+        }
+        .about-story-pic img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .about-story-center {
+            display: flex;
+            align-items: center;
+        }
+        .about-story-txt h3 {
+            margin: 50px 0;
+        }
+        .about-story-pic-position {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        /* ===================================================*/
+        .about-special {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+        .about-story-container {
+            width: 580px;
+            margin: 10px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            /* border: 1px solid #0C1212; */
+            position: relative;
+            z-index: 5;
+        }
+        .about-story-trans-txt {
+            position: relative;
+            margin: auto;
+            z-index: 10;
+            padding: 10px;
+        }
+        .about-story-trans-txt h2 {
+            text-align: center;
+            position: absolute;
+            left: 235px;
+            bottom: 150px;
+        }
+        .about-story-trans-txt p,.about-story-trans-txt-2 p {
+            margin: 10px;
+        }
+        .about-story-trans-txt-2 h2 {
+            position: absolute;
+            bottom: 118px;
+        }
+        .about-story-trans-pic img {
+            width: 100%;
+            height: 430px;
+        }
+        .about-story-trans-txt::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 125px;
+            background-color: #fff;
+            border-radius: 60% 60% 0 0;
+            bottom: 110px;
+            left: 0;
+            
+            z-index: -1;
+            /* overflow: hidden; */
+        }
+        .about-story-trans-txt-2::after {
+            bottom: 77px;
+            /* left: ; */
+            /* z-index: -5; */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="UR首頁.html">
+                    <img src="個專圖片素材/logo ur.jpg" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <nav class="navbar">
+                    <div class="d">
+                        <button class="d-btn">E-BIKE</button>
+                        <div class="d-content">
+                            <div class="d-brands">
+                                <div class="column">
+                                    <h3>Brands</h3>
+                                    <a href="">Vanmoof</a>
+                                    <a href="">Cowboy</a>
+                                    <a href="">Gogoro</a>
+                                    <a href="">Musashi Velo</a>
+                                </div>
+                                <div class="column">
+                                    <h3>E-bikes</h3>
+                                    <a href="產品EBIKE.html">Vanmoof V</a>
+                                    <a href="產品EBIKE.html">Vanmoof S5</a>
+                                    <a href="產品EBIKE.html">Vanmoof X5</a>
+                                    <a href="產品EBIKE.html">Vanmoof S3</a>
+                                </div>
+                                <div class="column column-pic">
+                                    <img src="個專圖片素材/vf v-1去被.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="app功能介紹.html">APP</a>
+                    <a href="關於我們.html">ABOUT</a>
+                    <a href="BLOG.html">BLOG</a>
+                    <a href="支援服務.html">SUPPORT</a>
+                </nav>
+            </div>
+            <div class="header-cart">
+                <img src="個專圖片素材/4.png" alt="">
+                <img src="個專圖片素材/2.png" alt="">
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="about-banner">
+        <div class="container width">
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <div class="about-banner-pic">
+                        <img src="個專圖片素材/banner-about.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 about-banner-center">
+                    <div class="about-banner-txt">
+                        <h1>ABOUT..</h1>
+                        <h2>URBAN RIDING</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="about">
+        <h1>Our story</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 about-story-center">
+                    <div class="about-story-txt">
+                        <h3>The inspiration and ethos for Urban Riding begun with the name.
+                        </h3>
+                        <h3>In the same way that a mountain bike is suitable for riding across mountains, UR is for pedaling around city.
+                        </h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7">
+                    <div class="about-story-pic">
+                        <div class="row">
+                            <div class="col-12 col-md-4 about-story-pic-position">
+                                <img src="個專圖片素材/about-2.jpg" alt="">
+                                <img src="個專圖片素材/about-3.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <img src="個專圖片素材/about-6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-special">
+        <div class="about-story-container">
+            <div class="about-story-trans-pic">
+                <img src="個專圖片素材/about-4.jpg" alt="">
+            </div>
+            <div class="about-story-trans-txt">
+                <h2>URBAN</h2>
+                <p>We want you to forget the bicycle itself and simply enjoy the ride.
+
+                That is why we emphasize comfort over speed, and a feeling of lightness at the first turn of the pedal.
+                </p>
+            </div>
+        </div>
+        <div class="about-story-container">
+            <div class="about-story-trans-pic">
+                <img src="個專圖片素材/about-1.jpg" alt="">
+            </div>
+            <div class="about-story-trans-txt about-story-trans-txt-2">
+                <h2>RIDING</h2>
+                <p>All our frames and parts are based on this concept of ” URBAN RIDING “ – that is what UR is all about.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="main-footer">
+            <div class="footer-logo">
+                <img src="個專圖片素材/footer-logo.png" alt="">
+            </div>
+            <div class="footer-container">
+                <div class="footer-item">
+                    <h4>E-BIKE</h4>
+                    <nav>
+                        <a href="產品EBIKE.html">Vanmoof</a>
+                        <a href="產品EBIKE.html">Cowboy</a>
+                        <a href="產品EBIKE.html">Gogoro eeyo</a>
+                        <a href="產品EBIKE.html">Musashi Velo</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <a href="app功能介紹.html">
+                        <h4>APP</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="關於我們.html">
+                        <h4>ABOUT</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="BLOG.html">
+                        <h4>BLOG</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <h4>SUPPORT</h4>
+                    <nav>
+                        <a href="支援服務.html">Fixing</a>
+                        <a href="支援服務.html">Contact us</a>
+                        <a href="支援服務.html">Appointment</a>
+                        <a href="支援服務.html">Q&A</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <h4>FOLLOW US</h4>
+                    <nav>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Youtube</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy;  This platform protects learning policies and displays. If you have any doubts about translation, you can send a private message to TibaMe, and you will be assisted by a dedicated person.
+        </div>
+    </div>
+
+   
+    
+
+
+    
+</body>
+</html>

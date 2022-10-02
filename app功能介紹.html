@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="general-set.css">
+    <style>
+        .banner {
+            width: 100%;
+            height: 600px;
+            background-color: #101617;
+            background:
+                linear-gradient(115deg, #101617 50%,transparent 50%) center center / 100% 100%,
+                url("個專圖片素材/banner-app.jpeg") right center / auto 100%;
+        }
+        .banner-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            margin: auto;
+        }
+        .banner-app-txt {
+            height: 100%;
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .banner-app-txt h1,.banner-app-txt h3 {
+            color: #ffffff;
+            padding-bottom: 0.3em;
+            margin-bottom: 0.3em;
+        }
+        /*=========================function title==================*/
+        .app-wrap {
+            display: flex;
+            width: 1200px;
+            margin: 100px auto;
+            padding-top: 75px;
+        }
+        .app-item {
+            width: 270px;
+            margin: 0 15px;
+            text-align: center;
+            border: 10px solid #F8A151;
+            border-radius: 20px;
+            /* box-shadow: 2px 4px 10px #fa0; */
+        }
+        .app-subtitle {
+            padding: 20px;
+        }
+        .app-subtitle h3 {
+            color: #3a3a3a;
+        }
+        .app-icon {
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+            margin: -75px auto 0;
+            font-size: 100px;
+            line-height: 150px;
+            border-radius: 50%;
+            position: relative;
+        }
+        .app-icon:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-top: 10px solid #EDA415;
+            border-right: 10px solid #EDA415;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+            left: -10px;
+            top: -10px;
+            border-radius: 50%;
+            transform: rotate(-45deg);
+        }
+        .app-icon img {
+            width: 50%;
+        }
+        .appfunction h1 {
+            display: flex;
+            justify-content: center;
+        }
+        /*==========================app-route========================*/
+        .app-container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .app-plan-route {
+            width: 580px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .app-1 { 
+            width: 1200px;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        .app-1 h2 {
+            margin: 20px;
+            text-align: left;
+        }
+        .app-plan-route img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .app-plan-route h3,.app-plan-route p {
+            margin: 10px;
+        } 
+        /*==========================app-unlock========================*/
+        .app-lock {
+            width: 580px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+        .app-unlock-phone {
+            position: absolute;
+            width: 30%;
+            left: -90px;
+            top: 110px;
+            align-items: center;
+        }
+        .app-lock-txt h3,.app-lock-txt p {
+            margin: 10px;
+        } 
+        /*==========================app-track========================*/
+        .app-track {
+            width: 580px;
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .app-track p {
+            margin: 10px;
+        }
+        .app-track img {
+            width: 100%;
+            position: relative;
+            border-radius: 10px;
+        }
+        .app-track .float {
+            z-index: 2;
+            left: 100px;
+        }
+        .track-border {
+            border-bottom: 1px solid #a8a8a8;
+            padding-bottom: 20px;
+        }
+          /*==========================app-achieve======================*/
+        .app-achieve-txt {
+            width: 1200px;
+            padding: 10px;
+        }
+        .app-achieve {
+            width: 580px;
+            margin: 10px;
+        }
+        .app-achieve-txt p {
+            margin: 10px;
+        }
+        .app-achieve img {
+            width: 100%;
+        }
+        .achieve-down {
+            align-items: end;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="UR首頁.html">
+                    <img src="個專圖片素材/logo ur.jpg" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <nav class="navbar">
+                    <div class="d">
+                        <button class="d-btn">E-BIKE</button>
+                        <div class="d-content">
+                            <div class="d-brands">
+                                <div class="column">
+                                    <h3>Brands</h3>
+                                    <a href="">Vanmoof</a>
+                                    <a href="">Cowboy</a>
+                                    <a href="">Gogoro</a>
+                                    <a href="">Musashi Velo</a>
+                                </div>
+                                <div class="column">
+                                    <h3>E-bikes</h3>
+                                    <a href="產品EBIKE.html">Vanmoof V</a>
+                                    <a href="產品EBIKE.html">Vanmoof S5</a>
+                                    <a href="產品EBIKE.html">Vanmoof X5</a>
+                                    <a href="產品EBIKE.html">Vanmoof S3</a>
+                                </div>
+                                <div class="column column-pic">
+                                    <img src="個專圖片素材/vf v-1去被.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="app功能介紹.html">APP</a>
+                    <a href="關於我們.html">ABOUT</a>
+                    <a href="BLOG.html">BLOG</a>
+                    <a href="支援服務.html">SUPPORT</a>
+                </nav>
+            </div>
+            <div class="header-cart">
+                <img src="個專圖片素材/4.png" alt="">
+                <img src="個專圖片素材/2.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-container">
+            <div class="banner-app-txt">
+                <h1>URBAN RIDING App</h1>
+                <h3>At the heart of UR,is your road companion. Connected to you and any path you take.
+                </h3>
+            </div>
+        </div>
+    </div>
+    <section class="appfunction">
+        <h1>Connect your ebike</h1>
+        <div class="app-wrap">
+            <div class="app-item">
+                <div class="app-icon">
+                    <img src="個專圖片素材/route.png" alt="">
+                </div>
+                <div class="app-subtitle">
+                    <h3>Plan Your Route</h3>
+                </div>    
+            </div>
+            <div class="app-item">
+                <div class="app-icon">
+                    <img src="個專圖片素材/unlock.png" alt="">
+                </div>
+                <div class="app-subtitle">
+                    <h3>Keyless unlock</h3>
+                </div>    
+            </div>
+            <div class="app-item">
+                <div class="app-icon">
+                    <img src="個專圖片素材/track.png" alt="">
+                </div>
+                <div class="app-subtitle">
+                    <h3>Track Your Activities</h3>
+                </div>    
+            </div>
+            <div class="app-item">
+                <div class="app-icon">
+                    <img src="個專圖片素材/achievement.png" alt="">
+                </div>
+                <div class="app-subtitle">
+                    <h3>Achievements</h3>
+                </div>    
+            </div>
+        </div>
+    </section>
+
+    <section class="app-1">
+        <h2>Plan your route</h2>
+        <div class="app-container">
+            <div class="app-plan-route">
+                <img src="個專圖片素材/app-plan1.png" alt="">
+                <h3>Route</h3>
+                <hr class="content-hr">
+                <p>Beat traffic by mapping the quickest route or take a breather with the clearest alternative with real-time air quality mapping in your area.</p>
+            </div>
+            <div class="app-plan-route">
+                <img src="個專圖片素材/app-plan2.jpg" alt="">
+                <h3>Direction</h3>
+                <hr class="content-hr">
+                <p>Navigate the city like a local who knows every corner. Break free from congestion, be guided to your favorite places, even find bike parking spots..</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="app-1">
+        <h2>Keyless unlock</h2>
+        <div class="app-container">
+            <div class="app-lock">
+                <div class="app-lock-txt">
+                    <h3>Digital key</h3>
+                    <hr class="content-hr">
+                    <p>Unlock your bike and start your ride with a simple tap in the app. You're the only one who can turn it on.</p>
+                </div>
+                <div class="app-lock-txt">
+                    <h3>Auto Unlock</h3>
+                    <hr class="content-hr">
+                    <p>As you approach, the bike senses your connection and </p>
+                    <p>comes alive. Effortless, slick - jump on and ride off.</p>
+                </div>
+                <div class="app-lock-txt">
+                    <h3>Never Out of Power</h3>
+                    <hr class="content-hr">
+                    <p>Phone running low? With a turn of the key, take out the bike's battery and push it back in to kickstart the motor.</p>
+                </div>
+            </div>
+            <div class="app-lock">
+                <video autoplay="" muted="" loop="" playsinline="" id="" style="border-radius: 10px;">
+                    <source src="個專圖片素材/touch-unlock.mp4">
+                </video>
+                <img class="app-unlock-phone" src="個專圖片素材/app2定位.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="app-1">
+        <h2 class="track-border">Track Your Activities</h2>
+        <div class="app-container">
+            <div class="app-track ">
+                <p>You can enable your bike to automatically track your rides, without using GPS. Measure your distance, speed, and battery usage. </p>
+                <img class="float" src="個專圖片素材/track4.png" alt="">
+            </div>
+            <div class="app-track">
+                <img src="個專圖片素材/track3.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="app-1">
+        <h2 class="achieve-border track-border">Achievements</h2>
+        <div class="app-container achieve-down">
+            <div class="app-achieve-txt">
+
+                <!-- <hr class="content-hr"> -->
+                <p>Collect badges for your achievements and show them off with pride.</p>
+            </div>
+            <div class="app-achieve">
+                <img src="個專圖片素材/app-achieve1.png" alt="">
+            </div>
+            <div class="app-achieve">
+                <img src="個專圖片素材/app-achieve2.png" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <div class="footer">
+        <div class="main-footer">
+            <div class="footer-logo">
+                <img src="個專圖片素材/footer-logo.png" alt="">
+            </div>
+            <div class="footer-container">
+                <div class="footer-item">
+                    <h4>E-BIKE</h4>
+                    <nav>
+                        <a href="產品EBIKE.html">Vanmoof</a>
+                        <a href="產品EBIKE.html">Cowboy</a>
+                        <a href="產品EBIKE.html">Gogoro eeyo</a>
+                        <a href="產品EBIKE.html">Musashi Velo</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <a href="app功能介紹.html">
+                        <h4>APP</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="關於我們.html">
+                        <h4>ABOUT</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <a href="BLOG.html">
+                        <h4>BLOG</h4>
+                    </a>
+                </div>
+                <div class="footer-item">
+                    <h4>SUPPORT</h4>
+                    <nav>
+                        <a href="支援服務.html">Fixing</a>
+                        <a href="支援服務.html">Contact us</a>
+                        <a href="支援服務.html">Appointment</a>
+                        <a href="支援服務.html">Q&A</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <h4>FOLLOW US</h4>
+                    <nav>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Youtube</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy;  This platform protects learning policies and displays. If you have any doubts about translation, you can send a private message to TibaMe, and you will be assisted by a dedicated person.
+        </div>
+    </div>
+
+</body>
+</html>
