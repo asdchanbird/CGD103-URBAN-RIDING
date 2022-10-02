@@ -137,6 +137,9 @@
 h1,h2,h3,h4,p,a,li,button {
     font-family:'AvantGarde Md BT';
 }
+a {
+    text-decoration: none;
+}
 .orange {
     color: #F8A151;
 }
@@ -151,7 +154,7 @@ h1,h2,h3,h4,p,a,li,button {
     margin: 10px;
 }
 /*========================================================h2.h3.h4.p 文字大小設定=====================================*/
-h1 {font-size: 48px;color: #3a3a3a;letter-spacing: 2px;}
+h1 {font-size: 48px;color: #3a3a3a;line-height: 32px;letter-spacing: 2px;}
 h2 {font-size: 32px;color: #3a3a3a;line-height: 32px;}
 h3 {font-size: 24px;color: #3a3a3a;line-height: 32px;}
 h4 {font-size: 18px;color: #3a3a3a;line-height: 32px;}
