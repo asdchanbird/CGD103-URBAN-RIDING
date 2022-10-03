@@ -176,28 +176,28 @@ a {letter-spacing: 1px;}
     display: inline-block;
     cursor: pointer;
     color: #3a3a3a;
-    transition: 0.5s;
+    transition: 0.5s ease;
 }
 .learn-more:hover {
     border: 3px solid #3a3a3a;
 }
-.button1 {/*橘色按鈕*/
+/* .button1 {
     background-color: rgba(237, 164, 21, 0.8);
     color: #ffffff;
     padding: 10px 30px;
     border: none;
     border-radius: 30px;
     font-size: 24px;
-}
-.button2 {
+} */
+/* .button2 {
     background-color: #434343;
     color: #ffffff;
     padding: 10px 30px;
     border: none;
     border-radius: 30px;
     font-size: 24px;
-}
-.btn-42,
+} */
+/* .btn-42,
 .btn-42 *,
 .btn-42 :after,
 .btn-42 :before,
@@ -266,7 +266,7 @@ a {letter-spacing: 1px;}
 }
 .btn-42:hover {
   background-color: transparent;
-}
+} */
 /*button-read*/
 .button-read {
     display: inline-block;
@@ -321,7 +321,7 @@ a {letter-spacing: 1px;}
     display: inline-block;
     cursor: pointer;
     color: #fff;
-    transition: 0.5s;
+    transition: 0.5s ease;
     text-decoration: none;
     border: none;
 }
@@ -341,7 +341,7 @@ a {letter-spacing: 1px;}
     display: inline-block;
     cursor: pointer;
     color: #fff;
-    transition: 0.5s;
+    transition: 0.5s ease;
     text-decoration: none;
     border: none;
 }
