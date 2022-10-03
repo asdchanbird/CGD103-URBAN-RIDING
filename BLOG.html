@@ -13,10 +13,11 @@
         .blog-banner {
             width: 100%;
             background-image: url("個專圖片素材/banner-news.png");
-            background-size: 100%;
+            background-size: cover;
             height: 650px;
             display: flex;
             align-items: center;
+            position: relative;
         }
         .blog-banner h1 {
             color: #fff;
@@ -24,9 +25,8 @@
         .blog-banner-title {
             width: 1200px;
             margin: auto;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            position: absolute;
+            left: 100px;
         }
         /*====================nav==================*/
         .period {
@@ -121,7 +121,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            /* background-color: #EBECF0; */
+            
         }
         .blog-item p,.blog-item h2,.blog-item h3 {
             /* margin: 10px; */
@@ -142,6 +142,7 @@
             background-color: #EBECF0;
             border-radius: 10px;
             cursor: pointer;
+            height: 136px;
         }
         .blog-card-pic {
             display: flex;
