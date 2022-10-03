@@ -176,9 +176,8 @@
         .blog-swiper{
             width:100%;
             padding-top: 100px;
-            text-align:left;
+            /* text-align: left; */
             margin: auto;
-
         }
         .blog-swiper h1{
             color:#3a3a3a;
@@ -186,7 +185,7 @@
             margin: 30px;
             text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
         }
-        .carousel{
+        .carousel {
             width:90%;
             margin:0px auto;
             display: flex;
@@ -199,12 +198,28 @@
         .carousel p {
             color: #ABA6A6;
         }
+        .swiper-pic {
+            height: 200px;
+            display: flex;
+        }
+        .swiper-pic img {
+            width: 100%;
+        }
+        .swiper-txt {
+            display: flex;
+            align-items: flex-start;
+            height: 150px;
+        }
         .carousel-card {
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
             background-color: #F5F5F5;
-            border-radius: 10px;
-            height: 350px;
+            border-radius: 10px;    
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            max-width: 30%;
+            width: 30%;
         }
         .carousel-card a {
             text-decoration: none;
@@ -214,7 +229,7 @@
         }
         .slick-slide img{
             width:100%;
-            height: 200px;
+            /* height: 200px; */
             border-radius: 10px 10px 0 0;
         }
         .blog-swiper .slick-dots li button:before {
@@ -245,7 +260,6 @@
         }
         .home-support-card p {
             color: #4a4a4a;
-            /* font-size: 18px; */
             padding: 10px;
         }
        
@@ -426,54 +440,78 @@
 
 
     <div class="blog-swiper">
-        <h1>DISCOVER LASTEST <span class="orange">BLOG</span><h2>
-            <div class="carousel">
-                <div class="carousel-card">
+        <h1>DISCOVER LASTEST <span class="orange">BLOG</span></h1>
+        <div class="carousel">
+            <div class="carousel-card">
+                <div class="swiper-pic">
                     <img src="UR-pic/hp-blog1.jpg">
+                </div>
+                <div class="swiper-txt">
                     <a href="BLOG.html">
                         <p>September 11,2022</p>
                         <h4>Musashi Velo GS 01 start  to take orders</h4>
                     </a>
                 </div>
-                <div class="carousel-card">
+            </div>
+            <div class="carousel-card">
+                <div class="swiper-pic">
                     <img src="UR-pic/hp-blog2.jpg">
+                </div>
+                <div class="swiper-txt">
                     <a href="BLOG.html">
                         <p>June 07,2022</p>
                         <h4>Behind the workshop doors:
                         a day in the life of a VanMoof Bike     Doctor</h4>
                     </a>
                 </div>
-                <div class="carousel-card">
+            </div>
+            <div class="carousel-card">
+                <div class="swiper-pic">
                     <img src="UR-pic/hp-blog3.jpg">
+                </div>
+                <div class="swiper-txt">
                     <a href="BLOG.html">
                         <p>April 14,2022</p>
                         <h4>How to hack the city:
                         tips and tricks for urban e-bike riders</h4>
                     </a>
                 </div>
-                <div class="carousel-card">
+            </div>
+            <div class="carousel-card">
+                <div class="swiper-pic">
                     <img src="UR-pic/hp-blog4.jpg">
+                </div>
+                <div class="swiper-txt">
                     <a href="BLOG.html">
                         <p>February 11,2022</p>
                         <h4>Introducing the VanMoof S5 & A5</h4>
                     </a>
                 </div>
-                <div class="carousel-card">
+            </div>
+            <div class="carousel-card">
+                <div class="swiper-pic">
                     <img src="UR-pic/hp-blog5.jpg">
-                    <a href="BLOG.html">
-                        <p>October 24,2021</p>
-                        <h4>Expanding our Service Hubs and certified workshops</h4>
-                    </a>
                 </div>
-                <div class="carousel-card">
+                    <div class="swiper-txt">
+                        <a href="BLOG.html">
+                            <p>October 24,2021</p>
+                            <h4>Expanding our Service Hubs and certified workshops</h4>
+                        </a>
+                    </div>
+            </div>
+            <div class="carousel-card">
+                <div class="swiper-pic">
                     <img src="UR-pic/hp-blog6.jpg">
-                    <a href="BLOG.html">
-                        <p>September 01,2021</p>
-                        <h4>In Pursuit:How our Bike Hunters Bust Bike Thieves</h4>
-                    </a>
                 </div>
+                    <div class="swiper-txt">
+                        <a href="BLOG.html">
+                            <p>September 01,2021</p>
+                            <h4>In Pursuit:How our Bike Hunters Bust Bike Thieves</h4>
+                        </a>
+                    </div>
             </div>
         </div>
+    </div>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
 
