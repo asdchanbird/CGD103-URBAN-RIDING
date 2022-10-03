@@ -11,12 +11,21 @@
     <style>
         /*=================================banner=====================*/
         .about-banner {
-            width: 1920px;
+            width: 100%;
             background-color: #0C1212;
-            display: flex; 
         }
-        .about-banner-pic,.about-banner-center{
-            width: 50%;
+        .about-wrapper {
+            width: 1400px;
+            margin: auto;
+            display: flex;
+        }
+        .about-banner-pic {
+            width: 800px;
+        }
+        .about-banner-center {
+            width: 600px;
+            display: flex;
+            align-items: center;
         }
         .about-banner-pic img {
             width: 100%;
@@ -28,10 +37,6 @@
         .about-banner-txt h1,.about-banner-txt h2 {
             color: #ffffff;
             margin: 20px 40px;
-        }
-        .about-banner-center {
-            display: flex;
-            align-items: center;
         }
         /*==============================*/
         .about {
@@ -182,13 +187,15 @@
 
 
     <div class="about-banner">
-        <div class="about-banner-pic">
-            <img src="UR-pic/banner-about.jpg" alt="">
-        </div>
-        <div class="about-banner-center">
-            <div class="about-banner-txt">
-                <h1>ABOUT..</h1>
-                <h2>URBAN RIDING</h2>
+        <div class="about-wrapper">
+            <div class="about-banner-pic">
+                <img src="UR-pic/banner-about.jpg" alt="">
+            </div>
+            <div class="about-banner-center">
+                <div class="about-banner-txt">
+                    <h1>ABOUT..</h1>
+                    <h2>URBAN RIDING</h2>
+                </div>
             </div>
         </div>
     </div>
