@@ -54,6 +54,7 @@
     padding: 16px 16px;
     text-decoration: none;
     text-transform: uppercase;
+    transition: 0.5s ease;
 }
 .d {
     float: left;
@@ -68,6 +69,8 @@
     padding: 14px 16px;
     background: inherit;
     text-transform: uppercase;
+    transition: 0.5s ease   ;
+
 }
 .navbar a:hover, .d:hover .d-btn {
     background-color: #101617;
