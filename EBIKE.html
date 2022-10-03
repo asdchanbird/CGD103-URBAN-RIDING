@@ -23,32 +23,45 @@
             margin: 10px;
         } */
         /*=============================filter==========================*/
-        .filter {
+        .pick-product {
+            padding-top: 100px;
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .brand-filter {
             background-color: #EBECF0;
-            padding: 20px;
             border-radius: 10px;
-            height: 300px;
+            height: 400px;
             margin: 10px;
             display: flex;
             flex-direction: column;
-            
+            width: 260px;
+            padding: 10px;
         }
-        /* .porduct-height {
-            margin-top: 80px;
-        } */
-        .filter a {
+        .ebike-product {
+            width: 880px;
+            display: flex;
+            margin: 10px;
+            flex-wrap: wrap;
+        }
+        .brand-filter h2 {
+            border-bottom: 1px solid #2D3033;
+            padding-bottom: 20px;
+        }
+        .brand-filter a {
             text-decoration: none;
             color: #4a4a4a;
+            font-size: 18px;
         }
-        .filter h2,.filter a {
+        .brand-filter h2,.brand-filter a {
             line-height: 24px;
-            margin: 10px 0;
-        }
-        .pick-product {
-            padding-top: 100px;
+            margin: 10px 20px;
         }
         
         .product-card {
+            width: 400px;
             margin:  10px;
             padding: 10px;
             background-color: #EBECF0;
@@ -57,7 +70,7 @@
             transition: 0.4s ease;
         }
         .product-card:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
         .product-card .card-image {
             height: 250px;
@@ -159,121 +172,96 @@
     <!-- <div class="cookie">
         <p>Home / E-BIKE</p>
     </div> -->
-
     <section class="pick-product">
-        <div class="container porduct-height">
-            <div class="row">
-                <div class="col-12 col-md-3">
-                    <div class="filter">
-                        <h2>Brands</h2>
-                        <hr>
-                        <a href="#">Vanmoof</a>
-                        <a href="#">Cowboy</a>
-                        <a href="#">Gogoro</a>
-                        <a href="#">Musashi Velo</a>
-                    </div>
+        <div class="brand-filter">
+            <h2>Brands</h2>
+            <a href="#">Vanmoof</a>
+            <a href="#">Cowboy</a>
+            <a href="#">Gogoro</a>
+            <a href="#">Musashi Velo</a>
+        </div>
+        <div class="ebike-product">
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="EBIKE-purchase.html">
+                        <img src="UR-pic/vf v-1去被.png" alt="">
+                    </a>
                 </div>
-                <div class="col-12 col-md-9 product">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="product-card">
-                                <div class="card-image">
-                                    <a href="EBIKE-purchase.html">
-                                        <img src="UR-pic/vf v-1去被.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-card-content">
-                                    <h3>Vanmoof V</h3>
-                                    <p>For riders 5'5''-6'8''</p>
-                                    <h3>$2,429</h3>
-                                    <button class="cart">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="product-card">
-                                <div class="card-image">
-                                    <a href="EBIKE-purchase.html">
-                                        <img src="UR-pic/vf a5-1去被.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-card-content">
-                                    <h3>Vanmoof V</h3>
-                                    <p>For riders 5'5''-6'8''</p>
-                                    <h3>$2,429</h3>
-                                    <button class="cart">Add to cart
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-12 col-md-6">
-                            <div class="product-card">
-                                <div class="card-image">
-                                    <a href="EBIKE-purchase.html">
-                                        <img src="UR-pic/vf s3-1去被.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-card-content">
-                                    <h3>Vanmoof V</h3>
-                                    <p>For riders 5'5''-6'8''</p>
-                                    <h3>$2,429</h3>
-                                    <button class="cart">Add to cart
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="col-12 col-md-6">
-                            <div class="product-card">
-                                <div class="card-image">
-                                    <a href="EBIKE-purchase.html">
-                                        <img src="UR-pic/vf x3去被.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-card-content">
-                                    <h3>Vanmoof V</h3>
-                                    <p>For riders 5'5''-6'8''</p>
-                                    <h3>$2,429</h3>
-                                    <button class="cart">Add to cart
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-12 col-md-6">
-                            <div class="product-card">
-                                <div class="card-image">
-                                    <a href="EBIKE-purchase.html">
-                                        <img src="UR-pic/vf x3去被.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-card-content">
-                                    <h3>Vanmoof V</h3>
-                                    <p>For riders 5'5''-6'8''</p>
-                                    <h3>$2,429</h3>
-                                    <button class="cart">Add to cart
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="product-card">
-                                <div class="card-image">
-                                    <a href="EBIKE-purchase.html">
-                                        <img src="UR-pic/vf x3去被.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="product-card-content">
-                                    <h3>Vanmoof V</h3>
-                                    <p>For riders 5'5''-6'8''</p>
-                                    <h3>$2,429</h3>
-                                    <button class="cart">Add to cart
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="product-card-content">
+                    <h3>Vanmoof V</h3>
+                    <p>For riders 5'5''-6'8''</p>
+                    <h3>$2,429</h3>
+                    <button class="cart">Add to cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="EBIKE-purchase.html">
+                        <img src="UR-pic/vf a5-1去被.png" alt="">
+                    </a>
+                </div>
+                <div class="product-card-content">
+                    <h3>Vanmoof V</h3>
+                    <p>For riders 5'5''-6'8''</p>
+                    <h3>$2,429</h3>
+                    <button class="cart">Add to cart
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="EBIKE-purchase.html">
+                        <img src="UR-pic/vf s3-1去被.png" alt="">
+                    </a>
+                </div>
+                <div class="product-card-content">
+                    <h3>Vanmoof V</h3>
+                    <p>For riders 5'5''-6'8''</p>
+                    <h3>$2,429</h3>
+                    <button class="cart">Add to cart
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="EBIKE-purchase.html">
+                        <img src="UR-pic/vf x3去被.png" alt="">
+                    </a>
+                </div>
+                <div class="product-card-content">
+                    <h3>Vanmoof V</h3>
+                    <p>For riders 5'5''-6'8''</p>
+                    <h3>$2,429</h3>
+                    <button class="cart">Add to cart
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="EBIKE-purchase.html">
+                        <img src="UR-pic/vf x3去被.png" alt="">
+                    </a>
+                </div>
+                <div class="product-card-content">
+                    <h3>Vanmoof V</h3>
+                    <p>For riders 5'5''-6'8''</p>
+                    <h3>$2,429</h3>
+                    <button class="cart">Add to cart
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image">
+                    <a href="EBIKE-purchase.html">
+                        <img src="UR-pic/vf x3去被.png" alt="">
+                    </a>
+                </div>
+                <div class="product-card-content">
+                    <h3>Vanmoof V</h3>
+                    <p>For riders 5'5''-6'8''</p>
+                    <h3>$2,429</h3>
+                    <button class="cart">Add to cart
+                    </button>
                 </div>
             </div>
         </div>
