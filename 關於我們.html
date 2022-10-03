@@ -11,18 +11,23 @@
     <style>
         /*=================================banner=====================*/
         .about-banner {
-            width: 100%;
-            background-color: #0C1212;   
+            width: 1920px;
+            background-color: #0C1212;
+            display: flex; 
         }
-        .width {
-            max-width: 100%;
+        .about-banner-pic,.about-banner-center{
+            width: 50%;
         }
         .about-banner-pic img {
             width: 100%;
         }
+        .about-banner-txt {
+            display: flex;
+            flex-direction: column;
+        }
         .about-banner-txt h1,.about-banner-txt h2 {
             color: #ffffff;
-            margin: 50px 0;
+            margin: 20px 40px;
         }
         .about-banner-center {
             display: flex;
@@ -38,21 +43,37 @@
             font-weight: 600;
             margin: 10px;
         }
+        .about-story-pic {
+            display: flex;
+            width: 570px;
+        }
         .about-story-pic img {
             width: 100%;
             border-radius: 10px;
         }
         .about-story-center {
+            width: 600px;
+        }
+        .about-story-txt {
             display: flex;
-            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
         }
         .about-story-txt h3 {
-            margin: 50px 0;
+            margin: 30px 0;
         }
         .about-story-pic-position {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            max-width: 234px;
+            margin: 10px 0;
+        }
+        .about-story-pic-logo {
+            max-width: 436px;
+        }
+        .about-story-pic-position img {
+            width: 100%;
         }
         /* ===================================================*/
         .about-special {
@@ -159,21 +180,15 @@
         </div>
     </div>
 
-   
+
     <div class="about-banner">
-        <div class="container width">
-            <div class="row">
-                <div class="col-12 col-md-8">
-                    <div class="about-banner-pic">
-                        <img src="個專圖片素材/banner-about.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 about-banner-center">
-                    <div class="about-banner-txt">
-                        <h1>ABOUT..</h1>
-                        <h2>URBAN RIDING</h2>
-                    </div>
-                </div>
+        <div class="about-banner-pic">
+            <img src="個專圖片素材/banner-about.jpg" alt="">
+        </div>
+        <div class="about-banner-center">
+            <div class="about-banner-txt">
+                <h1>ABOUT..</h1>
+                <h2>URBAN RIDING</h2>
             </div>
         </div>
     </div>
@@ -190,14 +205,14 @@
                         </h3>
                     </div>
                 </div>
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-md-7 about-story-center">
                     <div class="about-story-pic">
                         <div class="row">
                             <div class="col-12 col-md-4 about-story-pic-position">
                                 <img src="個專圖片素材/about-2.jpg" alt="">
                                 <img src="個專圖片素材/about-3.jpg" alt="">
                             </div>
-                            <div class="col-12 col-md-8">
+                            <div class="col-12 col-md-8 about-story-pic-logo">
                                 <img src="個專圖片素材/about-6.png" alt="">
                             </div>
                         </div>
@@ -206,6 +221,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="about-special">
         <div class="about-story-container">
