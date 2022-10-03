@@ -158,10 +158,11 @@ a {
 }
 /*========================================================h2.h3.h4.p 文字大小設定=====================================*/
 h1 {font-size: 48px;color: #3a3a3a;line-height: 32px;letter-spacing: 2px;}
-h2 {font-size: 32px;color: #3a3a3a;line-height: 32px;}
-h3 {font-size: 24px;color: #3a3a3a;line-height: 32px;}
-h4 {font-size: 18px;color: #3a3a3a;line-height: 32px;}
-p {font-size: 16px;color: #4a4a4a;line-height: 32px;}
+h2 {font-size: 32px;color: #3a3a3a;line-height: 32px;letter-spacing: 1px;}
+h3 {font-size: 24px;color: #3a3a3a;line-height: 32px;letter-spacing: 1px;}
+h4 {font-size: 18px;color: #3a3a3a;line-height: 32px;letter-spacing: 1px;}
+p {font-size: 16px;color: #4a4a4a;line-height: 32px;letter-spacing: 1px;}
+a {letter-spacing: 1px;}
 /*===================================================button級別================================================= */
 .learn-more {
     background-color: transparent;
@@ -425,6 +426,7 @@ section {
     line-height: 1.4;
     padding: 5px 0;
     font-size: 16px;
+    transition: 0.3s;
 }
 .footer-item nav a:hover {
     color: #fff;
