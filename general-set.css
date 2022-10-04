@@ -140,6 +140,8 @@
     text-decoration: underline;
 }
 /*=====================================字型===================================*/
+@import url('http://fonts.cdnfonts.com/css/avantgarde-md-bt');
+
 h1,h2,h3,h4,p,a,li,button {
     font-family:'AvantGarde Md BT';
 }
