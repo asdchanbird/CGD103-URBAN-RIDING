@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="general-set.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js?v=987"></script>
+    <style>
+        .blog-wrap {
+            width: 100%;
+
+        }
+        .blog-content {
+            width: 900px;
+            margin: auto;
+    
+        }
+        .blog-content-pic {
+            margin: 10px;
+        }
+        .blog-content-pic img {
+            width: 100%;
+            /* object-fit: cover; */
+        }
+        .blog-content-txt h2 {
+            padding: 10px 0;
+        }
+        .blog-content-txt {
+            margin: 10px 40px;
+            letter-spacing: 0.08em;
+        }
+        /*sfafa*/
+        .app-container {
+            text-align: center;
+        }
+        .app-section {
+            width: 100%;
+            /* background-attachment: ;   */
+            background-color: #101617;
+            height: 1200px;
+        } 
+        .app-content {
+            width: 1400px;
+            margin: auto;
+            text-align: center;
+        }
+        .hp-app {
+            margin-bottom: 80px;
+            padding: 10px;
+        }
+        .appTxt {
+            margin-top: 50px;
+        }
+        .appTxt h2 {
+            padding-bottom: 30px;
+        }
+        .appTxt h2,.appTxt p{
+            color: #fff;
+            line-height: 40px;
+        }
+        .appTxt-pic {
+            margin: 10px 50px; 
+        }
+        .appTxt-pic img{
+            width: 12%;
+            margin: 0 10px;
+            object-fit: cover;
+        }
+        .media {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1.8fr 1fr 1fr 1fr;
+            gap: 10px;
+            position: relative;
+        }
+        .media-item {
+            padding: 20px 0;
+            display: block;
+        }   
+        .media-item img {
+            width: 100%;
+            display: block;
+            transition: .6s ease-in-out;
+        }
+        .app-animation img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="blog-wrap">
+        <div class="blog-content">
+            <div class="blog-content-pic">
+                <img src="UR-pic/blog-1.png" alt="">
+            </div>
+            <div class="blog-content-txt">
+                <p>2022/2/25</p>
+                <h2>Revolutionizing the ride:Our Head of Product Design, Job Stehmann, reveals the all-new VanMoof S5.</h2>
+                <p>We've never been ones to shy away from ushering in a sea of change. Deep in VanMoof HQ, our top minds have been hard at work crafting two e-bike models that will trigger a radical shift in e-mobility once again. .</p>
+                <button class="button-read" style="vertical-align:middle"><span>Read more </span></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-wrap">
+        <div class="blog-content">
+            <div class="blog-content-pic">
+                <img src="UR-pic/blog-2.jpg" alt="">
+            </div>
+            <div class="blog-content-txt">
+                <p>2022/2/25</p>
+                <h2>Turning the tables on the dreaded commute:</h2>
+                <p>Elon Musk’s email demanding Tesla employees come into the office for the full working week didn’t go down so well. And without enough parking spots or desks available for employees, how could you blame them? The office-versus-remote debate after pandemic restrictions lifted has divided many.</p>
+                <button class="button-read" style="vertical-align:middle"><span>Read more </span></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-container">
+        <div class="slogan">
+            <h1>UNLOCK OUR <span class="orange">APP</span></h1>
+        </div>
+        <div class="app-section">
+            <div class="app-content">
+                <div class="hp-app">
+                    <div class="appTxt">
+                        <h2>URBAN RIDING APP</h2>
+                        <p>The app is your daily companion on the road. Navigate through your city, turn by turn.Track your bike's location anytime, anywhere.</p>
+                        <p>See your ride data at a glance and connect with fellow Cowboy riders. </p>
+                    </div>
+                    <div class="appTxt-pic">
+                        <img src="UR-pic/ios-app.png" alt="">
+                        <img src="UR-pic/android-app.png" alt="">
+                    </div>
+                    <a href="APP.html">
+                        <button class="explore">Explore</button>
+                    </a>
+                </div>
+                <div class="media">
+                    <div class="app-animation" style="transform: translate3d(0px, 164.8px, 0px)" data-scrub="0.7">
+                        <img src="UR-pic/appfloat7.webp" alt="">
+                        <img src="UR-pic/appfloat6.webp" alt="">
+                    </div>
+                    <div class="app-animation" style="transform: translate3d(0px, 184.8px, 0px)" data-scrub="0.8">
+                            <img src="UR-pic/appfloat2.webp" alt="">
+                            <img src="UR-pic/appfloat3.webp" alt="">
+                            <img src="UR-pic/appfloat1.webp" alt="">
+                    </div>
+                    <div class="app-animation" style="transform: translate3d(0px, 158.7px, 0px)" data-scrub="0.2">
+                        <img src="UR-pic/appfloat4.webp" alt="">
+                        <img src="UR-pic/APPHONEPAGE1.png" alt="">
+                    </div>
+                    <div class="motion">
+                        <picture class="media-item">
+                            <img src="UR-pic/app2定位.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="app-animation" style="transform: translate3d(0px, 157.4px, 0px)" data-scrub="0.4">
+                        <img src="UR-pic/APPHONEPAGE2.png" alt="">
+                        <img src="UR-pic/APPHONEPAGE4.png" alt="">
+                    </div>
+                    <div class="app-animation" style="transform: translate3d(0px, 176.1px, 0px)" data-scrub="0.8">
+                        <img src="UR-pic/APPHONEPAGE3.png" alt="">
+                        <img src="UR-pic/appfloat5.webp" alt="">
+                        <img src="UR-pic/appfloat10.webp" alt="">
+        
+                    </div>
+                    <div class="app-animation" style="transform: translate3d(0px, 164.8px, 0px)" data-scrub="0.7">
+                        <img src="UR-pic/appfloat8.webp" alt="">
+                        <img src="UR-pic/appfloat9.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+        // let smoother = ScrollSmoother.create({
+        //     wrapper: ".blog-wrap",
+        //     content: ".blog-content",
+        //     smooth: 2,
+        //     effects: true,
+        // });
+
+
+        let delay = document.querySelectorAll(".app-animation");
+        delay.forEach( part => {
+            let imageAni = gsap.to(part.querySelectorAll("img"), {
+                y: "-80vh",
+                ease: "none",
+                paused:true
+            })
+            let progressto = gsap.quickTo(imageAni, "progress", {
+                ease: "power3", duration: parseFloat(part.dataset.scrub) || 0.1
+            });
+            
+            gsap.to(part.querySelector(".media-item"), {
+                y: "80vh",
+                ease: "none",
+                scrollTrigger: {
+                    scrub: true,
+                    trigger: part,
+                    start: "top bottom",
+                    end: "bottom top",
+                    onUpdate: self => progressto(self.progress)
+                }
+            });
+        });
+    </script>
+</body>
+</html>

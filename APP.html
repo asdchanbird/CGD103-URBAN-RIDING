@@ -23,19 +23,25 @@
             max-width: 1400px;
             height: 100%;
             margin: auto;
+            display: flex;
+            flex-direction: column;
         }
         .banner-app-txt {
-            height: 100%;
+            height: 60%;
             width: 680px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: flex-start;
             padding: 10px;
         }
-        .banner-app-txt img {
-            margin: 30px 0;
-            width: 10%;
+        .banner-app-pic img {
+            margin: 30px 10px;
+            width: 25%;
+        }
+        .banner-app-pic {
+            width: 680px;
+            height: 40%;
         }
         .banner-app-txt h1,.banner-app-txt h3 {
             color: #ffffff;
@@ -229,9 +235,9 @@
                         </div>
                     </div>
                     <a class="underline" href="APP.html">APP</a>
-                    <a href="ABOUT.html">ABOUT</a>
                     <a href="BLOG.html">BLOG</a>
                     <a href="SUPPORT.html">SUPPORT</a>
+                    <a href="ABOUT.html">ABOUT</a>
                 </nav>
             </div>
             <div class="header-cart">
@@ -247,7 +253,10 @@
                 <h1>URBAN RIDING App</h1>
                 <h3>At the heart of UR,is your road companion. Connected to you and any path you take.
                 </h3>
-                <img src="UR-pic/qr.white.png" alt="">
+            </div>
+            <div class="banner-app-pic">
+                <img src="UR-pic/ios-app.png" alt="">
+                <img src="UR-pic/android-app.png" alt="">
             </div>
         </div>
     </div>
@@ -387,19 +396,12 @@
                     </nav>
                 </div>
                 <div class="footer-item">
-                    <a href="APP.html">
-                        <h4>APP</h4>
-                    </a>
-                </div>
-                <div class="footer-item">
-                    <a href="ABOUT.html">
-                        <h4>ABOUT</h4>
-                    </a>
-                </div>
-                <div class="footer-item">
-                    <a href="BLOG.html">
-                        <h4>BLOG</h4>
-                    </a>
+                    <h4>ABOUT</h4>
+                    <nav>
+                        <a href="APP.html">App</a>
+                        <a href="BLOG.html">Blog</a>
+                        <a href="ABOUT.html">About us</a>
+                    </nav>
                 </div>
                 <div class="footer-item">
                     <h4>SUPPORT</h4>

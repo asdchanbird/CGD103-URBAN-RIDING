@@ -47,7 +47,7 @@
 }
 .navbar a {
     float: left;
-    font-size: 18px;
+    /* font-size: 16px; */
     color: #3a3a3a;
     text-align: center;
     margin: 0 10px;
@@ -151,6 +151,9 @@ a {
 .orange {
     color: #F8A151;
 }
+.slogan-white h1 {
+    color: #fff;
+}
 /*==================================hr設定===========================================================*/
 /* .header-hr {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 20px;
@@ -162,12 +165,12 @@ a {
     margin: 10px;
 }
 /*========================================================h2.h3.h4.p 文字大小設定=====================================*/
-h1 {font-size: 48px;color: #3a3a3a;line-height: 32px;letter-spacing: 2px;}
-h2 {font-size: 32px;color: #3a3a3a;line-height: 32px;letter-spacing: 1px;}
+h1 {font-size: 48px;color: #3a3a3a;line-height: 42px;letter-spacing: 2px;}
+h2 {font-size: 32px;color: #3a3a3a;line-height: 42px;letter-spacing: 1px;}
 h3 {font-size: 24px;color: #3a3a3a;line-height: 32px;letter-spacing: 1px;}
 h4 {font-size: 18px;color: #3a3a3a;line-height: 32px;letter-spacing: 1px;}
 p {font-size: 16px;color: #4a4a4a;line-height: 32px;letter-spacing: 1px;}
-a {letter-spacing: 1px;}
+a {letter: spac;ing: 1px;}
 /*===================================================button級別================================================= */
 .learn-more {
     background-color: transparent;
@@ -280,7 +283,7 @@ a {letter-spacing: 1px;}
     border: none;
     color: #3a3a3a;
     text-align: left;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     padding: 10px;
     width: 200px;
@@ -392,16 +395,16 @@ section {
     flex-wrap: wrap;
 }
 .footer-logo {
-    width: 200px;
+    width: 300px;
     display: flex;
     /* justify-content: center; */
     align-items: center;
 }
 .footer-logo img {
-    width: 80%;
+    width: 60%;
 }
 .footer-container {
-    width: 1000px;
+    width: 900px;
     display: flex;
     flex-wrap: wrap;
     padding: 40px 0;
