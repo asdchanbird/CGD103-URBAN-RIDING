@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="general-set.css">
+    <link rel="stylesheet" href="RWD.css">
     <style>
         /*====================suppport-banner=======================*/
         .support-banner {
@@ -26,6 +27,7 @@
         .support-banner-pic img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
         .support-banner-title {
             width: 500px;
@@ -70,9 +72,12 @@
             margin: 10px;
             text-decoration: underline;
         }
+/*------------------------------------------*/
     </style>
+    <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
+    <input type="checkbox" id="menu-switch">
     <div class="header">
         <div class="header-container">
             <div class="header-logo">
@@ -116,6 +121,11 @@
                 <img src="UR-pic/4.png" alt="">
                 <img src="UR-pic/2.png" alt="">
             </div>
+            <label for="menu-switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
     </div>
 

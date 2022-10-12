@@ -47,15 +47,76 @@
             margin: 10px;
             flex-wrap: wrap;
         }
-        .brand-filter a {
-            text-decoration: none;
+        
+       
+
+
+        /*===========================================*/
+        .product-card {
+            width: 400px;
+            margin:  10px;
+            padding: 10px;
+            background-color: #EBECF0;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .04);
+            transition: 0.4s ease;
+        }
+        .product-card:hover {
+            transform: scale(1.03);
+        }
+        .product-card .card-image {
+            height: 250px;
+            padding: 0 20px;
+            text-align: center;
+            background-color: #EBECF0;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            transition: 0.4s ease;
+        }
+        .card-image:hover {
+            transform: rotate(-5deg);
+        }
+        .product-card .card-image img {
+            /* height: 250px; */
+            width: 100%;
+            cursor: pointer;
+        }
+        .product-card .product-card-content h3 {
+            color: #3a3a3a;
+            margin: 10px;
+        }
+        .product-card .product-card-content p {
             color: #4a4a4a;
+            font-weight: 500;
+            margin: 8px 10px 22px;
+            text-align: justify;
+        }
+
+        .product-card .product-card-content .cart {
+            cursor: pointer;
+            color: #fff;
+            width: 100%;
+            /* display: flex; */
+            height: 50px;
             font-size: 18px;
+            font-weight: 600;
+            background-color: #434343;
+            border: none;
+            border-radius: 10px;
+            transition: 0.5s ease;
         }
-        .brand-filter h2,.brand-filter a {
-            line-height: 24px;
-            margin: 0 20px;
+        .product-card-content .cart:hover {
+            background-color: #2D3033;
         }
+
+        .header {
+            border-bottom: 1px solid rgba(190, 170, 170, 0.5);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+            margin-bottom: 10px;
+        }
+        /*=================================*/
         .brand-filter ul {
             list-style-type: none;
         }
@@ -137,71 +198,7 @@
             color: #FFF;
             border-radius: 10px;
         }
-        /*==============prodcut-card====================*/        
-        .product-card {
-            width: 400px;
-            margin:  10px;
-            padding: 10px;
-            background-color: #EBECF0;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, .04);
-            transition: 0.4s ease;
-        }
-        .product-card:hover {
-            transform: scale(1.03);
-        }
-        .product-card .card-image {
-            height: 250px;
-            padding: 0 20px;
-            text-align: center;
-            background-color: #EBECF0;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            transition: 0.4s ease;
-        }
-        .card-image:hover {
-            transform: rotate(-5deg);
-        }
-        .product-card .card-image img {
-            /* height: 250px; */
-            width: 100%;
-            cursor: pointer;
-        }
-        .product-card .product-card-content h3 {
-            color: #3a3a3a;
-            margin: 10px;
-        }
-        .product-card .product-card-content p {
-            color: #4a4a4a;
-            font-weight: 500;
-            margin: 8px 10px 22px;
-            text-align: justify;
-        }
 
-        .product-card .product-card-content .cart {
-            cursor: pointer;
-            color: #fff;
-            width: 100%;
-            /* display: flex; */
-            height: 50px;
-            font-size: 18px;
-            font-weight: 600;
-            background-color: #434343;
-            border: none;
-            border-radius: 10px;
-            transition: 0.5s ease;
-        }
-        .product-card-content .cart:hover {
-            background-color: #2D3033;
-        }
-
-        .header {
-            border-bottom: 1px solid rgba(190, 170, 170, 0.5);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
-            margin-bottom: 10px;
-        }
     </style>
 </head>
 <body>
@@ -254,15 +251,10 @@
 
     <!-- <div class="cookie">
         <p>Home / E-BIKE</p>
+
+
     </div> -->
     <section class="pick-product">
-        <!-- <div class="brand-filter">
-            <h2>Brands</h2>
-            <a href="#">Vanmoof</a>
-            <a href="#">Cowboy</a>
-            <a href="#">Gogoro</a>
-            <a href="#">Musashi Velo</a>
-        </div> -->
         <div class="brand-filter">
             <h2>Brands </h2>
 	<!-- Contenedor -->
@@ -298,7 +290,34 @@
                 </li>
             </ul>
         </div>
+        <script>
+            $(function() {
+            var Accordion = function(el, multiple) {
+                this.el = el || {};
+                this.multiple = multiple || false;
 
+                // Variables privadas
+                var links = this.el.find('.brand-link');
+                // Evento
+                links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+            }
+
+            Accordion.prototype.dropdown = function(e) {
+                var $el = e.data.el;
+                    $this = $(this),
+                    $next = $this.next();
+
+                $next.slideToggle();
+                $this.parent().toggleClass('open');
+
+                if (!e.data.multiple) {
+                    $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+                };
+            }	
+
+            var accordion = new Accordion($('#accordion'), false);
+        });
+        </script>
 
         <div class="ebike-product">
             <div class="product-card">
@@ -386,34 +405,7 @@
             </div>
         </div>
     </section>
-    <script>
-        $(function() {
-        var Accordion = function(el, multiple) {
-            this.el = el || {};
-            this.multiple = multiple || false;
 
-            // Variables privadas
-            var links = this.el.find('.brand-link');
-            // Evento
-            links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-        }
-
-        Accordion.prototype.dropdown = function(e) {
-            var $el = e.data.el;
-                $this = $(this),
-                $next = $this.next();
-
-            $next.slideToggle();
-            $this.parent().toggleClass('open');
-
-            if (!e.data.multiple) {
-                $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
-            };
-        }	
-
-        var accordion = new Accordion($('#accordion'), false);
-    });
-    </script>
 
     <div class="footer">
         <div class="main-footer">

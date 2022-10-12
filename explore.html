@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="general-set.css">
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+         .product-explore {
+            width: 1200px;
+            background-color: #BADBF3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            margin: auto;
+            position: relative;
+            /* z-index: 1; */
+        }
+        .product-explore h1 {
+            margin: 10px;
+        }
+        .product-explore img {
+            width: 80%;
+        }
+        .explore-part {
+            position: absolute;
+            z-index: 6;
+            /* width: 1200px; */
+            height: 300px;
+            left: 100px;
+        }
+        .explore-pic {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .link-large {
+            background-color: #F8A151;
+            border-radius: 50%;
+            display: block;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            transition: 0.5s;
+        }
+        .link-1 {
+            left: 380px;
+            top: 137px;
+        }
+        .link-2 {
+            left: 610px;
+            top: 60px;
+        }
+        .link-3 {
+            left: 280px;
+            top: 300px;
+        }
+        .link-4 {
+            left: 450px;
+            top: 320px;
+        }
+        /*====*/
+        .modal-container:target {
+            display: flex;
+        }
+        .modal-container {
+            position: fixed;
+            bottom: 300px;
+            
+            z-index: 8;
+
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 1200px;
+            height:35%;
+    
+            animation: fadein 0.3s forwards; 
+        }
+        .modal {
+            width: 900px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            top: 50px;
+        }
+        .modal img {
+            object-fit: cover;
+            width: 100%;
+            vertical-align: top;
+        }
+        .link-cancel {
+            width: 30px;
+            height: 30px;
+            color: #F8A151;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            border-radius: 50%;
+            background-color: #EBECF0;
+            border: 1px solid #101617;
+        }
+        .link-cancel::before {
+            content: 'X';
+            transform: translateY(-0.2rem);
+            position: absolute;
+            color: #434343;
+            font-weight: bold;
+            top: 10px;
+        }
+        .modal-container .link-cancel:visited div[container] {
+            animation: fadeout 0.3s forwards;
+        }
+        .link-cancel:hover,.link-1:focus {
+            border-color: #434343;
+            background-color: #fff;
+            transform: translateY(-0.2rem);
+        }
+        @keyframes fadein {
+            0% {opacity: 0;}
+            25% {opacity: 0.25;}
+            50% {opacity: 0.5;}
+            75% {opacity: 0.75;}
+            100% {opacity: 1;}
+        }
+        @keyframes fadeout {
+            0% {opacity: 1;}
+            25% {opacity: 0.75;}
+            50% {opacity: 0.5;}
+            75% {opacity: 0.25;}
+            100% {opacity: 0;}
+        }
+        .blob {
+            /* background: black; */
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+            transform: scale(1);
+            animation: pulse-black 1.5s infinite;
+        }
+        .blob.orange-spot {
+            background: rgba(248,161,81, 1);
+            box-shadow: 0 0 0 0 rgba(248,161,81, 1);
+            animation: pulse-orange 2s infinite;
+        }
+        @keyframes pulse-orange {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="product-explore">
+        <h1>Explore every details</h1>
+        <div class="explore-pic">
+            <img src="UR-pic/vf s5去被.png" alt="">
+            <div class="explore-part" id="m1-c">
+                <a href="#m1-o" class="  link-large link-1 blob orange-spot"></a>
+                <a href="#m2-o" class="link-large link-2 blob orange-spot"></a>
+                <a href="#m3-o" class="link-large link-3 blob orange-spot"></a>
+                <a href="#m4-o" class="link-large link-4 blob orange-spot"></a>
+            </div>
+
+            <div class="modal-container" id="m1-o" style="background: transparent;">
+                <div class="modal">
+                    <img src="UR-pic/bike-back.webp" alt="">
+                    <a href="#m1-c" class="link-cancel" id="link-cancel">
+                    </a>
+                </div>
+            </div>
+            <div class="modal-container" id="m2-o" style="background: transparent;">
+                <div class="modal">
+                    <img src="UR-pic/bike-head.jpg" alt="">
+                    <a href="#m1-c" class="link-cancel" id="link-cancel">
+                    </a>
+                </div>
+            </div>
+            <div class="modal-container" id="m3-o" style="background: transparent;">
+                <div class="modal">
+                    <img src="UR-pic/bike-key.png" alt="">
+                    <a href="#m1-c" class="link-cancel" id="link-cancel">
+                    </a>
+                </div>
+            </div>
+            <div class="modal-container" id="m4-o" style="background: transparent;">
+                <div class="modal">
+                    <img src="UR-pic/bike-pad.png" alt="">
+                    <a href="#m1-c" class="link-cancel" id="link-cancel">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+</body>
+</html>

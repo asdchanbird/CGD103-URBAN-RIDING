@@ -1,4 +1,7 @@
 /* =========================================header============================================*/
+#menu-switch {
+    display: none;
+}
 .header {
     width: 100vw;
     height: 70px;
@@ -140,10 +143,15 @@
     text-decoration: underline;
 }
 /*=====================================字型===================================*/
+@font-face {
+    font-family: 'Avant Garde Medium Oblique BT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avant Garde Medium Oblique BT'), url('AVGARDMI_2.woff') format('woff');
+    }
 @import url('http://fonts.cdnfonts.com/css/avantgarde-md-bt');
-
 h1,h2,h3,h4,p,a,li,button {
-    font-family:'AvantGarde Md BT';
+    font-family: 'AvantGarde Md BT', sans-serif;
 }
 a {
     text-decoration: none;
@@ -410,8 +418,8 @@ section {
     padding: 40px 0;
 }
 .footer-item {
-    width: 0;
-    flex-grow: 1;
+    width: 185px;
+    /* flex-grow: 1; */
     margin: 0 20px;
 }
 .footer-item h4 {
