@@ -11,27 +11,31 @@
     <style>
         /*====================blog-content========*/
         .blog-banner {
-            width: 100%;
-            background-image: url("UR-pic/banner-news.png");
-            background-size: cover;
-            height: 650px;
             display: flex;
             align-items: center;
             margin: auto;
             position: relative;
+            padding-top: 70px;
+            width: 100%;
+        }
+        .blog-banner-pic {
+            width: 100%;
+            
+        }
+        .blog-banner-pic img {
+            width: 100%;
+            /* object-fit: cover; */
         }
         .blog-banner-title h1 {
             color: #fff;
-            position: absolute;
-            left: 30px;
         }
         .blog-banner img {
             width: 100%;    
         }
         .blog-banner-title {
-            width: 1200px;
-            margin: auto;
-            position: relative;
+            width: 100%;
+            position: absolute;
+            left: 60px;
         }
 
         /*====================nav==================*/
@@ -161,6 +165,7 @@
             border-radius: 10px;
         }
     </style>
+    <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
@@ -216,6 +221,9 @@
     </div>
 
     <div class="blog-banner">
+        <div class="blog-banner-pic">
+            <img src="UR-pic/banner-news.png" alt="">
+        </div>
         <div class="blog-banner-title">
             <h1>DISCOVER LASTEST BLOG</h1>
         </div>

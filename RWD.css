@@ -218,9 +218,6 @@
     .support-banner-title {
         width: 42.8571428571%;
     }
-    .support-banner {
-        padding-top: 70px;
-    }
 }
 @media screen and (max-width:1024px){
     .support-banner-pic {
@@ -236,9 +233,8 @@
         position: absolute;
         display: flex;
         justify-content: center;
-        align-items: center;
         width: 100%;
-        margin: auto;
+        /* margin: 0 auto; */
         left: 0;
         right: 0;
         top: 0;
@@ -288,8 +284,16 @@
     .about {
         width: 100%;
     }
+    .about-story {
+        width: 100%;
+    }
+    .about-banner {
+        width: 100%;
+    }
     .about-wrapper {
         width: 100%;
+        position: relative;
+        background-color: #08080A;
     }
     .about-banner-center {
         width: 50%;
@@ -305,23 +309,119 @@
     .about-story-txt h3 {
         margin: 30px 20px;
     }
-
+    /*=========*/
+    .about-special,.about-story-container  {
+        width: 100%;
+    }
 }
 @media screen and (max-width:1024px) {
-    
-}
-@media screen and (max-width:768px){
-    .about-banner {
-        padding-top: 100px;
-    }
-    .about-banner-txt h1 {
-        font-size: 32px;
-    }
-    .about-banner-txt h2 {
+    .about-story-txt h3 {
         font-size: 24px;
+    }
+    .about-story-pic-logo {
+        padding: 10px;
+    }
+    .about-banner-pic {
+        width: 100%;
+    }
+    .about-banner-pic img {
+        opacity: 0.3;
+    }
+    .about-banner-center {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        /* width: 100%; */
+        text-align: center  ;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .about-banner-txt h1, .about-banner-txt h2 {
+        margin: 10px 20px;
+    }
+    /*============about內容=======*/
+    .about-special {
+        /* padding: 10px; */
+        display: block;
+    }
+    .about-story-container {
+        /* margin: 10px; */
+        width:  97.5260416667%;
+        margin: 10px auto;
+    }
+    .about-story-center {
+        width: 100%;
     }
     .about-story {
         display: flex;
         flex-direction: column-reverse;
     }
 }
+@media screen and (max-width:768px){
+    .about-banner-txt h1 {
+        font-size: 24px;
+    }
+    .about-banner-txt h2 {
+        font-size: 18px;
+    }
+    .about-story-container {
+        width:  94.6666666667%;
+    }
+    .about-banner-txt h1, .about-banner-txt h2 {
+        margin: 10px;
+    }
+}
+
+/*=============BLOG RWD=================*/
+/*----------banner-----------*/
+@media screen and (max-width:1200px){
+    .period {
+        width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+}
+@media screen and (max-width:1024px){
+    .blog-content {
+        width: 100%;
+    }
+    .blog-banner-pic  {
+        background-color: #08080A;
+    }
+    .blog-banner-pic img {
+        opacity: 0.3;
+    }
+    .blog-banner-title {
+        display: flex;
+        justify-content: center;
+        left: 0;
+    }
+}
+@media screen and (max-width:768px){
+    .blog-banner-title h1 {
+        font-size: 24px;
+    }
+}
+/*--------------blog-card----------*/
+@media screen and (max-width:1200px){
+    .blog-container {
+        width: 100%;
+        justify-content: center;
+    }
+    .blog-item {
+        width: 100%;
+    }
+}
+@media screen and (max-width:1024px){
+
+}
+@media screen and (max-width:768px){
+
+}
+
+
+
+
