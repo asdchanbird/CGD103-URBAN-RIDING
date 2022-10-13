@@ -200,7 +200,7 @@
         width: 35%;
     }
     .copyright {
-        padding: 10px;
+        padding: 10px 0;
     }
 }
 /*=========================support-banner RWD====================*/
@@ -217,6 +217,9 @@
     }
     .support-banner-title {
         width: 42.8571428571%;
+    }
+    .support-banner {
+        padding-top: 70px;
     }
 }
 @media screen and (max-width:1024px){
@@ -243,9 +246,6 @@
     }
 }
 @media screen and (max-width:768px){
-    .support-banner {
-        padding-top: 30px;
-    }
     .support-banner-title h1 {
         font-size: 32px;
     }
@@ -255,12 +255,16 @@
     .support-container,.support-container h2 {
         width: 100%;
     }
+    .support-container {
+        justify-content: center;
+    }
     .support-container h2 {
         padding: 10px;
     }
     .support-card {
         width: 21.0369782889%;
     }
+    
 }
 @media screen and (max-width:1024px){
     .support-card {
@@ -279,4 +283,45 @@
     }
 }
 
-/*===========*/
+/*=============about====================*/
+@media screen and (max-width:1200px){
+    .about {
+        width: 100%;
+    }
+    .about-wrapper {
+        width: 100%;
+    }
+    .about-banner-center {
+        width: 50%;
+    }
+    /*===============*/
+    .about-story-center {
+        display: flex;
+        width: 50%;
+    }
+    .about-story-pic,.about-story-txt {
+        width: 100%;
+    }
+    .about-story-txt h3 {
+        margin: 30px 20px;
+    }
+
+}
+@media screen and (max-width:1024px) {
+    
+}
+@media screen and (max-width:768px){
+    .about-banner {
+        padding-top: 100px;
+    }
+    .about-banner-txt h1 {
+        font-size: 32px;
+    }
+    .about-banner-txt h2 {
+        font-size: 24px;
+    }
+    .about-story {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

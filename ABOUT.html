@@ -43,14 +43,21 @@
             width: 1200px;
             margin: auto;
         }
-        .about h1 {
-            padding: 5px;
+        .about h2 {
+            /* padding: 5px; */
             font-weight: 600;
             margin: 10px;
         }
+        .about-story {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
         .about-story-pic {
             display: flex;
-            width: 570px;
+            width: 100%;
+            /* width: 570px; */
         }
         .about-story-pic img {
             width: 100%;
@@ -65,20 +72,26 @@
             flex-direction: column;
         }
         .about-story-txt h3 {
-            margin: 30px 0;
+            margin: 30px 10px;
         }
         .about-story-pic-position {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            max-width: 234px;
-            margin: 10px 0;
+            justify-content: flex-start;
+            width: 40%;
+            /* margin: 10px 0; */
         }
         .about-story-pic-logo {
-            max-width: 436px;
+            width: 60%;
+            display: flex;
+            align-items: flex-end;
+        }
+        .about-story-pic-logo img {
+            margin: 10px;
         }
         .about-story-pic-position img {
-            width: 100%;
+            width: 80%;
+            margin: 10px;
         }
         /* ===================================================*/
         .about-special {
@@ -137,8 +150,10 @@
             /* z-index: -5; */
         }
     </style>
+    <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
+    <input type="checkbox" id="menu-switch">
     <div class="header">
         <div class="header-container">
             <div class="header-logo">
@@ -182,6 +197,11 @@
                 <img src="UR-pic/4.png" alt="">
                 <img src="UR-pic/2.png" alt="">
             </div>
+            <label for="menu-switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
     </div>
 
@@ -201,28 +221,24 @@
     </div>
 
     <section class="about">
-        <h1>Our story</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-5 about-story-center">
-                    <div class="about-story-txt">
-                        <h3>The inspiration and ethos for Urban Riding begun with the name.
-                        </h3>
-                        <h3>In the same way that a mountain bike is suitable for riding across mountains, UR is for pedaling around city.
-                        </h3>
-                    </div>
+        <h2>Our story</h2>
+        <div class="about-story">
+            <div class="about-story-center">
+                <div class="about-story-txt">
+                    <h3>The inspiration and ethos for Urban Riding begun with the name.
+                    </h3>
+                    <h3>In the same way that a mountain bike is suitable for riding across mountains, UR is for pedaling around city.
+                    </h3>
                 </div>
-                <div class="col-12 col-md-7 about-story-center">
-                    <div class="about-story-pic">
-                        <div class="row">
-                            <div class="col-12 col-md-4 about-story-pic-position">
-                                <img src="UR-pic/about-2.jpg" alt="">
-                                <img src="UR-pic/about-3.jpg" alt="">
-                            </div>
-                            <div class="col-12 col-md-8 about-story-pic-logo">
-                                <img src="UR-pic/about-6.png" alt="">
-                            </div>
-                        </div>
+            </div>
+            <div class="about-story-center">
+                <div class="about-story-pic">
+                    <div class="about-story-pic-position">
+                        <img src="UR-pic/about-2.jpg" alt="">
+                        <img src="UR-pic/about-3.jpg" alt="">
+                    </div>
+                    <div class="about-story-pic-logo">
+                        <img src="UR-pic/about-6.png" alt="">
                     </div>
                 </div>
             </div>
