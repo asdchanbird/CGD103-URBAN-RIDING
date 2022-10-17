@@ -33,7 +33,7 @@
             width: 100%;    
         }
         .blog-banner-title {
-            width: 100%;
+            width:50%;
             position: absolute;
             left: 60px;
         }
@@ -132,7 +132,9 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
+        }
+        .blog-main-pic img{
+            width: 100%;
         }
         .blog-item p,.blog-item h2,.blog-item h3 {
             /* margin: 10px; */
@@ -148,14 +150,20 @@
             cursor: pointer;
         }
         .blog-card {
-            /* padding: 10px; */
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
             background-color: #EBECF0;
             border-radius: 10px;
             cursor: pointer;
-            height: 136px;
+            /* height: 136px; */
+            display: flex;
+            margin: 10px;
+        }
+        .blog-card-txt {
+            width: 70%;
         }
         .blog-card-pic {
+            width: 30%;
+            padding: 10px;
             display: flex;
             align-items: center;
             background-color: #EBECF0;
@@ -269,14 +277,50 @@
         </div>
     </section>
 
+            
 
     <section class="blog-container">
         <div class="blog-item blog-shadow">
-            <img src="UR-pic/blog-5.jpg" alt="">
-            <p>September 23,2022</p>
-            <h3>Rider Stories: Mark– Perspectives on a city</h3>
+            <div class="blog-main-pic">
+                <img src="UR-pic/blog-5.jpg" alt="">
+            </div>
+            <div class="blog-main-txt">
+                <p>September 23,2022</p>
+                <h3>Rider Stories: Mark– Perspectives on a city</h3>
+            </div>
         </div>
         <div class="blog-item">
+            <div class="blogCard-wrap">
+                <div class="blog-card">
+                    <div class="blog-card-txt">
+                        <p>March 23,2022</p>
+                        <h3>Musashi Velo GS 01 start to take orders</h3>
+                    </div>
+                    <div class="blog-card-pic">
+                        <img src="UR-pic/hp-blog1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-txt">
+                        <p>April 14,2022</p>
+                        <h3>Tips and tricks for urban e-bike riders</h3>
+                    </div>
+                    <div class="blog-card-pic">
+                        <img src="UR-pic/blog-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-txt">
+                        <p>June 07,2022</p>
+                        <h3>Introducing the VanMoof S5 & A5</h3>
+                    </div>
+                    <div class="blog-card-pic">
+                        <img src="UR-pic/blog-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="blog-item">
             <div class="blog-card">
                 <div class="container">
                     <div class="row">
@@ -315,7 +359,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="blog-more">
             <a href="#">

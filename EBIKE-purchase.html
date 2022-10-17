@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="general-set.css">
+    <script src="jquery-3.6.1.js"></script>
+	<script src="jquery-ui.js"></script>
+    <script>
+    </script>
     <style>
         .header {
             border-bottom: 1px solid rgba(190, 170, 170, 0.5);
@@ -49,14 +53,15 @@
             color: #3A3A3A;
         } 
         .product-detail {
-            width: 560px;
-            padding: 10px;
+            width: 600px;
+            /* padding: 10px; */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
         .prodcut-detail-title {
             margin-bottom: 20px;
+            margin: 10px;
         }
         .prodcut-detail-title h1 {
             margin: 10px;
@@ -67,7 +72,8 @@
         .prodcut-detail-color {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around   ;
+            margin: 10px;
+            justify-content: space-around;
         }
         .prodcut-detail-color .color {
             background-color: #ffffff;
@@ -80,8 +86,9 @@
         .color:hover {
             border: 2px solid #3A3A3A;
         }
-        .color:active {
-            background-color: #D9D9D9;
+        .color:focus {
+            background-color: #EBECF0;
+            border: 2px solid #3A3A3A;
         }
         .product-detail-purchase {
             display: flex;
@@ -176,8 +183,10 @@
             align-items: center;
             width: 1200px;
             height:35%;
-    
-            animation: fadein 0.3s forwards; 
+            /* width: 100vw;
+            height: 100vh; */
+
+            /* animation: fadein 0.3s forwards;  */
         }
         .modal {
             width: 900px;
@@ -325,6 +334,7 @@
             width: 600px;
         }
     </style>
+    <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
     <input type="checkbox" id="menu-switch">

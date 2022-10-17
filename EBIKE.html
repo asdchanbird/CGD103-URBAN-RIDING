@@ -32,19 +32,19 @@
             flex-wrap: wrap;
         }
         .brand-filter {
-            background-color: #EBECF0;
+            /* background-color: #EBECF0; */
             border-radius: 10px;
-            height: 550px;
-            margin: 20px 10px;
+            /* height: 550px; */
+            /* margin: 20px 10px; */
             display: flex;
             flex-direction: column;
-            width: 260px;
-            padding: 10px;
+            width: 300px;
+            /* padding: 10px; */
         }
         .ebike-product {
-            width: 880px;
+            width: 900px;
             display: flex;
-            margin: 10px;
+            /* margin: 10px; */
             flex-wrap: wrap;
         }
         .brand-filter a {
@@ -65,12 +65,13 @@
             margin: 10px 20px;
         }
         .accordion {
-            width: 100%;
-            max-width: 360px;
-            margin: 30px auto 20px;
+            /* width: 100%; */
+            /* max-width: 260px; */
+            margin: 30px 20px 20px;
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
-            border-radius: 4px;
+            border-radius: 10px;
+            background-color: #EBECF0;
         }
         .accordion .brand-link {
             cursor: pointer;
@@ -139,8 +140,8 @@
         }
         /*==============prodcut-card====================*/        
         .product-card {
-            width: 400px;
-            margin:  10px;
+            width: 390px;
+            margin:  20px;
             padding: 10px;
             background-color: #EBECF0;
             border-radius: 20px;
@@ -165,7 +166,7 @@
             transform: rotate(-5deg);
         }
         .product-card .card-image img {
-            /* height: 250px; */
+            max-height: 250px;
             width: 100%;
             cursor: pointer;
         }
@@ -203,6 +204,7 @@
             margin-bottom: 10px;
         }
     </style>
+    <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
@@ -261,18 +263,12 @@
     <!-- <div class="cookie">
         <p>Home / E-BIKE</p>
     </div> -->
+
     <section class="pick-product">
-        <!-- <div class="brand-filter">
-            <h2>Brands</h2>
-            <a href="#">Vanmoof</a>
-            <a href="#">Cowboy</a>
-            <a href="#">Gogoro</a>
-            <a href="#">Musashi Velo</a>
-        </div> -->
         <div class="brand-filter">
-            <h2>Brands </h2>
-	<!-- Contenedor -->
+            <!-- <h2>Brands </h2> -->
             <ul id="accordion" class="accordion">
+                <h2>Brands </h2>
                 <li>
                     <div class="brand-link"></i>Vanmoof<i class="menu-down"></i></div>
                     <ul class="submenu">
@@ -304,8 +300,6 @@
                 </li>
             </ul>
         </div>
-
-
         <div class="ebike-product">
             <div class="product-card">
                 <div class="card-image">

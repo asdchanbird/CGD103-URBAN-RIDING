@@ -421,7 +421,200 @@
 @media screen and (max-width:768px){
 
 }
+/*==============App=====================*/
+@media screen and (max-width:1200px){
+    .appfunction,.app-wrap {
+        width: 100%;
+    }
+    .app-item {
+        width: 25%;
+    }
+
+/*--------app-1------*/
+    .app-1 {
+        width: 100%;
+    }
+    .app-container {
+        width: 100%;
+        justify-content: center;
+    }
+    .app-plan-route {
+        width: 48.0487804878%;
+    }
+}   
+@media screen and (max-width:1024px){
+    .app-item {
+        width: 50%;
+        margin: 0 auto 100px;
+        
+    }
+    .app-wrap {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .app-plan-route {
+        width: 46%;
+    }
+    .banner-app-txt {
+        align-items: center;
+    }
+}
+@media screen and (max-width:768px){
+    .banner-app-txt,.banner-app-pic {
+        width: 100%;
+    }
+    .app-wrap {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .app-item {
+        /* width: 80%; */
+        margin: 0 auto 100px;
+        
+    }
+    .app-plan-route {
+        width: 100%;
+        margin: 20px;
+    }
+}
+/*=========key unlock=======*/
+@media screen and (max-width:1200px){
+    .app-lock {
+        width: 50%;
+    }
+    #lock-video {
+        margin: 10px;
+    }
+    .app-unlock-phone {
+        left: -30px;
+    }
+}
+@media screen and (max-width:1024px){
+    .app-lock {
+        width: 100%;
+    }
+    #lock-video {
+        margin: 50px 10px 50px 50px;
+    }
+    .app-unlock-phone {
+        width: 20%;
+        top: 230px;
+        left: -10px;
+    }
+    .banner-container {
+        /* margin: auto; */
+        align-items: center;
+    }
+    .banner-app-pic,.banner-app-txt {
+        text-align: center;
+        /* margin:  0 auto; */
+    }
+}
+@media screen and (max-width:768px){
+
+}
+/*=========track=======*/
+@media screen and (max-width:1200px){
+    .app-track {
+        width: 49%;
+    }
+}
+@media screen and (max-width:1024px){
+    .app-track img {
+        width: 90%;
+    }
+    .app-track .float {
+        left: 23%;
+    }
+}   
+@media screen and (max-width:768px){
+
+}
+
+/*=========achievement=========*/
+@media screen and (max-width:1200px){
+    .app-achieve-txt {
+        width: 100%;
+    }
+    .app-achieve {
+        width: 50%;
+    }
+}
+@media screen and (max-width:1024px){
+
+}
+@media screen and (max-width:768px){
+    .app-achieve {
+        width: 100%;
+    }
+    .app-achieve-pic {
+        margin: 20px;
+    }
+}
+/*==============ebike==============*/
+@media screen and (max-width:1200px){
+    .pick-product {
+        width: 100%;
+    }
+    .brand-filter {
+        width: 25%;
+    }
+    .ebike-product {
+        width: 75%;
+    }
+    .product-card {
+        width: 42%;
+    }
+}
+@media screen and (max-width:1024px){
+    .brand-filter {
+        width: 30%;
+    }
+    .ebike-product {
+        width: 70%;
+    }
+    .product-card {
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px){
+    .brand-filter {
+        width: 100%;
+    }
+    .ebike-product {
+        width: 100%;
+    }
+}
+/*===========ebike purchase============*/
+@media screen and (max-width:1200px){
+    .product-wrap,.product-explore,.product-wrap {
+        width: 100%;
+    }
+    .product-photo {
+        width: 50%;
+    }
+    .product-detail {
+        width: 50%;
+    }
+}
+@media screen and (max-width:1024px){
+
+}
+@media screen and (max-width:768px){
+
+}
 
 
+@media screen and (max-width:1200px){
+    .app-icon {
+        width: 80%;
+        height: 80%;
+        line-height: 80%;
+    }
+}
+@media screen and (max-width:1024px){
 
+}
+@media screen and (max-width:768px){
 
+}

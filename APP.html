@@ -12,6 +12,7 @@
         .banner {
             width: 100%;
             height: 700px;
+            padding-top: 70px;
             background-color: #101617;
             background:
                 linear-gradient(115deg, #101617 50%,transparent 50%) center center / 100% 100%,
@@ -33,7 +34,7 @@
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-start;
-            padding: 10px;
+            /* padding: 10px; */
         }
         .banner-app-pic img {
             margin: 30px 10px;
@@ -45,8 +46,8 @@
         }
         .banner-app-txt h1,.banner-app-txt h3 {
             color: #ffffff;
-            padding-bottom: 0.3em;
             margin-bottom: 0.3em;
+            padding: 10px;
         }
         /*=========================function title==================*/
         .app-wrap {
@@ -110,6 +111,7 @@
             margin: auto;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
         .app-plan-route {
             width: 580px;
@@ -137,7 +139,7 @@
         /*==========================app-unlock========================*/
         .app-lock {
             width: 580px;
-            margin: 10px;
+            /* margin: 10px; */
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -150,29 +152,33 @@
             top: 110px;
             align-items: center;
         }
+        #lock-video {
+            border-radius: 10px;
+        }
         .app-lock-txt h3,.app-lock-txt p {
-            margin: 10px;
+            margin: 10px 20px;
         } 
         /*==========================app-track========================*/
-        .app-track {
-            width: 580px;
-            margin: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            justify-content: space-between;
+        .track-title {
+            width: 100%;
         }
-        .app-track p {
-            margin: 10px;
+        .track-title p {
+            margin: 20px;
         }
         .app-track img {
             width: 100%;
             position: relative;
             border-radius: 10px;
+            margin: 10px;
         }
-        .app-track .float {
+        .app-track {
+            width: 50%;
+            display: flex;
+            align-items: flex-end;
+        }
+         .float {
             z-index: 2;
-            left: 100px;
+            left: 15%;
         }
         .track-border {
             border-bottom: 1px solid #a8a8a8;
@@ -181,23 +187,25 @@
           /*==========================app-achieve======================*/
         .app-achieve-txt {
             width: 1200px;
-            padding: 10px;
         }
         .app-achieve {
-            width: 580px;
+            width: 600px;
+        }
+        .app-achieve-pic {
             margin: 10px;
         }
         .app-achieve-txt p {
-            margin: 10px;
+            margin: 20px;
         }
-        .app-achieve img {
+        .app-achieve-pic img {
             width: 100%;
         }
         .achieve-down {
-            align-items: end;
+            align-items: flex-end;
         }
         
     </style>
+    <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
@@ -261,7 +269,7 @@
             </div>
             <div class="banner-app-pic">
                 <img src="UR-pic/ios-app.png" alt="">
-                <img src="UR-pic/android-app.png" alt="">
+                <img src="UR-pic/android-app.png" alt="App-search">
             </div>
         </div>
     </div>
@@ -272,7 +280,7 @@
         <div class="app-wrap">
             <div class="app-item">
                 <div class="app-icon">
-                    <img src="UR-pic/route.png" alt="">
+                    <img src="UR-pic/route.png" alt="route">
                 </div>
                 <div class="app-subtitle">
                     <h3>Plan Your Route</h3>
@@ -280,7 +288,7 @@
             </div>
             <div class="app-item">
                 <div class="app-icon">
-                    <img src="UR-pic/unlock.png" alt="">
+                    <img src="UR-pic/unlock.png" alt="Lock">
                 </div>
                 <div class="app-subtitle">
                     <h3>Keyless unlock</h3>
@@ -288,7 +296,7 @@
             </div>
             <div class="app-item">
                 <div class="app-icon">
-                    <img src="UR-pic/track.png" alt="">
+                    <img src="UR-pic/track.png" alt="Track">
                 </div>
                 <div class="app-subtitle">
                     <h3>Track Your Activities</h3>
@@ -296,7 +304,7 @@
             </div>
             <div class="app-item">
                 <div class="app-icon">
-                    <img src="UR-pic/achievement.png" alt="">
+                    <img src="UR-pic/achievement.png" alt="achievement">
                 </div>
                 <div class="app-subtitle">
                     <h3>Achievements</h3>
@@ -346,7 +354,7 @@
                 </div>
             </div>
             <div class="app-lock">
-                <video autoplay="" muted="" loop="" playsinline="" id="" style="border-radius: 10px;">
+                <video autoplay="" muted="" loop="" playsinline="" id="lock-video">
                     <source src="UR-pic/touch-unlock.mp4">
                 </video>
                 <img class="app-unlock-phone" src="UR-pic/app2定位.png" alt="">
@@ -355,10 +363,12 @@
     </section>
 
     <section class="app-1">
-        <h2 class="track-border">Track Your Activities</h2>
+        <div class="track-title">
+            <h2 class="track-border">Track Your Activities</h2>
+            <p>You can enable your bike to automatically track your rides, without using GPS. Measure your distance, speed, and battery usage. </p>
+        </div>
         <div class="app-container">
-            <div class="app-track ">
-                <p>You can enable your bike to automatically track your rides, without using GPS. Measure your distance, speed, and battery usage. </p>
+            <div class="app-track">
                 <img class="float" src="UR-pic/track4.png" alt="">
             </div>
             <div class="app-track">
@@ -368,18 +378,20 @@
     </section>
 
     <section class="app-1">
-        <h2 class="achieve-border track-border">Achievements</h2>
+        <div class="app-achieve-txt">
+            <h2 class="track-border">Achievements</h2>
+            <p>Collect badges for your achievements and show them off with pride.</p>
+        </div>
         <div class="app-container achieve-down">
-            <div class="app-achieve-txt">
-
-                <!-- <hr class="content-hr"> -->
-                <p>Collect badges for your achievements and show them off with pride.</p>
+            <div class="app-achieve">
+                <div class="app-achieve-pic">
+                    <img src="UR-pic/app-achieve1.png" alt="">
+                </div>
             </div>
             <div class="app-achieve">
-                <img src="UR-pic/app-achieve1.png" alt="">
-            </div>
-            <div class="app-achieve">
-                <img src="UR-pic/app-achieve2.png" alt="">
+                <div class="app-achieve-pic">
+                    <img src="UR-pic/app-achieve2.png" alt="">
+                </div>
             </div>
         </div>
 
