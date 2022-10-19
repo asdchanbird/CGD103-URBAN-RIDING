@@ -36,19 +36,44 @@
         .product-photo img {
             width: 100%;
         }
-        .product-photo-side ul {
+        .product-photo-side {
+            /* display: flex; */
+            justify-content: center;
+            position: relative;
+        }
+        .photoBike-hover {
             display: flex;
-            flex-direction: row;
             justify-content: center;
         }
-        .product-photo-side li {
+        .product-photo-side button {
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            /* justify-content: center; */
+        }
+        .mouseover img {
+            display: none;
+            width: 80%;
+            position: absolute;
+            bottom: 150%;
+            left: 0;
+        }
+        /* .photoBike-main  {
+            display: flex;
+            justify-content: center;
+        } */
+        .photoBike-main img{
+            width: 100%;
+        }
+        /* .product-photo-side li {
             color: #4a4a4a;
             text-decoration: none;
             font-size: 24px;
             padding: 10px;
             margin: 10px;
-        }
-        .product-photo-side li:hover {
+        } */
+        .product-photo-side button:hover {
             text-decoration: underline;
             color: #3A3A3A;
         } 
@@ -98,7 +123,19 @@
         .product-detail-total h2 {
             margin: 5px 10px;
         }
+        .mouseover img{
+            width: 100%;
+        }
+        .mouseover {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
 
+        .mouseover-small img {
+            width: 80%;
+            margin: auto;         
+        }
         /*==================detail=============================*/
         /* .product-explore {
             width: 1200px;
@@ -487,14 +524,25 @@
 
     <section class="product-wrap">
         <div class="product-photo">
-            <img src="UR-pic/vf v-explore.png" alt="">
-            <div class="product-photo-side ">
-                <ul>
-                    <li>Side</li>
-                    <li>Front</li>
-                    <li>Back</li>
-                    <li>3/4</li>
-                </ul>
+            <!-- <img src="UR-pic/vf v-explore.png" alt=""> -->
+            <div class="product-photo-side">
+                <!-- <button class="mouseover">
+                    <img src="UR-pic/vf v-explore.png" style="display: block;" alt="">
+                </button> -->
+                <div class="photoBike-main">
+                    <img src="UR-pic/vf v-explore.png" style="display: block;" alt="">
+                </div>
+                <div class="photoBike-hover">
+                    <button class="mouseover">Front
+                        <img src="UR-pic/s5-head.png" alt="S5-head">
+                    </button>
+                    <button class="mouseover">Back
+                        <img src="UR-pic/s5-backed2.png" alt="S5-back">
+                    </button>
+                    <button class="mouseover mouseover-small">3/4
+                        <img src="UR-pic/s5-34-1.png" alt="S5-3/4">
+                    </button>
+                </div>
             </div>
         </div>
         <div class="product-detail">
@@ -530,6 +578,25 @@
         </div>
     </section>
 
+
+    <script>
+        let imgs = document.querySelectorAll(".product-photo-side img");
+        let mouseover = document.querySelectorAll(".mouseover")
+        
+        for(let i=0;i<imgs.length;i++){
+            $(mouseover[i]).hover(function(){
+                if(i < 5){
+                    $(imgs[i+1]).stop(true).toggle(1000) 
+                    $(imgs[0]).stop(true).toggle(1000) 
+                }
+            })
+        }
+
+        
+        // $(mouseover).hover(function(){
+        //     $('.mouseover img').stop(true).toggle(1000)
+        // })
+    </script>
     <!-- <section class="product-explore">
         <h1>Explore every details</h1>
         <img src="UR-pic/vf v-explore.png" alt="">
@@ -538,7 +605,7 @@
         <h1>Explore every details</h1>
         <div class="explore-pic" id="m1-c">
             <div class="explore-bike">
-                <img src="UR-pic/vf s5去被.png" alt="">
+                <img src="UR-pic/vf s5去被.png" alt="VF S5">
                 <a href="#myModal" class=" link-large link-1 blob orange-spot" id="sized"></a>
                 <a href="#myModal1" class="link-large link-2 blob orange-spot" id="sized1"></a>
                 <a href="#myModal2" class="link-large link-3 blob orange-spot" id="sized2"></a>
@@ -550,7 +617,7 @@
                 <div class="modal-content animated zoomIn">
                     <div class="modal-body nav">
                         <span class="close">×</span>
-                        <img src="UR-pic/bike-back.webp" alt="">
+                        <img src="UR-pic/bike-back.webp" alt="bike-back">
                     </div>
                 </div>
             </div>
@@ -559,7 +626,7 @@
                 <div class="modal-content animated zoomIn">
                     <div class="modal-body nav">
                         <span class="close">×</span>
-                        <img src="UR-pic/bike-head.jpg" alt="">
+                        <img src="UR-pic/bike-head.jpg" alt="bike-head">
                     </div>
                 </div>
             </div>
@@ -567,7 +634,7 @@
                 <div class="modal-content animated zoomIn">
                     <div class="modal-body nav">
                         <span class="close">×</span>
-                        <img src="UR-pic/bike-gear1.png" alt="">
+                        <img src="UR-pic/bike-gear1.png" alt="bike-gear">
                     </div>
                 </div>
             </div>
@@ -575,7 +642,7 @@
                 <div class="modal-content animated zoomIn">
                     <div class="modal-body nav">
                         <span class="close">×</span>
-                        <img src="UR-pic/bike=pedal2.jpg" alt="">
+                        <img src="UR-pic/bike=pedal2.jpg" alt="bike-pedal">
                     </div>
                 </div>
             </div>

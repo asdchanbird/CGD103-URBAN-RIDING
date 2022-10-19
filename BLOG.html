@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBAN RIDING-blog</title>
     <link rel="stylesheet" href="reset.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">  -->
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="general-set.css">
+    <script src="jquery-3.6.1.js"></script>
+	<script src="jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
+    
+    
     <style>
         /*====================blog-content========*/
         .blog-banner {
@@ -172,6 +178,141 @@
             width: 100%;
             border-radius: 10px;
         }
+        /*=========*/
+
+        /* ===== Select Box ===== */
+        .period-wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .sel {
+            font-size: 24px;
+            display: inline-block;
+            margin: 50px auto 20px;
+            width: 20%;
+           
+            position: relative;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .sel::before {
+        position: absolute;
+        content: '\f063';
+        /* font-family: 'FontAwesome'; */
+        font-size: 2em;
+        color: #FFF;
+        right: 20px;
+        top: calc(50% - 0.5em);
+        }
+
+        .sel.active::before {
+        transform: rotateX(-180deg);
+        }
+
+        .sel__placeholder {
+            display: block;
+            font-family: 'AvantGarde Md BT';
+            font-size: 24px;
+            color: #3A3A3A;
+            padding: 10px 20px;
+            text-align: left;
+            pointer-events: none;
+            user-select: none;
+            visibility: visible;
+        }
+
+        .sel.active .sel__placeholder {
+            visibility: hidden;
+        }
+
+        .sel__placeholder::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 20px;
+            content: attr(data-placeholder);
+            visibility: hidden;
+        }
+
+        .sel.active .sel__placeholder::before {
+            visibility: visible;
+        }
+
+        .sel__box {
+            position: absolute;
+            top: calc(100% + 4px);
+            left: -4px;
+            display: none;
+            list-style-type: none;
+            text-align: left;
+            font-size: 18px;
+            background-color: #FFF;
+            width: calc(100% + 8px);
+            box-sizing: border-box;
+        }
+
+        .sel.active .sel__box {
+            display: block;
+            animation: fadeInUp 500ms;
+        }
+
+        .sel__box__options {
+        display: list-item;
+        font-family: 'AvantGarde Md BT';
+        font-size: 18px;
+        color: #4a4a4a;
+        padding: 0.5em 1em;
+        user-select: none;
+        }
+
+        .sel__box__options::after {
+        content: '\f00c';
+        /* font-family: 'AvantGarde Md BT'; */
+        font-size: 0.5em;
+        margin-left: 5px;
+        display: none;
+        }
+
+        .sel__box__options.selected::after {
+            display: inline;
+        }
+
+        .sel__box__options:hover {
+            background-color: #ebedef;
+        }
+
+        /* ----- Select Box Black Panther ----- */
+        .sel {
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        }
+        .sel--black-panther {
+            z-index: 3;
+        }
+        /* ===== Keyframes ===== */
+        @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 20px, 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+        }
+
+        @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+        }
     </style>
     <link rel="stylesheet" href="RWD.css">
 </head>
@@ -237,7 +378,7 @@
         </div>
     </div>
     
-    <nav class="period">
+    <!-- <nav class="period">
         <ul>
             <li><a href="#">Period</a>
                 <ul class="period-time">
@@ -247,7 +388,70 @@
                 </ul>
             </li>
         </ul>
-    </nav>
+    </nav> -->
+    <div class="period-wrap">
+        <div class="sel sel--black-panther">
+            <select name="select-profession" id="select-profession">
+                <option value="" disabled>Period</option>
+                <option value="hacker">2022/12</option>
+                <option value="gamer">2022/11</option>
+                <option value="developer">2022/10</option>
+                <option value="programmer">2022/9</option>
+                <option value="designer">2022/8</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+       $('.sel').each(function() {
+        $(this).children('select').css('display', 'none');
+        
+        var $current = $(this);
+        
+        $(this).find('option').each(function(i) {
+            if (i == 0) {
+            $current.prepend($('<div>', {
+                class: $current.attr('class').replace(/sel/g, 'sel__box')
+            }));
+            
+            var placeholder = $(this).text();
+            $current.prepend($('<span>', {
+                class: $current.attr('class').replace(/sel/g, 'sel__placeholder'),
+                text: placeholder,
+                'data-placeholder': placeholder
+            }));
+            
+            return;
+            }
+            
+            $current.children('div').append($('<span>', {
+            class: $current.attr('class').replace(/sel/g, 'sel__box__options'),
+            text: $(this).text()
+            }));
+        });
+        });
+
+        // Toggling the `.active` state on the `.sel`.
+        $('.sel').click(function() {
+        $(this).toggleClass('active');
+        });
+
+        // Toggling the `.selected` state on the options.
+        $('.sel__box__options').click(function() {
+        var txt = $(this).text();
+        var index = $(this).index();
+        
+        $(this).siblings('.sel__box__options').removeClass('selected');
+        $(this).addClass('selected');
+        
+        var $currentSel = $(this).closest('.sel');
+        $currentSel.children('.sel__placeholder').text(txt);
+        $currentSel.children('select').prop('selectedIndex', index + 1);
+        });
+    </script>
+
+
+
 
     <section class="blog-wrap">
         <div class="blog-content">

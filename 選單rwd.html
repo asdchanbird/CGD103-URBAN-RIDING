@@ -87,15 +87,15 @@
                 justify-content: space-between;
             }
             .hb span {
-                width: 32px;
+                /* width: 32px;
                 height: 2px;
                 background-color: #3a3a3a;
                 opacity: 1;
                 position: absolute;
                 left: 0;
                 right: 0;
-                margin: auto;
-                transform: rotate(0);
+                margin: auto; */
+                /* transform: rotate(0); */
             }
             .menu {
                 position: absolute;
@@ -106,17 +106,58 @@
                 opacity: 0;
                 transform: opacity 1s 0s,
                            left 1s 1s;
+                
             }
-            .hb span:nth-child(1){
+            #menu-switch input {
+                display: block;
+                width: 40px;
+                height: 32px;
+                position: absolute;
+                top: -7px;
+                left: -5px;
+                
+                cursor: pointer;
+                
+                opacity: 0; /* hide this */
+                z-index: 2; /* and place it over the hamburger */
+                
+                -webkit-touch-callout: none;
+            }
+            .hb span:first-child
+            {
+                 transform-origin: 0% 0%;
+            }
+            .hb span:nth-last-child(2)
+            {
+                transform-origin: 0% 100%;
+            }
+            /* .hb span:nth-child(1){
                 top: 7px;
+                transform-origin: 0% 0%;
             }
             .hb span:nth-child(2){
                 top: 19px;
-            }
-            .hb span:nth-child(3){
+                transform-origin: 0% 100%;
+            } */
+            /* .hb span:nth-child(3){
                 top: 31px;
+            } */
+            #menu-switch input:checked ~ .hb span {
+                opacity: 1;
+                transform: rotate(45deg) translate(-2px, -1px);
+                background: #232323;
             }
-            #menu-switch:checked + .header .hb span:nth-child(1){
+            #menu-switch input:checked ~ .hb span:nth-last-child(3) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+            #menu-switch input:checked ~ .hb span:nth-last-child(2) {
+                transform: rotate(-45deg) translate(0, -1px);
+            }
+
+
+
+            /* #menu-switch:checked + .header .hb span:nth-child(1){
                 animation: no1 1s 1s forwards;
             }
             #menu-switch:checked + .header .hb span:nth-child(2){
@@ -124,13 +165,13 @@
             }
             #menu-switch:checked + .header .hb span:nth-child(3){
                 animation: no3 1s 1s forwards;
-            }
-            #menu-switch:checked + .header .menu {/*不是任何東西都可以被check*/
-                /* display: block; */
+            } */
+            #menu-switch:checked + .header .menu {/*不是任何東西都可以被check */
+                display: block;
                 left: 0;
                 opacity: 1;
-                transition: opacity 1s 2s;
-            }
+                transition: opacity 1s 1s;
+            } 
             @keyframes no1 {
                 0%{ top: 7px; transform: rotate(0deg);}
                 50%{ top: 19px; transform: rotate(0deg);}

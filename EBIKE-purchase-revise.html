@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="general-set.css">
     <script src="jquery-3.6.1.js"></script>
 	<script src="jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
     <script>
     </script>
     <style>
@@ -125,6 +124,9 @@
             position: relative;
             /* z-index: 1; */
         }
+        .product-explore h1 {
+            margin: 10px;
+        }
         .explore-bike img {
             width: 80%;
             height: 100%;
@@ -196,6 +198,21 @@
 
             /* animation: fadein 0.3s forwards;  */
         }
+        /* .modal {
+            width: 900px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            top: 50px;
+        }
+        .modal img {
+            object-fit: cover;
+            width: 100%;
+            vertical-align: top;
+        } */
         .link-cancel {
             width: 30px;
             height: 30px;
@@ -296,7 +313,6 @@
         }
         .description1-pic img {
             width: 80%;
-            object-fit: cover;
         }
         .description2 .description1-pic{
             display: flex;
@@ -304,7 +320,6 @@
         }
         .description2 .description1-txt img {
             width: 100%;
-            object-fit: cover;
         }
         /*=======================product-specify================*/
         .product-specify {
@@ -490,9 +505,9 @@
             <img src="UR-pic/vf v-explore.png" alt="">
             <div class="product-photo-side ">
                 <ul>
-                    <li>Side</li>
                     <li>Front</li>
                     <li>Back</li>
+                    <li>Side</li>
                     <li>3/4</li>
                 </ul>
             </div>
@@ -544,7 +559,12 @@
                 <a href="#myModal2" class="link-large link-3 blob orange-spot" id="sized2"></a>
                 <a href="#myModal3" class="link-large link-4 blob orange-spot" id="sized3"></a>
             </div>
-       
+            <!-- <div class="explore-part">
+                <a href="#myModal" class=" link-large link-1 blob orange-spot" id="sized"></a>
+                <a href="#myModal1" class="link-large link-2 blob orange-spot" id="sized1"></a>
+                <a href="#myModal2" class="link-large link-3 blob orange-spot" id="sized2"></a>
+                <a href="#myModal3" class="link-large link-4 blob orange-spot" id="sized3"></a>
+            </div> -->
             
             <div id="myModal" class="modal">
                 <div class="modal-content animated zoomIn">

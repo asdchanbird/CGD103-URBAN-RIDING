@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="general-set.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
     <style>
         .main-wrapper {
             width: 1200px;
@@ -78,14 +81,12 @@
         }
         .product-pop .product-pop-txt {
             width: 600px;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
             margin: auto;
-            background-color: #EBECF0;
+            /* display: flex; */
+            flex-direction: column;
+            justify-content: center;
         }
-        .homepage-wrap .cowboy3,.cowboy3 .product-pop-txt {
+        .homepage-wrap .cowboy3 {
             background-color: #D7D0BD;
         }
         .product-pop-txt h2 {
@@ -303,6 +304,7 @@
             object-fit: cover;
         }
     </style>
+    <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
     <input type="checkbox" id="menu-switch">
@@ -600,8 +602,7 @@
             </div>
         </div>
     </div>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+        
 
         <script>
         $(document).ready(function(){

@@ -150,7 +150,7 @@
     src: local('Avant Garde Medium Oblique BT'), url('AVGARDMI_2.woff') format('woff');
     }
 @import url('http://fonts.cdnfonts.com/css/avantgarde-md-bt');
-h1,h2,h3,h4,p,a,li,button {
+h1,h2,h3,h4,p,a,li,button,option,select {
     font-family: 'AvantGarde Md BT', sans-serif;
 }
 a {

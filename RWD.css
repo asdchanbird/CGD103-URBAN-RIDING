@@ -77,7 +77,8 @@
         right: 0;
         margin: auto;
         transform: rotate(0);
-    }
+      }
+   
     .menu {
         position: absolute;
         background-color: #fff;
@@ -589,32 +590,213 @@
 @media screen and (max-width:1200px){
     .product-wrap,.product-explore,.product-wrap {
         width: 100%;
+        display: flex;
     }
     .product-photo {
-        width: 50%;
+        width: 45%;
+        margin: 10px;
     }
     .product-detail {
         width: 50%;
     }
+    .product-photo-side {
+        margin: 10px;
+    }
 }
 @media screen and (max-width:1024px){
-
+    .product-photo {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .product-detail {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .explore-pic {
+        margin-top: 30px;
+    }
 }
 @media screen and (max-width:768px){
-
+    .product-explore h1 {
+        font-size: 24px;
+    }
+    .product-explore {
+        justify-content: space-between;
+    }
 }
 
-
+/*===========ebike purchase-descirbe============*/
 @media screen and (max-width:1200px){
-    .app-icon {
-        width: 80%;
-        height: 80%;
-        line-height: 80%;
+    .description1 {
+        width: 100%;
+        /* margin: auto; */
+    }
+    .description1-pic,.description1-txt,.description1-txt {
+        width: 42%;
+    }
+    .description1-pic {
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+}
+@media screen and (max-width:1024px){
+    .description1 {
+        width: 82%;
+    }
+    .description2 {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    .description .description1:nth-child(2n){
+        justify-content: center;
+        margin: 20px auto;
+    }
+}
+@media screen and (max-width:768px){
+    .description1 {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .description1-txt {
+        width: 90%;
+    }
+    .description1-pic img {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+    .description1-txt h2 {
+        font-size: 24px;
+        font-size: 500;
+    }
+    .description1-txt p {
+        font-size: 14px;
+    }
+}
+/*=========product-Specifications========*/
+@media screen and (max-width:1200px){
+    .product-specify,.product-specification  {
+        width: 100%;
+    }
+    .specification-main,.specification-sub {
+        width: 45%;
+    }
+    .product-wrap h2 {
+        margin-left: 4%
+    }
+    .specification-main h3 {
+        margin-left: 10%;
+    }
+    .content-hr {
+        width: 90%;
+        margin: 10px auto;
     }
 }
 @media screen and (max-width:1024px){
 
 }
 @media screen and (max-width:768px){
+    .specification-main h3 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
 
+
+/*============Homepage=======*/
+@media screen and (max-width:1200px){
+    .video-section {
+        height: 100%;
+    }
+    .homepage-section,.homepage-wrap {
+        width: 100%;
+    }
+    .product-pop {
+        width: 90%;
+        margin: 10px auto;
+        height: 400px;
+    }
+    .product-sub {
+        width: 28%;
+        margin: 20px auto;
+    }
+    .product-pop .product-pop-txt,.product-pop .product-pop-pic {
+        width: 50%;
+    }
+
+    /*=============hp-app=======*/
+    .app-section {
+        height: 1200px;
+    }
+    .app-content {
+        width: 100%;
+    }
+    .hp-app {
+        width: 90%;
+    }
+    /*=============hp-support=======*/
+    .home-support-wrap {
+        width: 90%;
+    }
+    .home-support-card {
+        width: 30%;
+        margin: 10px auto;
+    }
+}
+@media screen and (max-width:1024px){
+    .slogan h1 {
+        font-size: 32px;
+    }
+    .product-sub {
+        width: 45%;
+        /* margin: 20px auto; */
+    }
+    /*=============hp-app=======*/
+
+
+    /*=============hp-support=======*/
+    .home-support-card {
+        width: 45%;
+    }
+}
+@media screen and (max-width:768px){
+    .product-sub {
+        width: 88%;
+    }
+    .video {
+        /* overflow: hidden; */
+        padding-top: 70px;
+        height: 100%;
+    }
+    .product-pop {
+        flex-direction: column;
+        /* justify-content: flex-end; */
+        height: 500px;
+    }
+    .product-pop .product-pop-pic {
+        width: 100%;
+    }
+    .product-pop .product-pop-txt {
+        width: 100%;
+        justify-content: flex-end;
+        margin: 0 auto 20px; 
+    }
+    .homepage-wrap .product-pop:nth-child(2n) {
+        flex-direction: column;
+    }
+    /*=============hp-app=======*/
+    .app-section {
+        height: 900px;
+    }
+
+    /*=============hp-support=======*/
+    .home-support-card {
+        width: 90%;
+    }
+
+    
 }

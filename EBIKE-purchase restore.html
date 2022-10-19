@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="general-set.css">
     <script src="jquery-3.6.1.js"></script>
 	<script src="jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
     <script>
     </script>
     <style>
@@ -125,30 +124,23 @@
             position: relative;
             /* z-index: 1; */
         }
-        .explore-bike img {
+        .product-explore h1 {
+            margin: 10px;
+        }
+        .product-explore img {
             width: 80%;
-            height: 100%;
         }
         .explore-part {
             position: absolute;
             z-index: 6;
-            width: 80%;
             /* width: 1200px; */
             height: 300px;
-            /* left: 100px; */
-        }
-        .explore-bike {
-            width: 80%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-           
+            left: 100px;
         }
         .explore-pic {
             position: relative;
             display: flex;
             justify-content: center;
-           
         }
         .link-large {
             background-color: #F8A151;
@@ -160,21 +152,20 @@
             transition: 0.5s;
         }
         .link-1 {
-            position: absolute;
-            left: 40%;
-            top: 29%;
+            left: 380px;
+            top: 137px;
         }
         .link-2 {
-            left: 59%;
-            top: 12%;
+            left: 610px;
+            top: 60px;
         }
         .link-3 {
-            left: 32%;
-            top: 62%;
+            left: 280px;
+            top: 300px;
         }
         .link-4 {
-            left: 46%;
-            top: 67%;
+            left: 450px;
+            top: 320px;
         }
         /*====*/
         .modal-container:target {
@@ -195,6 +186,21 @@
             height: 100vh; */
 
             /* animation: fadein 0.3s forwards;  */
+        }
+        .modal {
+            width: 900px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            top: 50px;
+        }
+        .modal img {
+            object-fit: cover;
+            width: 100%;
+            vertical-align: top;
         }
         .link-cancel {
             width: 30px;
@@ -296,7 +302,6 @@
         }
         .description1-pic img {
             width: 80%;
-            object-fit: cover;
         }
         .description2 .description1-pic{
             display: flex;
@@ -304,7 +309,6 @@
         }
         .description2 .description1-txt img {
             width: 100%;
-            object-fit: cover;
         }
         /*=======================product-specify================*/
         .product-specify {
@@ -328,102 +332,6 @@
         .specification-sub {
             width: 600px;
         }
-
-        /*============*/
-        /* .explore-part {
-        position: relative;
-        width: 30px;
-        height: 30px;
-        margin: 25px;
-    }
-    .explore-part span {
-        margin: 0 auto;
-        position: relative;
-        top: 12px;
-    }
-    .explore-part span:before, .explore-partspan:after {
-        position: absolute;
-        content: '';
-    }
-    .explore-part span, .explore-part span:before, .explore-part span:after {
-        width: 30px;
-        height: 6px;
-        background-color: #FFF0A5;
-        display: block;
-    }
-    .explore-part span:before {
-        margin-top: -12px;
-    }
-    .explore-part span:after {
-        margin-top: 12px;
-    } */
-  /*==*/
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        padding:0.5%;
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%;
-        overflow: auto;
-        z-index: 100;
-    }
-    .modal-header {
-        padding: 2px 16px;
-        background-color: #FFF0A5;
-        border-bottom: none;
-        height:35vh;
-    }
-    .close {
-        color: #4a4a4a;
-        float: left;
-        font-size: 3em;
-        font-weight: bold;
-        opacity: 1;
-        position: fixed;
-        padding: 2px 16px;
-      
-    }
-    .close:hover,
-    .close:focus {
-        color: #F8A151;
-        text-decoration: none;
-        cursor: pointer;
-        transition: all 0.5s ease-out;
-    }
-    .zoomIn {
-        -webkit-animation-name: zoomIn;
-          animation-name: zoomIn;
-    }
-    .zoomOut {
-        -webkit-animation-name: zoomOut;
-          animation-name: zoomOut;
-    }
-    .animated {
-        -webkit-animation-duration: .3s;
-        animation-duration: .3s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-    }
-    @keyframes zoomIn {
-      from {
-          opacity: 0;
-          -webkit-transform: scale3d(.3, .3, .3);
-          transform: scale3d(.3, .3, .3);
-      }
-
-      50% {
-          opacity: 1;
-      }
-    }
-  
-  .modal-body img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-  }
     </style>
     <link rel="stylesheet" href="RWD.css">
 </head>
@@ -490,9 +398,9 @@
             <img src="UR-pic/vf v-explore.png" alt="">
             <div class="product-photo-side ">
                 <ul>
-                    <li>Side</li>
                     <li>Front</li>
                     <li>Back</li>
+                    <li>Side</li>
                     <li>3/4</li>
                 </ul>
             </div>
@@ -537,52 +445,15 @@
     <section class="product-explore">
         <h1>Explore every details</h1>
         <div class="explore-pic" id="m1-c">
-            <div class="explore-bike">
-                <img src="UR-pic/vf s5去被.png" alt="">
-                <a href="#myModal" class=" link-large link-1 blob orange-spot" id="sized"></a>
-                <a href="#myModal1" class="link-large link-2 blob orange-spot" id="sized1"></a>
-                <a href="#myModal2" class="link-large link-3 blob orange-spot" id="sized2"></a>
-                <a href="#myModal3" class="link-large link-4 blob orange-spot" id="sized3"></a>
-            </div>
-       
-            
-            <div id="myModal" class="modal">
-                <div class="modal-content animated zoomIn">
-                    <div class="modal-body nav">
-                        <span class="close">×</span>
-                        <img src="UR-pic/bike-back.webp" alt="">
-                    </div>
-                </div>
+            <img src="UR-pic/vf s5去被.png" alt="">
+            <div class="explore-part">
+                <a href="#m1-o" class="  link-large link-1 blob orange-spot"></a>
+                <a href="#m2-o" class="link-large link-2 blob orange-spot"></a>
+                <a href="#m3-o" class="link-large link-3 blob orange-spot"></a>
+                <a href="#m4-o" class="link-large link-4 blob orange-spot"></a>
             </div>
 
-            <div id="myModal1" class="modal">
-                <div class="modal-content animated zoomIn">
-                    <div class="modal-body nav">
-                        <span class="close">×</span>
-                        <img src="UR-pic/bike-head.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div id="myModal2" class="modal">
-                <div class="modal-content animated zoomIn">
-                    <div class="modal-body nav">
-                        <span class="close">×</span>
-                        <img src="UR-pic/bike-gear1.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div id="myModal3" class="modal">
-                <div class="modal-content animated zoomIn">
-                    <div class="modal-body nav">
-                        <span class="close">×</span>
-                        <img src="UR-pic/bike=pedal2.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- <div class="modal-container" id="m1-o" style="background: transparent;">
+            <div class="modal-container" id="m1-o" style="background: transparent;">
                 <div class="modal">
                     <img src="UR-pic/bike-back.webp" alt="">
                     <a href="#m1-c" class="link-cancel" id="link-cancel">
@@ -609,63 +480,10 @@
                     <a href="#m1-c" class="link-cancel" id="link-cancel">
                     </a>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
-    <script>
-        // Get Modal
-        let modal = document.getElementById('myModal');
-        let myModal1 = document.getElementById('myModal1');
-        let myModal2 = document.getElementById('myModal2');
-        let myModal3 = document.getElementById('myModal3');
-        
-        // Get pseudoelement to open Modal
-        let btn = document.getElementById("sized");
-        let btn1 = document.getElementById("sized1");
-        let btn2 = document.getElementById("sized2");
-        let btn3 = document.getElementById("sized3");
-        
-        // Get the <span> element to close Modal
-        let span = document.getElementsByClassName("close")[0];
-        let span1 = document.getElementsByClassName("close")[1];
-        let span2 = document.getElementsByClassName("close")[2];
-        let span3 = document.getElementsByClassName("close")[3];
-        // When user clicks button, open Modal
-        btn.onclick = function() {
-          modal.style.display = "block";
-        };
-        btn1.onclick = function() {
-            myModal1.style.display = "block";
-        };
-        btn2.onclick = function() {
-            myModal2.style.display = "block";
-        };
-        btn3.onclick = function() {
-            myModal3.style.display = "block";
-        };
-        
-        // When user clicks Close (x), close Modal
-        span.onclick = function() {
-          modal.style.display = "none";
-        };
-        span1.onclick = function() {
-            myModal1.style.display = "none";
-        };
-        span2.onclick = function() {
-            myModal2.style.display = "none";
-        };
-        span3.onclick = function() {
-            myModal3.style.display = "none";
-        };
-       
 
-        // When user clicks anywhere outside of the Modal, close Modal
-        window.onclick = function(e) {
-            if (e.target == modal) {
-              modal.style.display = "none";
-            }
-        }
-      </script>
 
     <section class="description">
         <div class="description1">
