@@ -45,7 +45,7 @@
         }
 
         /*====================nav==================*/
-        .period {
+        /* .period {
             width: 1200px;
             margin: auto;
             padding: 60px 0 10px;
@@ -99,7 +99,7 @@
         .period ul li ul li {
             clear: both;
             width: 100%;
-        }
+        } */
         /*=================blog-content*============================*/
         .blog-wrap {
             width: 100%;
@@ -160,9 +160,8 @@
             background-color: #EBECF0;
             border-radius: 10px;
             cursor: pointer;
-            /* height: 136px; */
             display: flex;
-            margin: 10px;
+            /* margin: 10px; */
         }
         .blog-card-txt {
             width: 70%;
@@ -173,6 +172,7 @@
             display: flex;
             align-items: center;
             background-color: #EBECF0;
+            border-radius: 10px;
         }
         .blog-card-pic img {
             width: 100%;
@@ -197,13 +197,13 @@
         }
         
         .sel::before {
-        position: absolute;
-        content: '\f063';
-        /* font-family: 'FontAwesome'; */
-        font-size: 2em;
-        color: #FFF;
-        right: 20px;
-        top: calc(50% - 0.5em);
+            position: absolute;
+            content: '\f063';
+            /* font-family: 'FontAwesome'; */
+            font-size: 2em;
+            color: #FFF;
+            right: 20px;
+            top: calc(50% - 0.5em);
         }
 
         .sel.active::before {
@@ -260,12 +260,12 @@
         }
 
         .sel__box__options {
-        display: list-item;
-        font-family: 'AvantGarde Md BT';
-        font-size: 18px;
-        color: #4a4a4a;
-        padding: 0.5em 1em;
-        user-select: none;
+            display: list-item;
+            font-family: 'AvantGarde Md BT';
+            font-size: 18px;
+            color: #4a4a4a;
+            padding: 0.5em 1em;
+            user-select: none;
         }
 
         .sel__box__options::after {
@@ -283,10 +283,14 @@
         .sel__box__options:hover {
             background-color: #ebedef;
         }
-
+        .sel:hover {
+            border: 2px solid #1a1a1a;
+            
+        }
         /* ----- Select Box Black Panther ----- */
         .sel {
-        border: 2px solid rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
         }
         .sel--black-panther {
             z-index: 3;
@@ -493,77 +497,34 @@
                 <h3>Rider Stories: Mark– Perspectives on a city</h3>
             </div>
         </div>
-        <div class="blog-item">
-            <div class="blogCard-wrap">
-                <div class="blog-card">
-                    <div class="blog-card-txt">
-                        <p>March 23,2022</p>
-                        <h3>Musashi Velo GS 01 start to take orders</h3>
-                    </div>
-                    <div class="blog-card-pic">
-                        <img src="UR-pic/hp-blog1.jpg" alt="">
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-card-txt">
-                        <p>April 14,2022</p>
-                        <h3>Tips and tricks for urban e-bike riders</h3>
-                    </div>
-                    <div class="blog-card-pic">
-                        <img src="UR-pic/blog-3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-card-txt">
-                        <p>June 07,2022</p>
-                        <h3>Introducing the VanMoof S5 & A5</h3>
-                    </div>
-                    <div class="blog-card-pic">
-                        <img src="UR-pic/blog-2.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="blog-item">
+        <div class="blog-item blog-triple">
             <div class="blog-card">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-8 blog-card-txt">
-                            <p>March 23,2022</p>
-                            <h3>Musashi Velo GS 01 start  to take orders</h3>
-                        </div>
-                        <div class="col-12 col-md-4 blog-card-pic">
-                            <img src="UR-pic/hp-blog1.jpg" alt="">
-                        </div>
-                    </div>
+                <div class="blog-card-txt">
+                    <p>March 23,2022</p>
+                    <h3>Musashi Velo GS 01 start to take orders</h3>
+                </div>
+                <div class="blog-card-pic">
+                    <img src="UR-pic/hp-blog1.jpg" alt="">
                 </div>
             </div>
             <div class="blog-card">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-8 blog-card-txt">
-                            <p>April 14,2022</p>
-                            <h3>Tips and tricks for urban e-bike riders</h3>
-                        </div>
-                        <div class="col-12 col-md-4 blog-card-pic">
-                            <img src="UR-pic/blog-3.jpg" alt="">
-                        </div>
-                    </div>
+                <div class="blog-card-txt">
+                    <p>April 14,2022</p>
+                    <h3>Tips and tricks for urban e-bike riders</h3>
+                </div>
+                <div class="blog-card-pic">
+                    <img src="UR-pic/blog-3.jpg" alt="">
                 </div>
             </div>
             <div class="blog-card">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-8 blog-card-txt">
-                            <p>June 07,2022</p>
-                            <h3>Introducing the VanMoof S5 & A5</h3>
-                        </div>
-                        <div class="col-12 col-md-4 blog-card-pic">
-                            <img src="UR-pic/blog-2.jpg" alt="">
-                        </div>
-                    </div>
+                <div class="blog-card-txt">
+                    <p>June 07,2022</p>
+                    <h3>Introducing the VanMoof S5 & A5</h3>
                 </div>
-            </div> -->
+                <div class="blog-card-pic">
+                    <img src="UR-pic/blog-2.jpg" alt="">
+                </div>
+            </div>
         </div>
         <div class="blog-more">
             <a href="#">

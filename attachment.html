@@ -5,206 +5,844 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="general-set.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="general-set.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js?v=987"></script>
+    <link href="http://fonts.cdnfonts.com/css/avantgarde-md-bt" rel="stylesheet">
+    <script src="jquery-3.6.1.js"></script>
+	<script src="jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
     <style>
-        .blog-wrap {
+        .box {
             width: 100%;
+            height: 350px;
+            padding-top: 70px;
+            background-color: #373737;
+        }
+        a,h1 h2,h3,h4,p {
+            font-family: 'AvantGarde Md BT', sans-serif;
+        }
+        @import url('http://fonts.cdnfonts.com/css/avantgarde-md-bt');
+        #menu-switch {
+                display: none;
+            }
+        @media screen and (max-width:1200px){
+            .header-container {
+                width: 100%;
+                justify-content: space-around;
+            }
+            .header-logo {
+                width: 16.66666%;
+            }
+            .menu {
+                width: 66.66666%;
+            }
+            .header-cart {
+                width: 16.666666%;
+                display: flex;
+                flex-wrap: wrap
+            }
+            .header-logo a {
+                display: flex;
+                justify-content: center;
+            }
+            .header-logo img {
+                width: 50%;
+                vertical-align: top;
+            }
+        }
+        @media screen and (max-width:1024px){
+            .header-container {
+                width: 100%;
+                justify-content: space-around;
+            }
+            /* .header-logo img {
+                width: 100%;
+                vertical-align: top;
+            } */
+            .header-logo {
+                width: 16.66666%;
+            }
+            .menu {
+                width: 66.66666%;
+            }
+            .header-cart {
+                width: 16.666666%;
+                display: flex;
+                flex-wrap: wrap
+            }
+        }
+        @media screen and (max-width:768px){
+            .hb {
+                width: 40px;
+                height: 40px;
+                background-color: #fff;
+                position: relative;
+                margin: 15px 30px;
+            }
+            .header-logo {
+                width: 30%;
+            }
+            .header-logo img {
+                width: 60%;
+                vertical-align: top;
+            }
+            .header-container {
+                width: 100%;
+                justify-content: space-between;
+            }
+            .hb span {
+                /* width: 32px;
+                height: 2px;
+                background-color: #3a3a3a;
+                opacity: 1;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto; */
+                /* transform: rotate(0); */
+            }
+            .menu {
+                position: absolute;
+                background-color: #fff;
+                width: 100%;
+                left: -100%;
+                top: 100%;
+                opacity: 0;
+                transform: opacity 1s 0s,
+                           left 1s 1s;
+                
+            }
+            #menu-switch input {
+                display: block;
+                width: 40px;
+                height: 32px;
+                position: absolute;
+                top: -7px;
+                left: -5px;
+                
+                cursor: pointer;
+                
+                opacity: 0; /* hide this */
+                z-index: 2; /* and place it over the hamburger */
+                
+                -webkit-touch-callout: none;
+            }
+            .hb span:first-child
+            {
+                 transform-origin: 0% 0%;
+            }
+            .hb span:nth-last-child(2)
+            {
+                transform-origin: 0% 100%;
+            }
+            /* .hb span:nth-child(1){
+                top: 7px;
+                transform-origin: 0% 0%;
+            }
+            .hb span:nth-child(2){
+                top: 19px;
+                transform-origin: 0% 100%;
+            } */
+            /* .hb span:nth-child(3){
+                top: 31px;
+            } */
+            #menu-switch input:checked ~ .hb span {
+                opacity: 1;
+                transform: rotate(45deg) translate(-2px, -1px);
+                background: #232323;
+            }
+            #menu-switch input:checked ~ .hb span:nth-last-child(3) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+            #menu-switch input:checked ~ .hb span:nth-last-child(2) {
+                transform: rotate(-45deg) translate(0, -1px);
+            }
 
+
+
+            /* #menu-switch:checked + .header .hb span:nth-child(1){
+                animation: no1 1s 1s forwards;
+            }
+            #menu-switch:checked + .header .hb span:nth-child(2){
+                animation: no2 1s 0s forwards;
+            }
+            #menu-switch:checked + .header .hb span:nth-child(3){
+                animation: no3 1s 1s forwards;
+            } */
+            #menu-switch:checked + .header .menu {/*不是任何東西都可以被check */
+                display: block;
+                left: 0;
+                opacity: 1;
+                transition: opacity 1s 1s;
+            } 
+            @keyframes no1 {
+                0%{ top: 7px; transform: rotate(0deg);}
+                50%{ top: 19px; transform: rotate(0deg);}
+                100%{ top: 19px; transform: rotate(45deg);}
+            }
+            @keyframes no2 {
+                0%{ opacity: 1;}
+                100%{ opacity: 0;}
+            }
+            @keyframes no3 {
+                0%{ top: 31px; transform: rotate(0deg);}
+                50%{ top: 19px; transform: rotate(0deg);}
+                100%{ top: 19px; transform: rotate(-45deg);}
+            }
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            .navbar > a,.navbar > button {
+                display: block;
+            }
+            .navbar > a {
+                text-align: left;
+            }
+            .header-cart {
+                justify-content: flex-end;
+                display: none;
+            }
+            .header-cart img {
+                margin: 10px;
+            }
         }
-        .blog-content {
-            width: 900px;
-            margin: auto;
-    
+        @media screen and (max-width:1200px){
+            .main-footer {
+                width: 100%;
+            }
+            .footer-logo {
+                width: 25%;
+                display: flex;
+                justify-content: center;
+            }
+            .footer-container {
+                width: 75%;
+                display: flex;
+            }
+            .footer-item {
+                width: 19.7131905895%;
+                padding: 20px 0;
+            }
         }
-        .blog-content-pic {
-            margin: 10px;
+        @media screen and (max-width:1024px){
+           /*  */
+            .main-footer {
+                display: flex;
+                justify-content: center;
+            }
+            .footer-logo {
+                width: 40%;
+                margin-top: 20px;
+            }
+            .footer-item {
+                width: 17.9153382926%;   
+            }
         }
-        .blog-content-pic img {
-            width: 100%;
-            /* object-fit: cover; */
+        @media screen and (max-width:768px){
+            
+            .footer-logo {
+                width: 100%;
+                margin-top: 20px;
+            }
+            .footer-logo img {
+                width: 30%;
+                vertical-align: bottom;
+            }
+            .footer-container {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .footer-item {
+                width: 35%;
+            }
+            .copyright {
+                padding: 10px;
+            }
         }
-        .blog-content-txt h2 {
-            padding: 10px 0;
-        }
-        .blog-content-txt {
-            margin: 10px 40px;
-            letter-spacing: 0.08em;
-        }
-        /*sfafa*/
-        .app-container {
-            text-align: center;
-        }
-        .app-section {
-            width: 100%;
-            /* background-attachment: ;   */
-            background-color: #101617;
-            height: 1200px;
-        } 
-        .app-content {
-            width: 1400px;
-            margin: auto;
-            text-align: center;
-        }
-        .hp-app {
-            margin-bottom: 80px;
-            padding: 10px;
-        }
-        .appTxt {
-            margin-top: 50px;
-        }
-        .appTxt h2 {
-            padding-bottom: 30px;
-        }
-        .appTxt h2,.appTxt p{
-            color: #fff;
-            line-height: 40px;
-        }
-        .appTxt-pic {
-            margin: 10px 50px; 
-        }
-        .appTxt-pic img{
-            width: 12%;
-            margin: 0 10px;
-            object-fit: cover;
-        }
-        .media {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1.8fr 1fr 1fr 1fr;
-            gap: 10px;
-            position: relative;
-        }
-        .media-item {
-            padding: 20px 0;
-            display: block;
-        }   
-        .media-item img {
-            width: 100%;
-            display: block;
-            transition: .6s ease-in-out;
-        }
-        .app-animation img {
-            width: 100%;
-            display: block;
-            object-fit: cover;
-            padding-bottom: 20px;
-        }
+        /*=====================*/
+            #menu-switch {
+                display: none;
+            }
+            .header {
+                width: 100vw;
+                height: 70px;
+                background-color: #fff;
+                position: fixed;
+                z-index: 10;
+            }
+            .header-container {
+                width: 1200px;
+                height: 70px;
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                position: relative;
+            }
+            .header-logo {
+                width: 200px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+            .header-logo img {
+                width: 50%;
+                /* cursor: url("UR首頁.html"), pointer; */
+            }
+            .navbar {
+                width: 800px;
+            }
+            .header-cart {
+                width: 200px;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .header-cart img {
+                width: 15%;
+                cursor: pointer;
+            }
+            .menu {
+                display: flex;
+                align-items: flex-end;
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: #fff;
+            }
+            .navbar a {
+                float: left;
+                /* font-size: 16px; */
+                color: #3a3a3a;
+                text-align: center;
+                margin: 0 10px;
+                padding: 16px 16px;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: 0.5s ease;
+            }
+            .d {
+                float: left;
+                overflow: hidden;
+            }
+            .d .d-btn {
+                font-size: 18px;
+                border: none;
+                outline: none;
+                color: #3a3a3a;
+                margin: 0 10px;
+                padding: 14px 16px;
+                background: inherit;
+                text-transform: uppercase;
+                transition: 0.5s ease;
+
+            }
+            .navbar a:hover, .d:hover .d-btn {
+                background-color: #101617;
+                border-radius: 20px;
+                color: #fff;
+            }
+            .d-content {
+                display: none;
+                position: absolute;
+                background: #fff;
+                width: 100%;
+                left: 0;
+                z-index: 10;
+                box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+                border-left: 1px solid #ccc;
+            }
+            .d:hover .d-content {
+                display: block;
+            }
+            .d-brands {
+                width: 100%;
+                display: flex;
+                margin-top: 20px;
+                position: relative;
+                
+            }
+            .column {
+                float: left;
+                width: 30%;
+                padding: 10px;
+                background-color: #fff;
+                height: 250px;
+            }
+            .column-pic {
+                width: 40%;
+            }
+            .column a {
+                display: block;
+                float: none;
+                color: #4a4a4a;
+                text-align: left;
+                font-size: 16px;
+            }
+            .column h3 {
+                color: #3a3a3a;
+                padding: 10px;
+            }
+            .column img {
+                width: 90%;
+            }
+            .column a:hover {
+                color: #fff;
+                background-color: #373737;
+            }
+            .d-brands::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            @media(max-width: 650px){
+                .column {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .navbar .underline {
+                text-decoration: underline;
+            }
+.come {
+    display: block;
+}
+.menu-bike {
+    position: relative;
+}
+.menu ul > li > ul li:nth-child(2) > ul:nth-child(1n),.menu ul > li > ul li:nth-child(2) > ul:nth-child(2n) {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 6vh;
+}
+
+.menu {
+    /* width: 800px; */
+    width: 66.66666%;
+}
+.menu-container {
+  margin: 0 auto;
+  background: #e9e9e9;
+}
+.menu a.logo {
+    display: inline-block;
+    padding: 1.5em 3em;
+    width: 19%;
+    /* float: left; */
+}
+.menu img {
+    max-width: 100%;
+}
+/* .menu-mobile {
+  display: none;
+  padding: 20px;
+} */
+/* .menu-mobile:after {
+  content: "\f394";
+  font-family: "Ionicons";
+  font-size: 2.5rem;
+  padding: 0;
+  float: right;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+} */
+.menu-dropdown-icon:before {
+  content: "\f489";
+  /* font-family: "Ionicons"; */
+  display: none;
+  cursor: pointer;
+  float: right;
+  padding: 1.5em 2em;
+  background: #fff;
+  color: #333;
+}
+.menu > ul {
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    /* IF .menu position=relative -> ul = container width, ELSE ul = 100% width */
+    box-sizing: border-box;
+    clear: right;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu > ul:before,
+.menu > ul:after {
+  content: "";
+  display: table;
+}
+.menu > ul:after {
+  clear: both;
+}
+.menu .clearfix li > a {
+    color: #3a3a3a;
+}
+.menu > ul > li {
+  float: left;
+  /* background: #e9e9e9; */
+  padding: 0;
+  margin: 0;
+  /* width: 50px; */
+}
+.menu > ul > li a {
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+.menu > ul > li:hover {
+    background-color: #101617;
+    border-radius: 20px;
+}
+.menu > ul > li:hover .changeNav {
+    color: #fff;
+}
+.menu > ul > li > ul {
+  display: none;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+.menu > ul > li > ul:before,
+.menu > ul > li > ul:after {
+  content: "";
+  display: table;
+}
+.menu > ul > li > ul:after {
+  clear: both;
+}
+.menu > ul > li > ul > li {
+  margin: 10px;
+  padding-bottom: 0;
+  list-style: none;
+  width: 30%;
+  background: none;
+  float: left;
+  
+}
+.menu > ul > li > ul > li a {
+  color: #777;
+  padding: 12px 20px;
+  width: 80%;
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+.menu > ul > li > ul > li a:hover{
+	color: #000;
+    background-color: #3a3a3a;
+    transition: 1s;
+    color: #fff;
+    border-radius: 10px;
+}
+.menu > ul > li > ul > li > ul {
+  display: block;
+  padding: 0;
+  margin: 10px 0 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+.menu > ul > li > ul > li > ul:before,
+.menu > ul > li > ul > li > ul:after {
+  content: "";
+  display: table;
+}
+.menu > ul > li > ul > li > ul:after {
+  clear: both;
+}
+.menu > ul > li > ul > li > ul > li {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  font-size: .8em;
+}
+.menu > ul > li > ul > li > ul > li a {
+  border: 0;    
+  font-size: 14px;
+}
+.menu > ul > li > ul.normal-sub {
+  width: 300px;
+  left: auto;
+  padding: 10px 20px;
+}
+.menu > ul > li > ul.normal-sub > li {
+  width: 100%;
+}
+.menu > ul > li > ul.normal-sub > li a {
+  border: 0;
+  padding: 1em 0;
+}
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Mobile style's
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 768px){
+    .clearfix {
+        /* display: flex; */
+        flex-direction: column;
+        /* display: block; */
+        opacity: 1;
+    }
+    .clearfix > li > ul {
+        
+    }
+
+}
+@media only screen and (max-width: 959px) {
+  /* .menu-container {
+    width: 100%;
+  }
+  .menu-container .menu{
+	display:inline-block;
+   } */
+  /* .menu-mobile {
+    display: block;    
+    float: right;    
+    padding: 20px 20px 0;
+  } */
+  .menu-dropdown-icon:before {
+    display: block;
+  }
+  .menu > ul {
+    /* display: none; */
+    width:100%;
+  }
+  /* .menu > ul > li {
+    width: 100%;
+    float: none;
+    display: block;
+  } */
+     .menu > ul > li a {
+    padding: 1.5em;
+    width: 100%;
+    display: block;
+  }
+  .menu > ul > li > ul {
+    position: relative;    
+    padding: 0 40px;
+  }
+  .menu > ul > li > ul.normal-sub {
+    width: 100%;
+  }
+  .menu > ul > li > ul > li {
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .menu > ul > li > ul > li:first-child {
+    margin: 0;
+  }
+  .menu > ul > li > ul > li > ul {
+    position: relative;
+  }
+  .menu > ul > li > ul > li > ul > li {
+    float: none;
+  }
+  /* .menu .show-on-mobile {
+    display: block;
+  } */
+} 
     </style>
+    <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
-    <section class="blog-wrap">
-        <div class="blog-content">
-            <div class="blog-content-pic">
-                <img src="UR-pic/blog-1.png" alt="">
+    <input type="checkbox" id="menu-switch">
+    <div class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="UR-pic/logo ur.jpg" alt="">
+                </a>
             </div>
-            <div class="blog-content-txt">
-                <p>2022/2/25</p>
-                <h2>Revolutionizing the ride:Our Head of Product Design, Job Stehmann, reveals the all-new VanMoof S5.</h2>
-                <p>We've never been ones to shy away from ushering in a sea of change. Deep in VanMoof HQ, our top minds have been hard at work crafting two e-bike models that will trigger a radical shift in e-mobility once again. .</p>
-                <button class="button-read" style="vertical-align:middle"><span>Read more </span></button>
-            </div>
-        </div>
-    </section>
 
-    <section class="blog-wrap">
-        <div class="blog-content">
-            <div class="blog-content-pic">
-                <img src="UR-pic/blog-2.jpg" alt="">
-            </div>
-            <div class="blog-content-txt">
-                <p>2022/2/25</p>
-                <h2>Turning the tables on the dreaded commute:</h2>
-                <p>Elon Musk’s email demanding Tesla employees come into the office for the full working week didn’t go down so well. And without enough parking spots or desks available for employees, how could you blame them? The office-versus-remote debate after pandemic restrictions lifted has divided many.</p>
-                <button class="button-read" style="vertical-align:middle"><span>Read more </span></button>
-            </div>
-        </div>
-    </section>
+            
+            <div class="menu">
+                <ul class="clearfix">
+                    <li><a href="#" class="changeNav">E-BIKE</a>
+                        <ul class="menu-dropdown">
+                            <li><a href="#">Brands</a>
+                                <ul class="menu-brand">
+                                    <li><a href="#">Vanmoof</a></li>
+                                    <li><a href="#">Cowboy</a></li>
+                                    <li><a href="#">Gogoro</a></li>
+                                    <li><a href="#">Musashi Velo</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-bike"><a href="#">E-bike</a>
+                                <ul class="menu-select1">
+                                    <li><a href="#">Vanmoof V</a></li>
+                                    <li><a href="#">Vanmoof S5</a></li>
+                                    <li><a href="#">Vanmoof X5</a></li>
+                                    <li><a href="#">Vanmoof S5</a></li>
+                                </ul>
 
-    <section class="app-container">
-        <div class="slogan">
-            <h1>UNLOCK OUR <span class="orange">APP</span></h1>
-        </div>
-        <div class="app-section">
-            <div class="app-content">
-                <div class="hp-app">
-                    <div class="appTxt">
-                        <h2>URBAN RIDING APP</h2>
-                        <p>The app is your daily companion on the road. Navigate through your city, turn by turn.Track your bike's location anytime, anywhere.</p>
-                        <p>See your ride data at a glance and connect with fellow Cowboy riders. </p>
-                    </div>
-                    <div class="appTxt-pic">
-                        <img src="UR-pic/ios-app.png" alt="">
-                        <img src="UR-pic/android-app.png" alt="">
-                    </div>
-                    <a href="APP.html">
-                        <button class="explore">Explore</button>
-                    </a>
-                </div>
-                <div class="media">
-                    <div class="app-animation" style="transform: translate3d(0px, 164.8px, 0px)" data-scrub="0.7">
-                        <img src="UR-pic/appfloat7.webp" alt="">
-                        <img src="UR-pic/appfloat6.webp" alt="">
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 184.8px, 0px)" data-scrub="0.8">
-                            <img src="UR-pic/appfloat2.webp" alt="">
-                            <img src="UR-pic/appfloat3.webp" alt="">
-                            <img src="UR-pic/appfloat1.webp" alt="">
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 158.7px, 0px)" data-scrub="0.2">
-                        <img src="UR-pic/appfloat4.webp" alt="">
-                        <img src="UR-pic/APPHONEPAGE1.png" alt="">
-                    </div>
-                    <div class="motion">
-                        <picture class="media-item">
-                            <img src="UR-pic/app2定位.png" alt="">
-                        </picture>
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 157.4px, 0px)" data-scrub="0.4">
-                        <img src="UR-pic/APPHONEPAGE2.png" alt="">
-                        <img src="UR-pic/APPHONEPAGE4.png" alt="">
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 176.1px, 0px)" data-scrub="0.8">
-                        <img src="UR-pic/APPHONEPAGE3.png" alt="">
-                        <img src="UR-pic/appfloat5.webp" alt="">
-                        <img src="UR-pic/appfloat10.webp" alt="">
-        
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 164.8px, 0px)" data-scrub="0.7">
-                        <img src="UR-pic/appfloat8.webp" alt="">
-                        <img src="UR-pic/appfloat9.webp" alt="">
-                </div>
+                                <ul class="menu-select1">
+                                    <li><a href="#">Cowboy 4</a></li>
+                                    <li><a href="#">Cowboy 3</a></li>
+                                    <li><a href="#">Cowboy 2</a></li>
+                                    <li><a href="#">Cowboy 4</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="#">Gogoro eeyo 4</a></li>
+                                    <li><a href="#">Gogoro eeyo 3</a></li>
+                                    <li><a href="#">Gogoro eeyo 2</a></li>
+                                    <li><a href="#">Gogoro eeyo 1</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="#">Musashi Velo</a></li>
+                                    <li><a href="#">Musashi Velo</a></li>
+                                    <li><a href="#">Musashi Velo</a></li>
+                                    <li><a href="#">Musashi Velo</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="#">Something</a>
+                                <ul>
+                                    <li><img src="https://picsum.photos/300/200/?random=10"></li>
+                                </ul>
+                            </li>      
+                        </ul>
+                    </li>
+                    <li><a href="#" class="changeNav">APP</a>
+                    <li><a href="#" class="changeNav">BLOG</a></li>
+                    <li><a href="#" class="changeNav">SUPPORT</a></li>
+                    <li><a href="#" class="changeNav">ABOUT</a></li>
+                  </ul>
             </div>
+            <div class="header-cart">
+                <img src="UR-pic/4.png" alt="">
+                <img src="UR-pic/2.png" alt="">
+            </div>
+            <label for="menu-switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
         </div>
     </div>
 
-    <script>
-        let delay = document.querySelectorAll(".app-animation");
-        delay.forEach( part => {
-            let imageAni = gsap.to(part.querySelectorAll("img"), {
-                y: "-80vh",
-                ease: "none",
-                paused:true
-            })
-            let progressto = gsap.quickTo(imageAni, "progress", {
-                ease: "power3", duration: parseFloat(part.dataset.scrub) || 0.1
-            });
-            
-            gsap.to(part.querySelector(".media-item"), {
-                y: "80vh",
-                ease: "none",
-                scrollTrigger: {
-                    scrub: true,
-                    trigger: part,
-                    start: "top bottom",
-                    end: "bottom top",
-                    onUpdate: self => progressto(self.progress)
+    <div class="box"></div>
+
+    <div class="footer">
+        <div class="main-footer">
+            <div class="footer-logo">
+                <img src="UR-pic/footer-logo.png" alt="">
+            </div>
+            <div class="footer-container">
+                <div class="footer-item">
+                    <h4>E-BIKE</h4>
+                    <nav>
+                        <a href="EBIKE.html">Vanmoof</a>
+                        <a href="EBIKE.html">Cowboy</a>
+                        <a href="EBIKE.html">Gogoro eeyo</a>
+                        <a href="EBIKE.html">Musashi Velo</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <h4>ABOUT</h4>
+                    <nav>
+                        <a href="APP.html">App</a>
+                        <a href="BLOG.html">Blog</a>
+                        <a href="ABOUT.html">About us</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <h4>SUPPORT</h4>
+                    <nav>
+                        <a href="SUPPORT.html">Fixing</a>
+                        <a href="SUPPORT.html">Contact us</a>
+                        <a href="SUPPORT.html">Appointment</a>
+                        <a href="SUPPORT.html">Q&A</a>
+                    </nav>
+                </div>
+                <div class="footer-item">
+                    <h4>FOLLOW US</h4>
+                    <nav>
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Youtube</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        $(document).ready(function() {
+		  "use strict";
+            // $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+            $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+            //   $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">&nbsp;</a>");
+            $(".menu > ul > li").hover(function(e) {
+                if ($(window).width() > 943) {
+                $(this).children("ul").stop(true, false).fadeToggle(150);
+                e.preventDefault();
                 }
             });
+            /*==========*/
+            let menuBrand = document.querySelectorAll(".menu-brand li");
+            let menuBike = document.querySelectorAll(".menu-bike ul");
+            // $(menuBike[0]).css({'display': 'none',})
+            // $(menuBike[1]).css({'display': 'none',})
+            // $(menuBike[2]).css({'display': 'none',})
+            // $(menuBike[3]).css({'display': 'none',})
+            for(let i=0;i<=menuBrand.length;i++){
+                $(menuBrand[i]).hover(function(){
+                    if(i > 0){
+                        $(menuBike[i]).stop(true).fadeToggle(400)
+                        // $(menuBike[i]).toggleClass('come')
+                        $(menuBike[0]).css({
+                            'display': 'none',
+                        })          
+                    }
+                    
+                })
+               
+            }
+            $(menuBrand[0]).hover(function(){
+                $(menuBike[0]).fadeToggle(400)
+            })
+            
+            /*=============================*/
+                
+    
+            $(".menu > ul > li").click(function() {
+                if ($(window).width() <= 943) {
+                $(this).children("ul").fadeToggle(150);
+                }
+            });
+		//   $(".menu-mobile").click(function(e) {
+		//     $(".menu > ul").toggleClass('show-on-mobile');
+		//     e.preventDefault();
+		//   });
+   
+            $(window).resize(function() {
+                $('.clearfix > li > ul').
+                $(".menu > ul > li").children("ul").hide();
+                $(".menu > ul").removeClass('show-on-mobile');
+		    });
         });
-    </script>
+        </script>
+
+        <div class="copyright">
+            Copyright &copy;  This platform protects learning policies and displays. If you have any doubts about translation, you can send a private message to TibaMe, and you will be assisted by a dedicated person.
+        </div>
+ 
+    </div>
 </body>
 </html>

@@ -379,10 +379,18 @@
 /*=============BLOG RWD=================*/
 /*----------banner-----------*/
 @media screen and (max-width:1200px){
-    .period {
-        width: 100%;
-       display: flex;
-       justify-content: center;
+    .period-wrap {
+        width: 50%;
+        margin: 0 10px;
+    }
+    .sel {
+        width: 50%;
+    }
+    .sel__placeholder {
+        font-size: 18px;
+    }
+    .sel__box__options {
+        font-size: 14px;
     }
 }
 @media screen and (max-width:1024px){
@@ -400,6 +408,12 @@
         justify-content: center;
         left: 0;
     }
+    .blog-wrap {
+        padding: 0;
+    }
+    .sel {
+        width: 60%;
+    }
 }
 @media screen and (max-width:768px){
     .blog-banner-title h1 {
@@ -413,11 +427,16 @@
         justify-content: center;
     }
     .blog-item {
-        width: 100%;
+        width: 90%;
+    }
+    .blog-card {
+        margin: 10px 0;
     }
 }
 @media screen and (max-width:1024px){
-
+    .blog-card {
+        margin: 10px 0;
+    }
 }
 @media screen and (max-width:768px){
 
