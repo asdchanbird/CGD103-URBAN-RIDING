@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBAN RIDING</title>
+    <link rel="icon" href="UR-pic/TAB.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="general-set.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
-      
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <script src="gsap-function.js"></script>
     <style>
         .main-wrapper {
             width: 1200px;
@@ -143,21 +145,22 @@
             width: 100%;
             /* background-attachment: ;   */
             background-color: #101617;
-            height: 1300px;
+            /* height: 1300px; */
         } 
         .app-content {
-            width: 1400px;
+            width: 100%;
             margin: auto;
             text-align: center;
         }
         .hp-app {
-            width: 1200px;
+            width: 60%;
             margin: auto;
             margin-bottom: 80px;
             padding: 10px;
         }
         .appTxt {
             margin-top: 50px;
+            /* width: 50%; */
         }
         .appTxt h2 {
             padding-bottom: 40px;
@@ -166,34 +169,63 @@
             color: #fff;
             line-height: 40px;
         }
+        .appTxt p {
+            font-size: 18px;
+        }
         .appTxt-pic {
-            margin: 10px 50px; 
+            margin: 30px 50px 20px; 
         }
         .appTxt-pic img{
-            width: 15%;
+            width: 25%;
             margin: 0 10px;
             object-fit: cover;
         }
+        .motion {
+            position: relative;
+        }
+       
         .media {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1.8fr 1fr 1fr 1fr;
             gap: 10px;
             position: relative;
+            height: 800px;
         }
         .media-item {
             padding: 20px 0;
             display: block;
+            position: absolute;
+            top: 5%;
         }   
         .media-item img {
             width: 100%;
             display: block;
             transition: .6s ease-in-out;
+            overflow: hidden;
+        }
+        .app-animation {
+            overflow: hidden;
+            
         }
         .app-animation img {
             width: 100%;
             display: block;
             object-fit: cover;
             padding-bottom: 20px;
+            position: relative;
+        }
+        .app-animation img:nth-child(1){
+            /* position: absolute; */
+            left: 0;
+            top: 25%;
+        }
+        .app-animation img:nth-child(2){
+            left: 0;
+            top: 30%;
+        }
+        .app-animation img:nth-child(3){
+            left: 0;
+            top: 35%;
         }
     
         /*=========================swpier-blog==========================*/
@@ -232,10 +264,11 @@
         .swiper-txt {
             display: flex;
             align-items: flex-start;
-            height: 150px;
+            height: 180px;
         }
         .carousel-card {
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             background-color: #F5F5F5;
             border-radius: 10px;    
             cursor: pointer;
@@ -244,6 +277,13 @@
             justify-content: flex-end;
             max-width: 30%;
             width: 30%;
+            transition: transform 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+        }
+        .carousel-card:hover {
+            /* box-shadow: -0.15rem -0.15rem 0.65rem rgba(255, 255, 255, .7), 0.15rem 0.15rem 0.65rem rgba(164, 167, 186, .7), inset 0 0 0 2px #e5e6eb, inset -2px -2px 0.75rem rgba(255, 255, 255, .7), inset 2px 2px 0.75rem rgba(164, 167, 186, .3); */
+            transform: scale(1.03);
+            box-shadow: 0 2px 3px rgba(0,0,0,0.25), 0 2px 3px rgba(0,0,0,0.22);
+
         }
         .carousel-card a {
             text-decoration: none;
@@ -261,6 +301,10 @@
             font-size: 15px;
             color:#3a3a3a;
             width: 100%;
+        }
+        .slick-next {
+            /* right: -5.5%; */
+            display: none !important;
         }
 /*========================================page-5=======================*/
         .home-support-wrap {
@@ -296,7 +340,7 @@
         }
         .video-section {
             width: 100%;
-            margin-top: 10px;
+            /* margin-top: 10px; */
             height: 730px;
         }
         video {
@@ -312,53 +356,77 @@
         <div class="header-container">
             <div class="header-logo">
                 <a href="index.html">
-                    <img src="UR-pic/logo ur.jpg" alt="">
+                    <img src="UR-pic/logo ur.jpg" alt="UR-logo">
                 </a>
             </div>
             <div class="menu">
-                <nav class="navbar">
-                    <div class="d">
-                        <button class="d-btn">E-BIKE</button>
-                        <div class="d-content">
-                            <div class="d-brands">
-                                <div class="column">
-                                    <h3>Brands</h3>
-                                    <a href="">Vanmoof</a>
-                                    <a href="">Cowboy</a>
-                                    <a href="">Gogoro</a>
-                                    <a href="">Musashi Velo</a>
-                                </div>
-                                <div class="column">
-                                    <h3>E-bikes</h3>
-                                    <a href="EBIKE.html">Vanmoof V</a>
-                                    <a href="EBIKE.html">Vanmoof S5</a>
-                                    <a href="EBIKE.html">Vanmoof X5</a>
-                                    <a href="EBIKE.html">Vanmoof S3</a>
-                                </div>
-                                <div class="column column-pic">
-                                    <img src="UR-pic/vf v-remove.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="APP.html">APP</a>
-                    <a href="BLOG.html">BLOG</a>
-                    <a href="SUPPORT.html">SUPPORT</a>
-                    <a href="ABOUT.html">ABOUT</a>
-                </nav>
+                <ul class="clearfix">
+                    <li><a href="#" class="changeNav">E-BIKE</a>
+                        <ul class="menu-dropdown">
+                            <li><a href="EBIKE.html">Brands</a>
+                                <ul class="menu-brand">
+                                    <li><a>Vanmoof</a></li>
+                                    <li><a>Cowboy</a></li>
+                                    <li><a>Gogoro</a></li>
+                                    <li><a>Musashi Velo</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-bike"><a href="EBIKE.html">E-bike</a>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Vanmoof V</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof S5</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof X5</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof S5</a></li>
+                                </ul>
+
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 1</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 1</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="brandLogo"><a href="#">Show Logo</a>
+                                <ul>
+                                    <li><img src="UR-pic/Vanmoof-logo2.png" alt="Vanmoof-logo"></li>
+                                    <li><img src="UR-pic/cowboy-logo.png" alt="Cowboy-logo"></li>
+                                    <li><img src="UR-pic/gogoro-logo.jfif" alt="Gogoro-logo"></li>
+                                    <li><img src="UR-pic/musashi_logo.png" alt="Musashi_logo"></li>
+                                </ul>
+                            </li>      
+                        </ul>
+                    </li>
+                    <li><a href="APP.html" class="changeNav">APP</a>
+                    <li><a href="BLOG.html" class="changeNav">BLOG</a></li>
+                    <li><a href="SUPPORT.html" class="changeNav">SUPPORT</a></li>
+                    <li><a href="ABOUT.html" class="changeNav">ABOUT</a></li>
+                  </ul>
             </div>
             <div class="header-cart">
-                <img src="UR-pic/4.png" alt="">
-                <img src="UR-pic/2.png" alt="">
+                <img src="UR-pic/4.png" alt="Shopping cart">
+                <img src="UR-pic/2.png" alt="Member">
             </div>
-            <label for="menu-switch" class="hb">
-                <span></span>
-                <span></span>
-                <span></span>
+            <label for="menu-switch" id="hamburger-icon" title="Menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
             </label>
         </div>
     </div>
-    
+
     <div class="video">
         <div class="video-section">
             <a href="#">
@@ -377,7 +445,7 @@
         </div>
 
         <div class="homepage-wrap">
-            <div class="product-pop">
+            <div class="product-pop gs_reveal gs_reveal_fromLeft">
                 <div class="product-pop-pic">
                     <img src="UR-pic/musashi velo.png" alt="">
                 </div>
@@ -390,7 +458,7 @@
                     </a>
                 </div>
             </div>
-            <div class="product-pop cowboy3">
+            <div class="product-pop cowboy3 gs_reveal gs_reveal_fromRight">
                 <div class="product-pop-pic">
                     <img src="UR-pic/v5.png" alt="">
                 </div>
@@ -405,7 +473,7 @@
             </div>
         </div>
 
-        <div class="homepage-wrap">
+        <div class="homepage-wrap gs_reveal">
             <div class="product-sub">
                 <div class="product-sub-txt">
                     <h2>Vanmoof S3</h2>
@@ -452,9 +520,9 @@
             <div class="app-content">
                 <div class="hp-app">
                     <div class="appTxt">
-                        <h2>URBAN RIDING APP</h2>
-                        <p>The app is your daily companion on the road. Navigate through your city, turn by turn.Track your bike's location anytime, anywhere.</p>
-                        <p>See your ride data at a glance and connect with fellow Cowboy riders. </p>
+                        <!-- <h2>URBAN RIDING APP</h2> -->
+                        <p>The app is your daily companion on the road. Navigate through your city, turn by turn.Track your bike's location anytime, anywhere.
+                        See your ride data at a glance and connect with fellow Cowboy riders. </p>
                     </div>
                     <div class="appTxt-pic">
                         <img src="UR-pic/ios-app.png" alt="">
@@ -465,6 +533,40 @@
                     </a>
                 </div>
                 <div class="media">
+                    <div class="app-animation" data-scrub="0.7">
+                        <img src="UR-pic/appfloat7.webp" alt="">
+                        <img src="UR-pic/appfloat6.webp" alt="">
+                    </div>
+                    <div class="app-animation" data-scrub="0.8">
+                            <img src="UR-pic/appfloat2.webp" alt="">
+                            <img src="UR-pic/appfloat3.webp" alt="">
+                            <img src="UR-pic/appfloat1.webp" alt="">
+                    </div>
+                    <div class="app-animation" data-scrub="0.2">
+                        <img src="UR-pic/appfloat4.webp" alt="">
+                        <img src="UR-pic/APPHONEPAGE1.png" alt="">
+                    </div>
+                    <div class="motion">
+                        <picture class="media-item">
+                            <img src="UR-pic/app2定位.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="app-animation" data-scrub="0.4">
+                        <img src="UR-pic/APPHONEPAGE2.png" alt="">
+                        <img src="UR-pic/APPHONEPAGE4.png" alt="">
+                    </div>
+                    <div class="app-animation" data-scrub="0.8">
+                        <img src="UR-pic/APPHONEPAGE3.png" alt="">
+                        <img src="UR-pic/appfloat5.webp" alt="">
+                        <img src="UR-pic/appfloat10.webp" alt="">
+        
+                    </div>
+                    <div class="app-animation" data-scrub="0.7">
+                        <img src="UR-pic/appfloat8.webp" alt="">
+                        <img src="UR-pic/appfloat9.webp" alt="">
+                    </div>
+                </div>
+                <!-- <div class="media">
                     <div class="app-animation" style="transform: translate3d(0px, 164.8px, 0px)" data-scrub="0.7">
                         <img src="UR-pic/appfloat7.webp" alt="">
                         <img src="UR-pic/appfloat6.webp" alt="">
@@ -496,17 +598,17 @@
                     <div class="app-animation" style="transform: translate3d(0px, 164.8px, 0px)" data-scrub="0.7">
                         <img src="UR-pic/appfloat8.webp" alt="">
                         <img src="UR-pic/appfloat9.webp" alt="">
-                </div>
+                    </div>
+                </div> -->
             </div>
         </div>
-    </div>
     </section>
 
     <script>
         let delay = document.querySelectorAll(".app-animation");
         delay.forEach( part => {
             let imageAni = gsap.to(part.querySelectorAll("img"), {
-                y: "-80vh",
+                y: "-40vh",
                 ease: "none",
                 paused:true
             })
@@ -515,7 +617,7 @@
             });
             
             gsap.to(part.querySelector(".media-item"), {
-                y: "80vh",
+                y: "40vh",
                 ease: "none",
                 scrollTrigger: {
                     scrub: true,
@@ -531,7 +633,7 @@
 
     <div class="blog-swiper">
         <h1>DISCOVER LASTEST <span class="orange">BLOG</span></h1>
-        <div class="carousel">
+        <div class="carousel gs_reveal">
             <div class="carousel-card">
                 <div class="swiper-pic">
                     <img src="UR-pic/hp-blog1.jpg">
@@ -607,11 +709,42 @@
         <script>
         $(document).ready(function(){
             $('.carousel').slick({
-                slidesToShow: 3,
+                slidesToShow: 4,
                 dots:true,
                 centerMode: true,
+                autoplay: true, //自動撥放
+                autoplaySpeed: 2000, //自動撥放的切換速率，單位毫秒
+                responsive: [
+                    {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        // slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                    },
+                    {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 2,
+                        // slidesToScroll: 2
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        // slidesToScroll: 2
+                    }
+                }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
             });
         });
+     
         </script>
 
 
@@ -620,7 +753,7 @@
             <h1><span class="orange">SUPPORT</span>&CONTACT US</h1>
         </div>
 
-        <div class="support-wrap home-support-wrap">
+        <div class="support-wrap home-support-wrap gs_reveal">
             <div class="card home-support-card">
                 <img src="UR-pic/support1.jpg" alt="">
                 <h4>Start fixing</h4>

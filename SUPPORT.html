@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBAN RIDING-support</title>
+    <link rel="icon" href="UR-pic/TAB.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="general-set.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <script src="gsap-function.js"></script>
     <style>
         /*====================suppport-banner=======================*/
         .support-banner {
@@ -17,12 +27,12 @@
             padding-top: 70px;
         }
         .support-wrapper {
-            width: 1400px;
+            width: 1200px;
             display: flex;
             margin: auto;
         }
         .support-banner-pic {
-            width: 900px;
+            width: 800px;
         }
         .support-banner-pic img {
             width: 100%;
@@ -30,7 +40,7 @@
             object-fit: cover;
         }
         .support-banner-title {
-            width: 500px;
+            width: 400px;
             display: flex;
             align-items: center;
         }
@@ -82,49 +92,73 @@
         <div class="header-container">
             <div class="header-logo">
                 <a href="index.html">
-                    <img src="UR-pic/logo ur.jpg" alt="">
+                    <img src="UR-pic/logo ur.jpg" alt="UR-logo">
                 </a>
             </div>
             <div class="menu">
-                <nav class="navbar">
-                    <div class="d">
-                        <button class="d-btn">E-BIKE</button>
-                        <div class="d-content">
-                            <div class="d-brands">
-                                <div class="column">
-                                    <h3>Brands</h3>
-                                    <a href="">Vanmoof</a>
-                                    <a href="">Cowboy</a>
-                                    <a href="">Gogoro</a>
-                                    <a href="">Musashi Velo</a>
-                                </div>
-                                <div class="column">
-                                    <h3>E-bikes</h3>
-                                    <a href="EBIKE.html">Vanmoof V</a>
-                                    <a href="EBIKE.html">Vanmoof S5</a>
-                                    <a href="EBIKE.html">Vanmoof X5</a>
-                                    <a href="EBIKE.html">Vanmoof S3</a>
-                                </div>
-                                <div class="column column-pic">
-                                    <img src="UR-pic/vf v-remove.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="APP.html">APP</a>
-                    <a href="BLOG.html">BLOG</a>
-                    <a class="underline" href="SUPPORT.html">SUPPORT</a>
-                    <a href="ABOUT.html">ABOUT</a>
-                </nav>
+                <ul class="clearfix">
+                    <li><a href="#" class="changeNav">E-BIKE</a>
+                        <ul class="menu-dropdown">
+                            <li><a href="EBIKE.html">Brands</a>
+                                <ul class="menu-brand">
+                                    <li><a>Vanmoof</a></li>
+                                    <li><a>Cowboy</a></li>
+                                    <li><a>Gogoro</a></li>
+                                    <li><a>Musashi Velo</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-bike"><a href="EBIKE.html">E-bike</a>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Vanmoof V</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof S5</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof X5</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof S5</a></li>
+                                </ul>
+
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 1</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 1</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="brandLogo"><a href="#">Show Logo</a>
+                                <ul>
+                                    <li><img src="UR-pic/Vanmoof-logo2.png" alt="Vanmoof-logo"></li>
+                                    <li><img src="UR-pic/cowboy-logo.png" alt="Cowboy-logo"></li>
+                                    <li><img src="UR-pic/gogoro-logo.jfif" alt="Gogoro-logo"></li>
+                                    <li><img src="UR-pic/musashi_logo.png" alt="Musashi_logo"></li>
+                                </ul>
+                            </li>      
+                        </ul>
+                    </li>
+                    <li><a href="APP.html" class="changeNav">APP</a>
+                    <li><a href="BLOG.html" class="changeNav">BLOG</a></li>
+                    <li><a href="SUPPORT.html" class="changeNav">SUPPORT</a></li>
+                    <li><a href="ABOUT.html" class="changeNav">ABOUT</a></li>
+                  </ul>
             </div>
             <div class="header-cart">
-                <img src="UR-pic/4.png" alt="">
-                <img src="UR-pic/2.png" alt="">
+                <img src="UR-pic/4.png" alt="Shopping cart">
+                <img src="UR-pic/2.png" alt="Member">
             </div>
-            <label for="menu-switch" class="hb">
-                <span></span>
-                <span></span>
-                <span></span>
+            <label for="menu-switch" id="hamburger-icon" title="Menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
             </label>
         </div>
     </div>
@@ -132,19 +166,19 @@
     <div class="support-banner">
         <div class="support-wrapper">
             <div class="support-banner-pic">
-                <img src="UR-pic/banner-support.jpg" alt="">
+                <img src="UR-pic/banner-support.jpg" alt="Support banner">
             </div>
-            <div class="support-banner-title">
+            <div class="support-banner-title gs_reveal">
                 <h1>Support&Contact us</h1>
             </div>
         </div>
     </div>
 
-    <section class="support-container">
+    <section class="support-container gs_reveal">
         <h2>How can we help ?</h2>
         <div class="support-card">
             <div class="support-card-pic">
-                <img src="UR-pic/repair.png" alt="">
+                <img src="UR-pic/repair.png" alt="Rapair">
             </div>
             <div class="support-card-txt">
                 <h3>Help with my bike</h3>
@@ -156,7 +190,7 @@
         </div>
         <div class="support-card">
             <div class="support-card-pic">
-                <img src="UR-pic/contactus.png" alt="">
+                <img src="UR-pic/contactus.png" alt="Contact us">
             </div>
             <div class="support-card-txt">
                 <h3>Contact us</h3>
@@ -168,7 +202,7 @@
         </div>
         <div class="support-card">
             <div class="support-card-pic">
-                <img src="UR-pic/appointment.png" alt="">
+                <img src="UR-pic/appointment.png" alt="Appointment">
             </div>
             <div class="support-card-txt">
                 <h3>Book appointment</h3>
@@ -180,7 +214,7 @@
         </div>
         <div class="support-card">
             <div class="support-card-pic">
-                <img src="UR-pic/Q&A.png" alt="">
+                <img src="UR-pic/Q&A.png" alt="Q&A">
             </div>
             <div class="support-card-txt">
                 <h3>Q&A</h3>
@@ -195,7 +229,7 @@
     <div class="footer">
         <div class="main-footer">
             <div class="footer-logo">
-                <img src="UR-pic/footer-logo.png" alt="">
+                <img src="UR-pic/footer-logo.png" alt="UR-logo">
             </div>
             <div class="footer-container">
                 <div class="footer-item">

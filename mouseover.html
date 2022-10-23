@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="UR-pic/TAB.png">
     <title>URBAN RIDING-Vanmoof V</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
@@ -59,13 +60,26 @@
             bottom: 150%;
             left: 0;
         }
-        /* .photoBike-main  {
+        .photoBike-main  {
+            /* position: relative; */
+            width: 100%;
+            /* height: 300px; */
+        }
+        /* .photoBike-main ul {
             display: flex;
-            justify-content: center;
+
         } */
         .photoBike-main img{
             width: 100%;
-        }
+        }   
+        /* .photoBike-main ul > li > img:nth-child(2) {
+            display: none;
+            width: 80%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        } */
+        
         /* .product-photo-side li {
             color: #4a4a4a;
             text-decoration: none;
@@ -128,14 +142,14 @@
             margin-right: 30px;
             margin-left: 10px;
         }
-        .color::after:active {
-            border: 2px solid darkblue;
-        }
+
         .color:hover {
-            border: 4px solid #ccc;
+            border: 3px solid #fff;
+            outline: 3px solid #ccc;
         }
         .color:focus {
-            border: 4px solid #F8A151;
+            border: 3px solid #fff;
+            outline: 3px solid #F8A151;
         }
        
         
@@ -161,8 +175,6 @@
         .product-button {
             margin-bottom: 0;
         }
-
-
         .mouseover img{
             width: 100%;
         }
@@ -174,6 +186,7 @@
 
         .mouseover-small img {
             width: 80%;
+            left: 10%;
             margin: auto;         
         }
         /*==================detail=============================*/
@@ -203,7 +216,7 @@
             /* z-index: 1; */
         }
         .explore-bike img {
-            width: 80%;
+            width: 100%;
             height: 100%;
         }
         .explore-part {
@@ -215,7 +228,7 @@
             /* left: 100px; */
         }
         .explore-bike {
-            width: 80%;
+            width: 100%;
             position: relative;
             display: flex;
             justify-content: center;
@@ -238,19 +251,19 @@
         }
         .link-1 {
             position: absolute;
-            left: 40%;
+            left: 38%;
             top: 29%;
         }
         .link-2 {
-            left: 59%;
+            left: 61%;
             top: 12%;
         }
         .link-3 {
-            left: 32%;
+            left: 27%;
             top: 62%;
         }
         .link-4 {
-            left: 46%;
+            left: 45%;
             top: 67%;
         }
         /*====*/
@@ -495,7 +508,8 @@
           opacity: 1;
       }
     }
-  
+
+ 
   .modal-body img {
     width: 100vw;
     height: 100vh;
@@ -505,7 +519,7 @@
     <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
-    <input type="checkbox" id="menu-switch">
+    <!-- <input type="checkbox" id="menu-switch">
     <div class="header">
         <div class="header-container">
             <div class="header-logo">
@@ -555,7 +569,172 @@
                 <span></span>
             </label>
         </div>
+    </div> -->
+
+    <input type="checkbox" id="menu-switch">
+    <div class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="UR-pic/logo ur.jpg" alt="UR-logo">
+                </a>
+            </div>
+            <div class="menu">
+                <ul class="clearfix">
+                    <li><a href="EBIKE.html" class="changeNav">E-BIKE</a>
+                        <ul class="menu-dropdown">
+                            <li><a href="#">Brands</a>
+                                <ul class="menu-brand">
+                                    <li><a>Vanmoof</a></li>
+                                    <li><a>Cowboy</a></li>
+                                    <li><a>Gogoro</a></li>
+                                    <li><a>Musashi Velo</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-bike"><a href="EBIKE.html">E-bike</a>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE.html">Vanmoof V</a></li>
+                                    <li><a href="EBIKE.html">Vanmoof S5</a></li>
+                                    <li><a href="EBIKE.html">Vanmoof X5</a></li>
+                                    <li><a href="EBIKE.html">Vanmoof S5</a></li>
+                                </ul>
+
+                                <ul class="menu-select1">
+                                    <li><a href="#">Cowboy 4</a></li>
+                                    <li><a href="#">Cowboy 3</a></li>
+                                    <li><a href="#">Cowboy 2</a></li>
+                                    <li><a href="#">Cowboy 4</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="#">Gogoro eeyo 4</a></li>
+                                    <li><a href="#">Gogoro eeyo 3</a></li>
+                                    <li><a href="#">Gogoro eeyo 2</a></li>
+                                    <li><a href="#">Gogoro eeyo 1</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="#">Musashi Velo 4</a></li>
+                                    <li><a href="#">Musashi Velo 3</a></li>
+                                    <li><a href="#">Musashi Velo 2</a></li>
+                                    <li><a href="#">Musashi Velo 1</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="brandLogo"><a href="#">Show Logo</a>
+                                <ul>
+                                    <li><img src="UR-pic/Vanmoof-logo2.png" alt="Vanmoof-logo"></li>
+                                    <li><img src="UR-pic/cowboy-logo.png" alt="Cowboy-logo"></li>
+                                    <li><img src="UR-pic/gogoro-logo.jfif" alt="Gogoro-logo"></li>
+                                    <li><img src="UR-pic/musashi_logo.png" alt="Musashi_logo"></li>
+                                </ul>
+                            </li>      
+                        </ul>
+                    </li>
+                    <li><a href="APP.html" class="changeNav">APP</a>
+                    <li><a href="BLOG.html" class="changeNav">BLOG</a></li>
+                    <li><a href="SUPPORT.html" class="changeNav">SUPPORT</a></li>
+                    <li><a href="ABOUT.html" class="changeNav">ABOUT</a></li>
+                  </ul>
+            </div>
+            <div class="header-cart">
+                <img src="UR-pic/4.png" alt="Shopping cart">
+                <img src="UR-pic/2.png" alt="Member">
+            </div>
+            <label for="menu-switch" id="hamburger-icon" title="Menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </label>
+        </div>
     </div>
+    <script>
+        $(document).ready(function() {
+		  "use strict";
+            $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+            $(".menu > ul > li").hover(function(e) {
+                if ($(window).width() > 943) {
+                $(this).children("ul").stop(true, false).fadeToggle(150);
+                e.preventDefault();
+                }
+            });
+            /*==========*/
+            let menuBrand = document.querySelectorAll(".menu-brand li");
+            let menuBike = document.querySelectorAll(".menu-bike ul");
+            let menuLogo = document.querySelectorAll(".brandLogo li")
+            for(let i=0;i<=menuBrand.length;i++){
+                $(menuBrand[i]).click(function(){
+                    if(i >= 0){  
+                        $(menuBike[0]).css({
+                            'display': 'none',
+                        })   
+                        $(menuBike[1]).css({
+                            'display': 'none',
+                        }) 
+                        $(menuBike[2]).css({
+                            'display': 'none',
+                        }) 
+                        $(menuBike[3]).css({
+                            'display': 'none',
+                        }) 
+                        /**/
+                        $(menuLogo[0]).css({
+                            'display': 'none',
+                        })   
+                        $(menuLogo[1]).css({
+                            'display': 'none',
+                        }) 
+                        $(menuLogo[2]).css({
+                            'display': 'none',
+                        }) 
+                        $(menuLogo[3]).css({
+                            'display': 'none',
+                        })         
+                    }
+                })
+            }
+            $('.menu > ul > li').click(function(){
+                if($(window).width() < 769){
+                    $(menuBrand).slideDown(2000)
+                    $('.menu-bike').hide()
+                    $('.brandLogo').hide()
+                }
+            })
+            /**/
+
+            $(menuBrand[0]).click(function(){
+                $(menuBike[0]).fadeToggle(400)
+                $(menuLogo[0]).fadeToggle(400)
+            })
+            $(menuBrand[1]).click(function(){
+                $(menuBike[1]).fadeToggle(400)
+                $(menuLogo[1]).fadeToggle(400)
+            })
+            
+            $(menuBrand[2]).click(function(){
+                $(menuBike[2]).fadeToggle(400)
+                $(menuLogo[2]).fadeToggle(400)
+            })
+            $(menuBrand[3]).click(function(){
+                $(menuBike[3]).fadeToggle(400)
+                $(menuLogo[3]).fadeToggle(400)
+            })
+            /*==========*/
+            $(".menu > ul > li").click(function() {
+                if ($(window).width() <= 943) {
+                $(this).children("ul").fadeToggle(150);
+                }
+            });
+            $(window).resize(function() {
+                $(".menu > ul > li").children("ul").hide();
+                $(".menu > ul").removeClass('show-on-mobile');
+		    });
+            });
+            $( document ).ready(function() {
+            let hamburger = $('#hamburger-icon');
+            hamburger.click(function() {
+                hamburger.toggleClass('active');
+            });
+        });
+      </script>
     <!-- <hr class="header-hr">
 
     <div class="cookie">
@@ -564,13 +743,16 @@
 
     <section class="product-wrap">
         <div class="product-photo">
-            <!-- <img src="UR-pic/vf v-explore.png" alt=""> -->
             <div class="product-photo-side">
-                <!-- <button class="mouseover">
-                    <img src="UR-pic/vf v-explore.png" style="display: block;" alt="">
-                </button> -->
                 <div class="photoBike-main">
-                    <img src="UR-pic/vf v-explore.png" style="display: block;" alt="">
+                    <img src="UR-pic/vf s5去被.png" style="display: block;" alt="VF S5">
+                    <!-- <ul>
+                        <li> <img src="UR-pic/vf v-explore.png" style="display: block;" alt="VF S5"></li>
+                        <li><img src="UR-pic/s5-head.png" alt="S5-head"></li>
+                        <li> <img src="UR-pic/s5-backed2.png" alt="S5-back"></li>
+                        <li><img src="UR-pic/s5-34-1.png" alt="S5-3/4"></li>
+                    </ul> -->
+                    
                 </div>
                 <div class="photoBike-hover">
                     <button class="mouseover">Front
@@ -580,7 +762,7 @@
                         <img src="UR-pic/s5-backed2.png" alt="S5-back">
                     </button>
                     <button class="mouseover mouseover-small">3/4
-                        <img src="UR-pic/s5-34-1.png" alt="S5-3/4">
+                        <img src="UR-pic/S5-silde.png" alt="S5-3/4">
                     </button>
                 </div>
             </div>
@@ -630,16 +812,18 @@
         for(let i=0;i<imgs.length;i++){
             $(mouseover[i]).hover(function(){
                 if(i < 5){
-                    $(imgs[i+1]).stop(true).fadeToggle(1100).delay(500) 
-                    $(imgs[0]).stop(true).fadeToggle(600) 
+                    $(imgs[i+1]).stop(true).fadeToggle(900).delay(500) 
+                    $(imgs[0]).stop(true).fadeToggle(400)
+                    // $(mouseover[i+1]).css(function(){
+                    //     display: 'block'
+                    // }) 
                 }
             })
+          
         }
 
         
-        // $(mouseover).hover(function(){
-        //     $('.mouseover img').stop(true).toggle(1000)
-        // })
+   
     </script>
     <!-- <section class="product-explore">
         <h1>Explore every details</h1>
@@ -690,37 +874,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-            <!-- <div class="modal-container" id="m1-o" style="background: transparent;">
-                <div class="modal">
-                    <img src="UR-pic/bike-back.webp" alt="">
-                    <a href="#m1-c" class="link-cancel" id="link-cancel">
-                    </a>
-                </div>
-            </div>
-            <div class="modal-container" id="m2-o" style="background: transparent;">
-                <div class="modal">
-                    <img src="UR-pic/bike-head.jpg" alt="">
-                    <a href="#m1-c" class="link-cancel" id="link-cancel">
-                    </a>
-                </div>
-            </div>
-            <div class="modal-container" id="m3-o" style="background: transparent;">
-                <div class="modal">
-                    <img src="UR-pic/bike-key.png" alt="">
-                    <a href="#m1-c" class="link-cancel" id="link-cancel">
-                    </a>
-                </div>
-            </div>
-            <div class="modal-container" id="m4-o" style="background: transparent;">
-                <div class="modal">
-                    <img src="UR-pic/bike-pad.png" alt="">
-                    <a href="#m1-c" class="link-cancel" id="link-cancel">
-                    </a>
-                </div>
-            </div> -->
         </div>
     </section>
     <script>

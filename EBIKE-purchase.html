@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="UR-pic/TAB.png">
     <title>URBAN RIDING-Vanmoof V</title>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'></link>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="general-set.css">
-    <script src="jquery-3.6.1.js"></script>
-	<script src="jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
-    <script>
-    </script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <script src="gsap-function.js"></script>
     <style>
         .header {
             border-bottom: 1px solid rgba(190, 170, 170, 0.5);
@@ -36,19 +42,57 @@
         .product-photo img {
             width: 100%;
         }
-        .product-photo-side ul {
+        .product-photo-side {
+            /* display: flex; */
+            justify-content: center;
+            position: relative;
+        }
+        .photoBike-hover {
             display: flex;
-            flex-direction: row;
             justify-content: center;
         }
-        .product-photo-side li {
+        .product-photo-side button {
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            /* justify-content: center; */
+        }
+        .mouseover img {
+            display: none;
+            width: 80%;
+            position: absolute;
+            bottom: 150%;
+            left: 0;
+        }
+        .photoBike-main  {
+            /* position: relative; */
+            width: 100%;
+            /* height: 300px; */
+        }
+        /* .photoBike-main ul {
+            display: flex;
+
+        } */
+        .photoBike-main img{
+            width: 100%;
+        }   
+        /* .photoBike-main ul > li > img:nth-child(2) {
+            display: none;
+            width: 80%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        } */
+        
+        /* .product-photo-side li {
             color: #4a4a4a;
             text-decoration: none;
             font-size: 24px;
             padding: 10px;
             margin: 10px;
-        }
-        .product-photo-side li:hover {
+        } */
+        .product-photo-side button:hover {
             text-decoration: underline;
             color: #3A3A3A;
         } 
@@ -58,6 +102,67 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+    
+        .prodcut-detail-color {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+            justify-content: flex-start;
+        }
+        .prodcut-detail-color .color {
+            /* background-color: #ffffff; */
+            border: 2px solid transparent;
+            /* border-radius: 10px; */
+            /* margin: 10px; */
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+        }
+        /* .color::after {
+            border-radius: inherit;
+            box-shadow: inset 0 1px px rgb(0 0 0 / 10%);
+            content: "";
+            display: block;
+            height: 44px;
+            position: absolute;
+            width: 44px;
+            border: 2px solid #ccc;
+            top: -16%;
+            left: -16%;
+        } */
+        .color-bk {
+            background-color: #000;
+        }
+        .color-sand {
+            background-color: #e8dfc8;
+        }
+        .color-green {
+            background-color: #6a7870;
+        }
+        .color {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 30px;
+            margin-left: 10px;
+        }
+
+        .color:hover {
+            border: 3px solid #fff;
+            outline: 3px solid #ccc;
+        }
+        .color:focus {
+            border: 3px solid #fff;
+            outline: 3px solid #F8A151;
+        }
+       
+        
+        .product-detail-purchase {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 10px;
         }
         .prodcut-detail-title {
             margin-bottom: 20px;
@@ -69,36 +174,28 @@
         .prodcut-detail-title p,.prodcut-detail-title h3 {
             margin: 10px;
         }
-        .prodcut-detail-color {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 10px;
-            justify-content: space-around;
-        }
-        .prodcut-detail-color .color {
-            background-color: #ffffff;
-            border: 2px solid rgba(0, 0, 0, 0.25);
-            border-radius: 10px;
-            padding: 10px 30px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .color:hover {
-            border: 2px solid #3A3A3A;
-        }
-        .color:focus {
-            background-color: #EBECF0;
-            border: 2px solid #3A3A3A;
-        }
-        .product-detail-purchase {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-        }
         .product-detail-total h2 {
             margin: 5px 10px;
         }
+        .product-button {
+            margin-bottom: 0;
+        }
 
+
+        .mouseover img{
+            width: 100%;
+        }
+        .mouseover {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .mouseover-small img {
+            width: 80%;
+            left: 10%;
+            margin: auto;         
+        }
         /*==================detail=============================*/
         /* .product-explore {
             width: 1200px;
@@ -126,7 +223,7 @@
             /* z-index: 1; */
         }
         .explore-bike img {
-            width: 80%;
+            width: 100%;
             height: 100%;
         }
         .explore-part {
@@ -138,7 +235,7 @@
             /* left: 100px; */
         }
         .explore-bike {
-            width: 80%;
+            width: 100%;
             position: relative;
             display: flex;
             justify-content: center;
@@ -161,19 +258,19 @@
         }
         .link-1 {
             position: absolute;
-            left: 40%;
+            left: 38%;
             top: 29%;
         }
         .link-2 {
-            left: 59%;
+            left: 61%;
             top: 12%;
         }
         .link-3 {
-            left: 32%;
+            left: 27%;
             top: 62%;
         }
         .link-4 {
-            left: 46%;
+            left: 45%;
             top: 67%;
         }
         /*====*/
@@ -259,7 +356,7 @@
                 box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
             }
             70% {
-                transform: scale(1);
+                transform: scale(1.3);
                 box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
             }
             100% {
@@ -418,7 +515,8 @@
           opacity: 1;
       }
     }
-  
+
+ 
   .modal-body img {
     width: 100vw;
     height: 100vh;
@@ -428,76 +526,109 @@
     <link rel="stylesheet" href="RWD.css">
 </head>
 <body>
+
     <input type="checkbox" id="menu-switch">
     <div class="header">
         <div class="header-container">
             <div class="header-logo">
                 <a href="index.html">
-                    <img src="UR-pic/logo ur.jpg" alt="">
+                    <img src="UR-pic/logo ur.jpg" alt="UR-logo">
                 </a>
             </div>
             <div class="menu">
-                <nav class="navbar">
-                    <div class="d">
-                        <button class="d-btn underline">E-BIKE</button>
-                        <div class="d-content">
-                            <div class="d-brands">
-                                <div class="column">
-                                    <h3>Brands</h3>
-                                    <a href="">Vanmoof</a>
-                                    <a href="">Cowboy</a>
-                                    <a href="">Gogoro</a>
-                                    <a href="">Musashi Velo</a>
-                                </div>
-                                <div class="column">
-                                    <h3>E-bikes</h3>
-                                    <a href="EBIKE.html">Vanmoof V</a>
-                                    <a href="EBIKE.html">Vanmoof S5</a>
-                                    <a href="EBIKE.html">Vanmoof X5</a>
-                                    <a href="EBIKE.html">Vanmoof S3</a>
-                                </div>
-                                <div class="column column-pic">
-                                    <img src="UR-pic/vf v-remove.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="APP.html">APP</a>
-                    <a href="BLOG.html">BLOG</a>
-                    <a href="SUPPORT.html">SUPPORT</a>
-                    <a href="ABOUT.html">ABOUT</a>
-                </nav>
+                <ul class="clearfix">
+                    <li><a href="#" class="changeNav">E-BIKE</a>
+                        <ul class="menu-dropdown">
+                            <li><a href="EBIKE.html">Brands</a>
+                                <ul class="menu-brand">
+                                    <li><a>Vanmoof</a></li>
+                                    <li><a>Cowboy</a></li>
+                                    <li><a>Gogoro</a></li>
+                                    <li><a>Musashi Velo</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-bike"><a href="EBIKE.html">E-bike</a>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Vanmoof V</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof S5</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof X5</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof S5</a></li>
+                                </ul>
+
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 1</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 1</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="brandLogo"><a href="#">Show Logo</a>
+                                <ul>
+                                    <li><img src="UR-pic/Vanmoof-logo2.png" alt="Vanmoof-logo"></li>
+                                    <li><img src="UR-pic/cowboy-logo.png" alt="Cowboy-logo"></li>
+                                    <li><img src="UR-pic/gogoro-logo.jfif" alt="Gogoro-logo"></li>
+                                    <li><img src="UR-pic/musashi_logo.png" alt="Musashi_logo"></li>
+                                </ul>
+                            </li>      
+                        </ul>
+                    </li>
+                    <li><a href="APP.html" class="changeNav">APP</a>
+                    <li><a href="BLOG.html" class="changeNav">BLOG</a></li>
+                    <li><a href="SUPPORT.html" class="changeNav">SUPPORT</a></li>
+                    <li><a href="ABOUT.html" class="changeNav">ABOUT</a></li>
+                  </ul>
             </div>
             <div class="header-cart">
-                <img src="UR-pic/4.png" alt="">
-                <img src="UR-pic/2.png" alt="">
+                <img src="UR-pic/4.png" alt="Shopping cart">
+                <img src="UR-pic/2.png" alt="Member">
             </div>
-            <label for="menu-switch" class="hb">
-                <span></span>
-                <span></span>
-                <span></span>
+            <label for="menu-switch" id="hamburger-icon" title="Menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
             </label>
         </div>
     </div>
-    <!-- <hr class="header-hr">
-
-    <div class="cookie">
-        <p>Home / E-BIKE / Vanmoof / V</p>
-    </div> -->
 
     <section class="product-wrap">
-        <div class="product-photo">
-            <img src="UR-pic/vf v-explore.png" alt="">
-            <div class="product-photo-side ">
-                <ul>
-                    <li>Side</li>
-                    <li>Front</li>
-                    <li>Back</li>
-                    <li>3/4</li>
-                </ul>
+        <div class="product-photo gs_reveal gs_reveal_fromLeft">
+            <div class="product-photo-side">
+                <div class="photoBike-main">
+                    <img src="UR-pic/vf s5去被.png" style="display: block;" alt="VF S5">
+                    <!-- <ul>
+                        <li> <img src="UR-pic/vf v-explore.png" style="display: block;" alt="VF S5"></li>
+                        <li><img src="UR-pic/s5-head.png" alt="S5-head"></li>
+                        <li> <img src="UR-pic/s5-backed2.png" alt="S5-back"></li>
+                        <li><img src="UR-pic/s5-34-1.png" alt="S5-3/4"></li>
+                    </ul> -->
+                </div>
+                <div class="photoBike-hover">
+                    <button class="mouseover">Front
+                        <img src="UR-pic/s5-head.png" alt="S5-head">
+                    </button>
+                    <button class="mouseover">Back
+                        <img src="UR-pic/s5-backed2.png" alt="S5-back">
+                    </button>
+                    <button class="mouseover mouseover-small">3/4
+                        <img src="UR-pic/S5-silde.png" alt="S5-3/4">
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="product-detail">
+        <div class="product-detail gs_reveal gs_reveal_fromRight">
             <div class="prodcut-detail-title">
                 <h1>Vanmoof V</h1>
                 <p>Rule the road with the Cow boy 4. Perfect for controlled cruising and longer rides.</p>
@@ -505,19 +636,13 @@
                 <h3>Choose your color：</h3>
             </div>
             <div class="prodcut-detail-color">
-                <button class="color" name="color">
-                    <img src="UR-pic/black-1.png" alt="">
-                </button>
-                <button class="color" name="color">
-                    <img src="UR-pic/sand.png" alt="">
-                </button>
-                <button class="color" name="color">
-                    <img src="UR-pic/green.png" alt="">
-                </button>
-                
+                <button class="color color-bk" name="color"></button>
+                <button class="color color-sand" name="color"> </button>
+                <button class="color color-green" name="color"></button>
+            
             </div>
-            <hr class="content-hr">
-            <div class="product-detail-purchase">
+            
+            <!-- <div class="product-detail-purchase">
                 <div class="product-detail-total">
                     <h2>Total：</h2>
                     <button class="add-cart">Add to cart</button>
@@ -526,10 +651,41 @@
                     <h2>$2,427</h2>
                     <button class="explore">Buy now</button>
                 </div>  
+            </div> -->
+            <div class="product-detail-purchase">
+                <hr class="content-hr">
+                <div class="product-detail-total">
+                    <h2>Total：$2,427</h2>
+                </div>
+                <div class="product-detail-total product-button">
+                    <button class="add-cart">Add to cart</button>
+                    <button class="explore">Buy now</button>
+                </div>  
             </div>
         </div>
     </section>
 
+
+    <script>
+        let imgs = document.querySelectorAll(".product-photo-side img");
+        let mouseover = document.querySelectorAll(".mouseover")
+        
+        for(let i=0;i<imgs.length;i++){
+            $(mouseover[i]).hover(function(){
+                if(i < 5){
+                    $(imgs[i+1]).stop(true).fadeToggle(900).delay(500) 
+                    $(imgs[0]).stop(true).fadeToggle(400)
+                    // $(mouseover[i+1]).css(function(){
+                    //     display: 'block'
+                    // }) 
+                }
+            })
+          
+        }
+
+        
+   
+    </script>
     <!-- <section class="product-explore">
         <h1>Explore every details</h1>
         <img src="UR-pic/vf v-explore.png" alt="">
@@ -538,7 +694,7 @@
         <h1>Explore every details</h1>
         <div class="explore-pic" id="m1-c">
             <div class="explore-bike">
-                <img src="UR-pic/vf s5去被.png" alt="">
+                <img src="UR-pic/vf s5去被.png" alt="VF S5">
                 <a href="#myModal" class=" link-large link-1 blob orange-spot" id="sized"></a>
                 <a href="#myModal1" class="link-large link-2 blob orange-spot" id="sized1"></a>
                 <a href="#myModal2" class="link-large link-3 blob orange-spot" id="sized2"></a>
@@ -550,7 +706,7 @@
                 <div class="modal-content animated zoomIn">
                     <div class="modal-body nav">
                         <span class="close">×</span>
-                        <img src="UR-pic/bike-back.webp" alt="">
+                        <img src="UR-pic/bike-back.webp" alt="bike-back">
                     </div>
                 </div>
             </div>
@@ -559,7 +715,7 @@
                 <div class="modal-content animated zoomIn">
                     <div class="modal-body nav">
                         <span class="close">×</span>
-                        <img src="UR-pic/bike-head.jpg" alt="">
+                        <img src="UR-pic/bike-head.jpg" alt="bike-head">
                     </div>
                 </div>
             </div>
@@ -567,7 +723,7 @@
                 <div class="modal-content animated zoomIn">
                     <div class="modal-body nav">
                         <span class="close">×</span>
-                        <img src="UR-pic/bike-gear1.png" alt="">
+                        <img src="UR-pic/bike-gear1.png" alt="bike-gear">
                     </div>
                 </div>
             </div>
@@ -575,41 +731,10 @@
                 <div class="modal-content animated zoomIn">
                     <div class="modal-body nav">
                         <span class="close">×</span>
-                        <img src="UR-pic/bike=pedal2.jpg" alt="">
+                        <img src="UR-pic/bike=pedal2.jpg" alt="bike-pedal">
                     </div>
                 </div>
             </div>
-
-
-
-            <!-- <div class="modal-container" id="m1-o" style="background: transparent;">
-                <div class="modal">
-                    <img src="UR-pic/bike-back.webp" alt="">
-                    <a href="#m1-c" class="link-cancel" id="link-cancel">
-                    </a>
-                </div>
-            </div>
-            <div class="modal-container" id="m2-o" style="background: transparent;">
-                <div class="modal">
-                    <img src="UR-pic/bike-head.jpg" alt="">
-                    <a href="#m1-c" class="link-cancel" id="link-cancel">
-                    </a>
-                </div>
-            </div>
-            <div class="modal-container" id="m3-o" style="background: transparent;">
-                <div class="modal">
-                    <img src="UR-pic/bike-key.png" alt="">
-                    <a href="#m1-c" class="link-cancel" id="link-cancel">
-                    </a>
-                </div>
-            </div>
-            <div class="modal-container" id="m4-o" style="background: transparent;">
-                <div class="modal">
-                    <img src="UR-pic/bike-pad.png" alt="">
-                    <a href="#m1-c" class="link-cancel" id="link-cancel">
-                    </a>
-                </div>
-            </div> -->
         </div>
     </section>
     <script>
@@ -631,32 +756,32 @@
         let span2 = document.getElementsByClassName("close")[2];
         let span3 = document.getElementsByClassName("close")[3];
         // When user clicks button, open Modal
-        btn.onclick = function() {
-          modal.style.display = "block";
-        };
-        btn1.onclick = function() {
-            myModal1.style.display = "block";
-        };
-        btn2.onclick = function() {
-            myModal2.style.display = "block";
-        };
-        btn3.onclick = function() {
-            myModal3.style.display = "block";
-        };
-        
+        $(btn).click(function(){
+            $(modal).fadeToggle(500)
+        })
+        $(btn1).click(function(){
+            $(myModal1).fadeToggle(500)
+        })
+        $(btn2).click(function(){
+            $(myModal2).fadeToggle(500)
+        })
+        $(btn3).click(function(){
+            $(myModal3).fadeToggle(500)
+        })
         // When user clicks Close (x), close Modal
-        span.onclick = function() {
-          modal.style.display = "none";
-        };
-        span1.onclick = function() {
-            myModal1.style.display = "none";
-        };
-        span2.onclick = function() {
-            myModal2.style.display = "none";
-        };
-        span3.onclick = function() {
-            myModal3.style.display = "none";
-        };
+        $(span).click(function(){
+            $(modal).fadeOut(500)
+        })
+        $(span1).click(function(){
+            $(myModal1).fadeOut(500)
+        })
+        $(span2).click(function(){
+            $(myModal2).fadeOut(500)
+        })
+        $(span3).click(function(){
+            $(myModal3).fadeOut(500)
+        })
+        
        
 
         // When user clicks anywhere outside of the Modal, close Modal
@@ -669,17 +794,17 @@
 
     <section class="description">
         <div class="description1">
-            <div class="description1-pic">
+            <div class="description1-pic gs_reveal gs_reveal_fromLeft">
                 <img src="UR-pic/product description1.webp" alt="">
             </div>
-            <div class="description1-txt ">
+            <div class="description1-txt gs_reveal gs_reveal_fromRight">
                 <h2>Mount your phone to the handlebars and use the VanMoof app while you’re on the move.
                 </h2>
                 <p>Track every ride
                     Track your current speed, ride duration, and distance while you ride – and look back at your ride history to see how many kilometers you’ve crunched that month. Oh, and you can keep your phone nicely charged up here, too.</p>
             </div>
         </div>
-        <div class="description1 description2">
+        <div class="description1 description2 gs_reveal">
             <div class="description1-pic">
                 <img src="UR-pic/product description2.webp" alt="">
             </div>
@@ -693,7 +818,7 @@
         </div>
     </section>
 
-    <section class="product-wrap">
+    <section class="product-wrap gs_reveal">
         <h2>Specifications</h2>
         <div class="product-specify">
             <div class="product-specification">
@@ -782,8 +907,6 @@
             Copyright &copy;  This platform protects learning policies and displays. If you have any doubts about translation, you can send a private message to TibaMe, and you will be assisted by a dedicated person.
         </div>
     </div>
-
-
     
 </body>
 </html>

@@ -73,6 +73,85 @@
             }
         }
         @media screen and (max-width:768px){
+            /* #hamburger-icon {
+        width: 50px;
+        height: 40px;
+        position: relative;
+        display: block;
+        margin: auto 20px;
+      }
+      #hamburger-icon .line {
+        display: block;
+        background: #3a3a3a;
+        width: 50px;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        border-radius: 4px;
+        transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+      }
+      #hamburger-icon .line.line-1 {
+        top: 20%;
+      }
+      #hamburger-icon .line.line-2 {
+        top: 50%;
+      }
+      #hamburger-icon .line.line-3 {
+        top: 80%;
+      }
+      #hamburger-icon:hover .line-1, #hamburger-icon:focus .line-1 {
+        transform: translateY(0px);
+        -webkit-transform: translateY(-4px);
+        -moz-transform: translateY(-4px);
+      }
+      #hamburger-icon:hover .line-3, #hamburger-icon:focus .line-3 {
+        transform: translateY(0px);
+        -webkit-transform: translateY(4px);
+        -moz-transform: translateY(4px);
+      }
+      #hamburger-icon.active .line-1 {
+        transform: translateY(10px) translateX(0) rotate(45deg);
+        -webkit-transform: translateY(10px) translateX(0) rotate(45deg);
+        -moz-transform: translateY(10px) translateX(0) rotate(45deg);
+      }
+      #hamburger-icon.active .line-2 {
+        opacity: 0;
+      }
+      #hamburger-icon.active .line-3 {
+        transform: translateY(-14px) translateX(0) rotate(-45deg);
+        -webkit-transform: translateY(-14px) translateX(0) rotate(-45deg);
+        -moz-transform: translateY(-14px) translateX(0) rotate(-45deg);
+      }
+      label {
+        text-decoration: none;
+        color: #000;
+        margin: 0.5em 1.5em;
+        display: inline-block;
+      }
+      label:hover, label:focus {
+        color: #3a3a3a;
+      }
+      .clearfix {
+        padding: 20px;
+      }
+      .menu > ul {
+        padding: 10px;
+      }
+      .clearfix > li {
+        padding: 0 20px;
+      }
+      .menu > ul > li {
+        padding: 0 20px;
+      }
+      .clearfix > li > a {
+        margin-left: 3%;
+        border-bottom: 1px solid #101617;
+      } */
+    
+
+            /*======*/
             .hb {
                 width: 40px;
                 height: 40px;
@@ -91,17 +170,6 @@
                 width: 100%;
                 justify-content: space-between;
             }
-            .hb span {
-                /* width: 32px;
-                height: 2px;
-                background-color: #3a3a3a;
-                opacity: 1;
-                position: absolute;
-                left: 0;
-                right: 0;
-                margin: auto; */
-                /* transform: rotate(0); */
-            }
             .menu {
                 position: absolute;
                 background-color: #fff;
@@ -110,73 +178,12 @@
                 top: 100%;
                 opacity: 0;
                 transform: opacity 1s 0s,
-                           left 1s 1s;
+                           left 0.5s 1s;
                 
             }
-            #menu-switch input {
-                display: block;
-                width: 40px;
-                height: 32px;
-                position: absolute;
-                top: -7px;
-                left: -5px;
-                
-                cursor: pointer;
-                
-                opacity: 0; /* hide this */
-                z-index: 2; /* and place it over the hamburger */
-                
-                -webkit-touch-callout: none;
-            }
-            .hb span:first-child
-            {
-                 transform-origin: 0% 0%;
-            }
-            .hb span:nth-last-child(2)
-            {
-                transform-origin: 0% 100%;
-            }
-            /* .hb span:nth-child(1){
-                top: 7px;
-                transform-origin: 0% 0%;
-            }
-            .hb span:nth-child(2){
-                top: 19px;
-                transform-origin: 0% 100%;
-            } */
-            /* .hb span:nth-child(3){
-                top: 31px;
-            } */
-            #menu-switch input:checked ~ .hb span {
-                opacity: 1;
-                transform: rotate(45deg) translate(-2px, -1px);
-                background: #232323;
-            }
-            #menu-switch input:checked ~ .hb span:nth-last-child(3) {
-                opacity: 0;
-                transform: rotate(0deg) scale(0.2, 0.2);
-            }
-            #menu-switch input:checked ~ .hb span:nth-last-child(2) {
-                transform: rotate(-45deg) translate(0, -1px);
-            }
-
-
-
-            /* #menu-switch:checked + .header .hb span:nth-child(1){
-                animation: no1 1s 1s forwards;
-            }
-            #menu-switch:checked + .header .hb span:nth-child(2){
-                animation: no2 1s 0s forwards;
-            }
-            #menu-switch:checked + .header .hb span:nth-child(3){
-                animation: no3 1s 1s forwards;
-            } */
-            #menu-switch:checked + .header .menu {/*不是任何東西都可以被check */
-                display: block;
-                left: 0;
-                opacity: 1;
-                transition: opacity 1s 1s;
-            } 
+          
+           
+         
             @keyframes no1 {
                 0%{ top: 7px; transform: rotate(0deg);}
                 50%{ top: 19px; transform: rotate(0deg);}
@@ -421,7 +428,6 @@
     left: 0;
     top: 6vh;
 }
-
 .menu {
     /* width: 800px; */
     width: 66.66666%;
@@ -439,21 +445,7 @@
 .menu img {
     max-width: 100%;
 }
-/* .menu-mobile {
-  display: none;
-  padding: 20px;
-} */
-/* .menu-mobile:after {
-  content: "\f394";
-  font-family: "Ionicons";
-  font-size: 2.5rem;
-  padding: 0;
-  float: right;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-25%);
-          transform: translateY(-25%);
-} */
+
 .menu-dropdown-icon:before {
   content: "\f489";
   /* font-family: "Ionicons"; */
@@ -492,7 +484,7 @@
   float: left;
   /* background: #e9e9e9; */
   padding: 0;
-  margin: 0;
+  margin: 0 10px 0 0;
   /* width: 50px; */
 }
 .menu > ul > li a {
@@ -543,7 +535,7 @@
   display: block;
   border-bottom: 1px solid #ccc;
 }
-.menu > ul > li > ul > li a:hover{
+.menu > ul > li > ul > li >ul a:hover {
 	color: #000;
     background-color: #3a3a3a;
     transition: 1s;
@@ -588,6 +580,23 @@
   border: 0;
   padding: 1em 0;
 }
+.brandLogo {
+    position: relative;
+}
+.brandLogo img {
+    width: 80%;
+}
+.menu ul > li > ul li:nth-child(3) > ul > li:nth-child(1n),.menu ul > li > ul li:nth-child(3) > ul > li:nth-child(2n),.menu ul > li > ul li:nth-child(3) > ul > li:nth-child(1) {
+    display: none;
+    position: absolute;
+    left: 4%;
+    top: 160%;
+}
+    /* .menu > ul {
+        display: none;
+        width:100%;
+    } */
+
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 Mobile style's
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -598,18 +607,16 @@ Mobile style's
         /* display: block; */
         opacity: 1;
     }
-    .clearfix > li > ul {
-        
-    }
+    
 
 }
 @media only screen and (max-width: 959px) {
-  /* .menu-container {
+  .menu-container {
     width: 100%;
   }
   .menu-container .menu{
 	display:inline-block;
-   } */
+   }
   /* .menu-mobile {
     display: block;    
     float: right;    
@@ -618,34 +625,27 @@ Mobile style's
   .menu-dropdown-icon:before {
     display: block;
   }
-  .menu > ul {
-    /* display: none; */
-    width:100%;
-  }
   /* .menu > ul > li {
     width: 100%;
     float: none;
     display: block;
   } */
-     .menu > ul > li a {
-    padding: 1.5em;
-    width: 100%;
-    display: block;
-  }
+    .menu > ul > li a {
+        padding: 1.5em 10px 20px;
+        width: 100%;
+        display: block;
+    }
   .menu > ul > li > ul {
     position: relative;    
-    padding: 0 40px;
+    padding: 0 20px;
   }
-  .menu > ul > li > ul.normal-sub {
+  /* .menu > ul > li > ul.normal-sub {
     width: 100%;
-  }
+  } */
   .menu > ul > li > ul > li {
     float: none;
     width: 100%;
     margin-top: 20px;
-  }
-  .menu > ul > li > ul > li:first-child {
-    margin: 0;
   }
   .menu > ul > li > ul > li > ul {
     position: relative;
@@ -653,10 +653,99 @@ Mobile style's
   .menu > ul > li > ul > li > ul > li {
     float: none;
   }
-  /* .menu .show-on-mobile {
-    display: block;
-  } */
 } 
+    @media screen and (max-width:768px){
+        #hamburger-icon {
+        width: 50px;
+        height: 40px;
+        position: relative;
+        display: block;
+        margin: auto 20px;
+      }
+      #hamburger-icon .line {
+        display: block;
+        background: #3a3a3a;
+        width: 50px;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        border-radius: 4px;
+        transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+      }
+      #hamburger-icon .line.line-1 {
+        top: 20%;
+      }
+      #hamburger-icon .line.line-2 {
+        top: 50%;
+      }
+      #hamburger-icon .line.line-3 {
+        top: 80%;
+      }
+      #hamburger-icon:hover .line-1, #hamburger-icon:focus .line-1 {
+        transform: translateY(0px);
+        -webkit-transform: translateY(-4px);
+        -moz-transform: translateY(-4px);
+      }
+      #hamburger-icon:hover .line-3, #hamburger-icon:focus .line-3 {
+        transform: translateY(0px);
+        -webkit-transform: translateY(4px);
+        -moz-transform: translateY(4px);
+      }
+      #hamburger-icon.active .line-1 {
+        transform: translateY(10px) translateX(0) rotate(45deg);
+        -webkit-transform: translateY(10px) translateX(0) rotate(45deg);
+        -moz-transform: translateY(10px) translateX(0) rotate(45deg);
+      }
+      #hamburger-icon.active .line-2 {
+        opacity: 0;
+      }
+      #hamburger-icon.active .line-3 {
+        transform: translateY(-14px) translateX(0) rotate(-45deg);
+        -webkit-transform: translateY(-14px) translateX(0) rotate(-45deg);
+        -moz-transform: translateY(-14px) translateX(0) rotate(-45deg);
+      }
+      label {
+        text-decoration: none;
+        color: #000;
+        margin: 0.5em 1.5em;
+        display: inline-block;
+      }
+      label:hover, label:focus {
+        color: #3a3a3a;
+      }
+      .clearfix {
+        padding: 20px;
+      }
+      .menu > ul {
+        padding: 10px;
+      }
+      .clearfix > li {
+        padding: 0 20px;
+      }
+      .menu > ul > li {
+        padding: 0 20px;
+      }
+      .clearfix > li > a {
+        border-bottom: 2px solid #ccc;
+      }
+      .menu > ul > li:hover {
+        background-color: transparent;
+      }
+      .menu > ul > li:hover .changeNav {
+        color: #3a3a3a;
+      }
+      .menu > ul > li > ul > li {
+        width: 100%;
+      }
+      .header {
+            border-bottom: 1px solid rgba(190, 170, 170, 0.5);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+            margin-bottom: 10px;
+        }
+    }
+
     </style>
     <link rel="stylesheet" href="RWD.css">
 </head>
@@ -666,14 +755,12 @@ Mobile style's
         <div class="header-container">
             <div class="header-logo">
                 <a href="index.html">
-                    <img src="UR-pic/logo ur.jpg" alt="">
+                    <img src="UR-pic/logo ur.jpg" alt="UR-logo">
                 </a>
             </div>
-
-            
             <div class="menu">
                 <ul class="clearfix">
-                    <li><a href="#" class="changeNav">E-BIKE</a>
+                    <li><a href="EBIKE.html" class="changeNav">E-BIKE</a>
                         <ul class="menu-dropdown">
                             <li><a href="#">Brands</a>
                                 <ul class="menu-brand">
@@ -704,39 +791,48 @@ Mobile style's
                                     <li><a href="#">Gogoro eeyo 1</a></li>
                                 </ul>
                                 <ul class="menu-select1">
-                                    <li><a href="#">Musashi Velo</a></li>
-                                    <li><a href="#">Musashi Velo</a></li>
-                                    <li><a href="#">Musashi Velo</a></li>
-                                    <li><a href="#">Musashi Velo</a></li>
+                                    <li><a href="#">Musashi Velo 4</a></li>
+                                    <li><a href="#">Musashi Velo 3</a></li>
+                                    <li><a href="#">Musashi Velo 2</a></li>
+                                    <li><a href="#">Musashi Velo 1</a></li>
                                 </ul>
                             </li>
                             
-                            <li><a href="#">Something</a>
+                            <li class="brandLogo"><a href="#">Show Logo</a>
                                 <ul>
-                                    <li><img src="https://picsum.photos/300/200/?random=10"></li>
+                                    <li><img src="UR-pic/Vanmoof-logo2.png" alt="Vanmoof-logo"></li>
+                                    <li><img src="UR-pic/cowboy-logo.png" alt="Cowboy-logo"></li>
+                                    <li><img src="UR-pic/gogoro-logo.jfif" alt="Gogoro-logo"></li>
+                                    <li><img src="UR-pic/musashi_logo.png" alt="Musashi_logo"></li>
                                 </ul>
                             </li>      
                         </ul>
                     </li>
-                    <li><a href="#" class="changeNav">APP</a>
-                    <li><a href="#" class="changeNav">BLOG</a></li>
-                    <li><a href="#" class="changeNav">SUPPORT</a></li>
-                    <li><a href="#" class="changeNav">ABOUT</a></li>
+                    <li><a href="APP.html" class="changeNav">APP</a>
+                    <li><a href="BLOG.html" class="changeNav">BLOG</a></li>
+                    <li><a href="SUPPORT.html" class="changeNav">SUPPORT</a></li>
+                    <li><a href="ABOUT.html" class="changeNav">ABOUT</a></li>
                   </ul>
             </div>
             <div class="header-cart">
-                <img src="UR-pic/4.png" alt="">
-                <img src="UR-pic/2.png" alt="">
+                <img src="UR-pic/4.png" alt="Shopping cart">
+                <img src="UR-pic/2.png" alt="Member">
             </div>
-            <label for="menu-switch" class="hb">
-                <span></span>
-                <span></span>
-                <span></span>
+            <label for="menu-switch" id="hamburger-icon" title="Menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
             </label>
-
         </div>
     </div>
-
+    <script>
+        $( document ).ready(function() {
+          let hamburger = $('#hamburger-icon');
+          hamburger.click(function() {
+            hamburger.toggleClass('active');
+          });
+    });
+      </script>
     <div class="box"></div>
 
     <div class="footer">
@@ -797,27 +893,140 @@ Mobile style's
             /*==========*/
             let menuBrand = document.querySelectorAll(".menu-brand li");
             let menuBike = document.querySelectorAll(".menu-bike ul");
+            let menuLogo = document.querySelectorAll(".brandLogo li")
             // $(menuBike[0]).css({'display': 'none',})
             // $(menuBike[1]).css({'display': 'none',})
             // $(menuBike[2]).css({'display': 'none',})
             // $(menuBike[3]).css({'display': 'none',})
             for(let i=0;i<=menuBrand.length;i++){
-                $(menuBrand[i]).hover(function(){
-                    if(i > 0){
-                        $(menuBike[i]).stop(true).fadeToggle(400)
-                        // $(menuBike[i]).toggleClass('come')
+                $(menuBrand[i]).click(function(){
+                    if(i >= 0){  
                         $(menuBike[0]).css({
                             'display': 'none',
-                        })          
+                        })   
+                        $(menuBike[1]).css({
+                            'display': 'none',
+                        }) 
+                        $(menuBike[2]).css({
+                            'display': 'none',
+                        }) 
+                        $(menuBike[3]).css({
+                            'display': 'none',
+                        }) 
+                        /**/
+                        $(menuLogo[0]).css({
+                            'display': 'none',
+                        })   
+                        $(menuLogo[1]).css({
+                            'display': 'none',
+                        }) 
+                        $(menuLogo[2]).css({
+                            'display': 'none',
+                        }) 
+                        $(menuLogo[3]).css({
+                            'display': 'none',
+                        })         
                     }
-                    
                 })
-               
             }
-            $(menuBrand[0]).hover(function(){
+            $('.menu > ul > li').click(function(){
+                if($(window).width() < 769){
+                    $(menuBrand).slideDown(2000)
+                    $('.menu-bike').hide()
+                    $('.brandLogo').hide()
+                }
+            })
+                
+            //     if(i = 0){   
+                //         $(menuBike[2]).css({
+                //             'display': 'none',
+                //         }) 
+                //         $(menuBike[3]).css({
+                //             'display': 'none',
+                //         })    
+                //         $(menuBike[1]).css({
+                //             'display': 'none',
+                //         })       
+                //     }else if(i = 1){
+                //         $(menuBike[0]).css({
+                //             'display': 'none',
+                //         }) 
+                //         $(menuBike[2]).css({
+                //             'display': 'none',
+                //         }) 
+                //         $(menuBike[3]).css({
+                //             'display': 'none',
+                //         }) 
+                //     }else if(i = 2){
+                //         $(menuBike[0]).css({
+                //             'display': 'none',
+                //         }) 
+                //         $(menuBike[1]).css({
+                //             'display': 'none',
+                //         }) 
+                //         $(menuBike[3]).css({
+                //             'display': 'none',
+                //         }) 
+                //     }else if(i = 3){
+                //         $(menuBike[0]).css({
+                //             'display': 'none',
+                //         }) 
+                //         $(menuBike[1]).css({
+                //             'display': 'none',
+                //         }) 
+                //         $(menuBike[2]).css({
+                //             'display': 'none',
+                //         }) 
+                //     }
+                // })  
+                // })
+    
+            // $(menuBrand[0]).on('mouseover mouseout', function(){
+            //     $(menuBike[0]).fadeIn(400)
+            // })
+            // $(menuBrand[1]).on('mouseover mouseout', function(){
+            //     $(menuBike[1]).fadeIn(400)
+            // })
+            // $(menuBrand[2]).on('mouseover mouseout', function(){
+            //     $(menuBike[2]).fadeIn(400)
+            // })
+            // $(menuBrand[3]).on('mouseover mouseout', function(){
+            //     $(menuBike[3]).fadeIn(400)
+            // })
+
+            
+            /**/
+
+            $(menuBrand[0]).click(function(){
                 $(menuBike[0]).fadeToggle(400)
+                $(menuLogo[0]).fadeToggle(400)
+            })
+            $(menuBrand[1]).click(function(){
+                $(menuBike[1]).fadeToggle(400)
+                $(menuLogo[1]).fadeToggle(400)
             })
             
+            $(menuBrand[2]).click(function(){
+                $(menuBike[2]).fadeToggle(400)
+                $(menuLogo[2]).fadeToggle(400)
+            })
+            $(menuBrand[3]).click(function(){
+                $(menuBike[3]).fadeToggle(400)
+                $(menuLogo[3]).fadeToggle(400)
+            })
+            
+            // $(menuBrand[0]).click(function(){
+            //     $(menuLogo[0]).fadeToggle(400)
+            // })
+            // $(menuBrand[1]).click(function(){
+            //     $(menuLogo[1]).fadeToggle(400)
+            // })
+            // $(menuBrand[2]).click(function(){
+            //     $(menuLogo[2]).fadeToggle(400)
+            // })
+            // $(menuBrand[3]).click(function(){
+            //     $(menuLogo[3]).fadeToggle(400)
+            // })
             /*=============================*/
                 
     
@@ -832,7 +1041,6 @@ Mobile style's
 		//   });
    
             $(window).resize(function() {
-                $('.clearfix > li > ul').
                 $(".menu > ul > li").children("ul").hide();
                 $(".menu > ul").removeClass('show-on-mobile');
 		    });

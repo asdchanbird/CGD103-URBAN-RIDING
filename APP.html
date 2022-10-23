@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBAN RIDING-APP</title>
+    <link rel="icon" href="UR-pic/TAB.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="general-set.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+    <script src="jquery-3.6.1.js"></script>
+	<script src="jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
+    <script src="gsap-function.js"></script>
     <style>
         .banner {
             width: 100%;
@@ -50,7 +58,7 @@
             padding: 10px;
         }
         /*=========================function title==================*/
-        .app-wrap {
+        /* .app-wrap {
             display: flex;
             width: 1200px;
             margin: 100px auto;
@@ -63,7 +71,7 @@
             border: 10px solid #F8A151;
             border-radius: 20px;
             /* box-shadow: 2px 4px 10px #fa0; */
-        }
+        /* }
         .app-subtitle {
             padding: 20px;
         }
@@ -104,6 +112,91 @@
         .appfunction {
             width: 1200px;
             margin: auto;
+        } */ 
+        .function {
+            text-align: center;
+            width: 100%;
+            /* height: 200px; */
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .app-intro h1 {
+            text-align: center;
+            margin: 20px auto 40px;
+        }
+        .caption {
+            font-size: 18px;
+            color: #3a3a3a;
+        }
+        .app-function {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            background: #e5e6eb;
+            /* padding: 1rem 1.5rem; */
+            /* border-radius: 16px; */
+            cursor: pointer;
+            color: #555970;
+            letter-spacing: 0.04em;
+            text-shadow: -1px -1px 2px #fff, 1px 1px 2px rgba(0, 0, 0, .2);
+            box-shadow: -0.25rem -0.25rem 0.75rem rgba(255, 255, 255, .7), 0.25rem 0.25rem 0.75rem rgba(164, 167, 186, .7), inset 2px 2px 2px rgba(164, 167, 186, .04);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .app-function:hover {
+            box-shadow: -0.15rem -0.15rem 0.65rem rgba(255, 255, 255, .7), 0.15rem 0.15rem 0.65rem rgba(164, 167, 186, .7), inset 0 0 0 1px #e5e6eb, inset -2px -2px 0.75rem rgba(255, 255, 255, .7), inset 2px 2px 0.75rem rgba(164, 167, 186, .3);
+        }
+        .app-function.is-active {
+            box-shadow: -1px -1px 3px rgba(255, 255, 255, .7), 1px 1px 3px rgba(164, 167, 186, .7), inset 0 0 0 2px #e5e6eb, inset -2px -2px 0.5rem #fff, inset 2px 2px 0.5rem rgba(164, 167, 186, .8);
+        }
+        .app-function img {
+            width: 30%;
+        }
+        .function-wrap {
+            width: 1200px;
+            margin: auto;
+            /* display: flex;*/
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            /* justify-content: center; */
+        }
+
+        @media screen and (max-width:1200px){
+            .app-function {
+                width: 100px;
+            }      
+            .function-wrap {
+                width: 90%;
+            }
+        }
+        @media screen and (max-width:1024px){
+            .caption {
+                font-size: 16px;
+            }
+        }
+        @media screen and (max-width:768px){
+            .app-function {
+                width: 100%;
+            }
+            .function-wrap {
+                grid-template-columns: repeat(2,1fr);
+                justify-items: center;
+            }
+            .function {
+                width: 40%;
+            }    
+        }
+        @media screen and (max-width:420px){
+            .function {
+                width: 60%;
+            } 
         }
         /*==========================app-route========================*/
         .app-container {
@@ -176,7 +269,7 @@
             display: flex;
             align-items: flex-end;
         }
-         .float {
+        .float {
             z-index: 2;
             left: 15%;
         }
@@ -203,7 +296,308 @@
         .achieve-down {
             align-items: flex-end;
         }
-        
+        /*=====*/
+        /* .menu-bike {
+            position: relative;
+        }
+        .menu ul > li > ul li:nth-child(2) > ul:nth-child(1n),.menu ul > li > ul li:nth-child(2) > ul:nth-child(2n) {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 6vh;
+        }
+        .menu {
+            width: 66.66666%;
+        }
+        .menu-container {
+            margin: 0 auto;
+            background: #e9e9e9;
+        }
+        .menu a.logo {
+            display: inline-block;
+            padding: 1.5em 3em;
+            width: 19%;
+            
+        }
+        .menu img {
+            max-width: 100%;
+        }
+
+        .menu-dropdown-icon:before {
+            content: "\f489";
+            display: none;
+            cursor: pointer;
+            float: right;
+            padding: 1.5em 2em;
+            background: #fff;
+            color: #333;
+        }
+        .menu > ul {
+            margin: 0 auto;
+            width: 100%;
+            list-style: none;
+            padding: 0;
+            position: relative;
+            box-sizing: border-box;
+            clear: right;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .menu > ul:before,
+        .menu > ul:after {
+            content: "";
+            display: table;
+        }
+        .menu > ul:after {
+            clear: both;
+        }
+        .menu .clearfix li > a {
+            color: #3a3a3a;
+        }
+        .menu > ul > li {
+            float: left;
+            padding: 0;
+            margin: 0 10px 0 0;
+        }
+        .menu > ul > li a {
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+        .menu > ul > li:hover {
+            background-color: #101617;
+            border-radius: 20px;
+        }
+        .menu > ul > li:hover .changeNav {
+            color: #fff;
+        }
+        .menu > ul > li > ul {
+            display: none;
+            width: 100%;
+            background: #fff;
+            padding: 20px;
+            position: absolute;
+            z-index: 99;
+            left: 0;
+            margin: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .menu > ul > li > ul:before,
+        .menu > ul > li > ul:after {
+            content: "";
+            display: table;
+        }
+        .menu > ul > li > ul:after {
+            clear: both;
+        }
+        .menu > ul > li > ul > li {
+            margin: 10px;
+            padding-bottom: 0;
+            list-style: none;
+            width: 30%;
+            background: none;
+            float: left;
+        }
+        .menu > ul > li > ul > li a {
+            color: #777;
+            padding: 12px 20px;
+            width: 80%;
+            display: block;
+            border-bottom: 1px solid #ccc;
+        }
+        .menu > ul > li > ul > li >ul a:hover {
+            color: #000;
+            background-color: #3a3a3a;
+            transition: 1s;
+            color: #fff;
+            border-radius: 10px;
+        }
+        .menu > ul > li > ul > li > ul {
+            display: block;
+            padding: 0;
+            margin: 10px 0 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .menu > ul > li > ul > li > ul:before,
+        .menu > ul > li > ul > li > ul:after {
+            content: "";
+            display: table;
+        }
+        .menu > ul > li > ul > li > ul:after {
+            clear: both;
+        }
+        .menu > ul > li > ul > li > ul > li {
+            float: left;
+            width: 100%;
+            padding: 10px 0;
+            margin: 0;
+            font-size: .8em;
+        }
+        .menu > ul > li > ul > li > ul > li a {
+            border: 0;    
+            font-size: 14px;
+        }
+        .menu > ul > li > ul.normal-sub {
+            width: 300px;
+            left: auto;
+            padding: 10px 20px;
+        }
+        .menu > ul > li > ul.normal-sub > li {
+            width: 100%;
+        }
+        .menu > ul > li > ul.normal-sub > li a {
+            border: 0;
+            padding: 1em 0;
+        }
+        .brandLogo {
+            position: relative;
+        }
+        .brandLogo img {
+            width: 80%;
+        }
+        .menu ul > li > ul li:nth-child(3) > ul > li:nth-child(1n),.menu ul > li > ul li:nth-child(3) > ul > li:nth-child(2n),.menu ul > li > ul li:nth-child(3) > ul > li:nth-child(1) {
+            display: none;
+            position: absolute;
+            left: 4%;
+            top: 160%;
+        } */
+
+        /* ––––––––––––––––––––––––––––––––––––––––––––––––––
+        Mobile style's
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        /* @media screen and (max-width: 768px){
+            .clearfix {
+                flex-direction: column;
+                opacity: 1;
+            }
+            
+
+        }
+        @media only screen and (max-width: 959px) {
+        .menu-container {
+            width: 100%;
+        }
+        .menu-container .menu{
+            display:inline-block;
+        }
+        .menu-dropdown-icon:before {
+            display: block;
+        }
+        .menu > ul > li a {
+            padding: 1.5em 10px 20px;
+            width: 100%;
+            display: block;
+        }
+        .menu > ul > li > ul {
+            position: relative;    
+            padding: 0 20px;
+        }
+        .menu > ul > li > ul > li {
+            float: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .menu > ul > li > ul > li > ul {
+            position: relative;
+        }
+        .menu > ul > li > ul > li > ul > li {
+            float: none;
+        }
+        } 
+        @media screen and (max-width:768px){
+            #hamburger-icon {
+            width: 50px;
+            height: 40px;
+            position: relative;
+            display: block;
+            margin: auto 20px;
+        }
+        #hamburger-icon .line {
+            display: block;
+            background: #3a3a3a;
+            width: 50px;
+            height: 5px;
+            position: absolute;
+            left: 0;
+            border-radius: 4px;
+            transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+        }
+        #hamburger-icon .line.line-1 {
+            top: 20%;
+        }
+        #hamburger-icon .line.line-2 {
+            top: 50%;
+        }
+        #hamburger-icon .line.line-3 {
+            top: 80%;
+        }
+        #hamburger-icon:hover .line-1, #hamburger-icon:focus .line-1 {
+            transform: translateY(0px);
+            -webkit-transform: translateY(-4px);
+            -moz-transform: translateY(-4px);
+        }
+        #hamburger-icon:hover .line-3, #hamburger-icon:focus .line-3 {
+            transform: translateY(0px);
+            -webkit-transform: translateY(4px);
+            -moz-transform: translateY(4px);
+        }
+        #hamburger-icon.active .line-1 {
+            transform: translateY(10px) translateX(0) rotate(45deg);
+            -webkit-transform: translateY(10px) translateX(0) rotate(45deg);
+            -moz-transform: translateY(10px) translateX(0) rotate(45deg);
+        }
+        #hamburger-icon.active .line-2 {
+            opacity: 0;
+        }
+        #hamburger-icon.active .line-3 {
+            transform: translateY(-14px) translateX(0) rotate(-45deg);
+            -webkit-transform: translateY(-14px) translateX(0) rotate(-45deg);
+            -moz-transform: translateY(-14px) translateX(0) rotate(-45deg);
+        }
+        label {
+            text-decoration: none;
+            color: #000;
+            margin: 0.5em 1.5em;
+            display: inline-block;
+        }
+        label:hover, label:focus {
+            color: #3a3a3a;
+        }
+        .clearfix {
+            padding: 20px;
+        }
+        .menu > ul {
+            padding: 10px;
+        }
+        .clearfix > li {
+            padding: 0 20px;
+        }
+        .menu > ul > li {
+            padding: 0 20px;
+        }
+        .clearfix > li > a {
+            border-bottom: 2px solid #ccc;
+        }
+        .menu > ul > li:hover {
+            background-color: transparent;
+        }
+        .menu > ul > li:hover .changeNav {
+            color: #3a3a3a;
+        }
+        .menu > ul > li > ul > li {
+            width: 100%;
+        }
+        .header {
+                border-bottom: 1px solid rgba(190, 170, 170, 0.5);
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+                margin-bottom: 10px;
+            }
+        } */
     </style>
     <link rel="stylesheet" href="RWD.css">
 </head>
@@ -213,56 +607,80 @@
         <div class="header-container">
             <div class="header-logo">
                 <a href="index.html">
-                    <img src="UR-pic/logo ur.jpg" alt="">
+                    <img src="UR-pic/logo ur.jpg" alt="UR-logo">
                 </a>
             </div>
             <div class="menu">
-                <nav class="navbar">
-                    <div class="d">
-                        <button class="d-btn">E-BIKE</button>
-                        <div class="d-content">
-                            <div class="d-brands">
-                                <div class="column">
-                                    <h3>Brands</h3>
-                                    <a href="">Vanmoof</a>
-                                    <a href="">Cowboy</a>
-                                    <a href="">Gogoro</a>
-                                    <a href="">Musashi Velo</a>
-                                </div>
-                                <div class="column">
-                                    <h3>E-bikes</h3>
-                                    <a href="EBIKE.html">Vanmoof V</a>
-                                    <a href="EBIKE.html">Vanmoof S5</a>
-                                    <a href="EBIKE.html">Vanmoof X5</a>
-                                    <a href="EBIKE.html">Vanmoof S3</a>
-                                </div>
-                                <div class="column column-pic">
-                                    <img src="UR-pic/vf v-remove.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="underline" href="APP.html">APP</a>
-                    <a href="BLOG.html">BLOG</a>
-                    <a href="SUPPORT.html">SUPPORT</a>
-                    <a href="ABOUT.html">ABOUT</a>
-                </nav>
+                <ul class="clearfix">
+                    <li><a href="#" class="changeNav">E-BIKE</a>
+                        <ul class="menu-dropdown">
+                            <li><a href="EBIKE.html">Brands</a>
+                                <ul class="menu-brand">
+                                    <li><a>Vanmoof</a></li>
+                                    <li><a>Cowboy</a></li>
+                                    <li><a>Gogoro</a></li>
+                                    <li><a>Musashi Velo</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-bike"><a href="EBIKE.html">E-bike</a>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Vanmoof V</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof S5</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof X5</a></li>
+                                    <li><a href="EBIKE-purchase.html">Vanmoof S5</a></li>
+                                </ul>
+
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Gogoro eeyo 1</a></li>
+                                </ul>
+                                <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 4</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 3</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 2</a></li>
+                                    <li><a href="EBIKE-purchase.html">Musashi Velo 1</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="brandLogo"><a href="#">Show Logo</a>
+                                <ul>
+                                    <li><img src="UR-pic/Vanmoof-logo2.png" alt="Vanmoof-logo"></li>
+                                    <li><img src="UR-pic/cowboy-logo.png" alt="Cowboy-logo"></li>
+                                    <li><img src="UR-pic/gogoro-logo.jfif" alt="Gogoro-logo"></li>
+                                    <li><img src="UR-pic/musashi_logo.png" alt="Musashi_logo"></li>
+                                </ul>
+                            </li>      
+                        </ul>
+                    </li>
+                    <li><a href="APP.html" class="changeNav">APP</a>
+                    <li><a href="BLOG.html" class="changeNav">BLOG</a></li>
+                    <li><a href="SUPPORT.html" class="changeNav">SUPPORT</a></li>
+                    <li><a href="ABOUT.html" class="changeNav">ABOUT</a></li>
+                  </ul>
             </div>
             <div class="header-cart">
-                <img src="UR-pic/4.png" alt="">
-                <img src="UR-pic/2.png" alt="">
+                <img src="UR-pic/4.png" alt="Shopping cart">
+                <img src="UR-pic/2.png" alt="Member">
             </div>
-            <label for="menu-switch" class="hb">
-                <span></span>
-                <span></span>
-                <span></span>
+            <label for="menu-switch" id="hamburger-icon" title="Menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
             </label>
         </div>
     </div>
 
     <div class="banner">
         <div class="banner-container">
-            <div class="banner-app-txt">
+            <div class="banner-app-txt gs_reveal">
                 <h1>URBAN RIDING App</h1>
                 <h3>At the heart of UR,is your road companion. Connected to you and any path you take.
                 </h3>
@@ -274,55 +692,47 @@
         </div>
     </div>
 
-
-    <section class="appfunction">
+    <section class="app-intro gs_reveal">
         <h1>Connect your ebike</h1>
-        <div class="app-wrap">
-            <div class="app-item">
-                <div class="app-icon">
-                    <img src="UR-pic/route.png" alt="route">
-                </div>
-                <div class="app-subtitle">
-                    <h3>Plan Your Route</h3>
-                </div>    
+        <div class="function-wrap">
+            <div class="function">
+                <a class="app-function" href="#route"><img src="UR-pic/route.png" alt=""></a>
+                <p class="caption">Plan Your Route</p>
             </div>
-            <div class="app-item">
-                <div class="app-icon">
-                    <img src="UR-pic/unlock.png" alt="Lock">
-                </div>
-                <div class="app-subtitle">
-                    <h3>Keyless unlock</h3>
-                </div>    
+            <div class="function">
+                <a class="app-function" href="#unlock"><img src="UR-pic/unlock.png" alt="Lock"></a>
+                <p class="caption">Keyless unlock</p>
             </div>
-            <div class="app-item">
-                <div class="app-icon">
-                    <img src="UR-pic/track.png" alt="Track">
-                </div>
-                <div class="app-subtitle">
-                    <h3>Track Your Activities</h3>
-                </div>    
+            <div class="function">
+                <a class="app-function" href="
+                #track"><img src="UR-pic/track.png" alt="Track"></a>
+                <p class="caption">Track Your Activities</p>
             </div>
-            <div class="app-item">
-                <div class="app-icon">
-                    <img src="UR-pic/achievement.png" alt="achievement">
-                </div>
-                <div class="app-subtitle">
-                    <h3>Achievements</h3>
-                </div>    
+            <div class="function">
+                <a class="app-function" href="#achievement"><img src="UR-pic/achievement.png" alt="achievement"></a>
+                <p class="caption">Achievements</p>
             </div>
         </div>
     </section>
+    <script>
+        $('.app-function').on('click',function(){
+            let href = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(href).offset().top-30
+            },1000)
+        })
+    </script>
 
-    <section class="app-1">
+    <section class="app-1" id="route">
         <h2>Plan your route</h2>
         <div class="app-container">
-            <div class="app-plan-route">
+            <div class="app-plan-route gs_reveal gs_reveal_fromLeft">
                 <img src="UR-pic/app-plan1.png" alt="">
                 <h3>Route</h3>
                 <hr class="content-hr">
                 <p>Beat traffic by mapping the quickest route or take a breather with the clearest alternative with real-time air quality mapping in your area.</p>
             </div>
-            <div class="app-plan-route">
+            <div class="app-plan-route gs_reveal gs_reveal_fromRight">
                 <img src="UR-pic/app-plan2.jpg" alt="">
                 <h3>Direction</h3>
                 <hr class="content-hr">
@@ -332,9 +742,9 @@
         
     </section>
 
-    <section class="app-1">
+    <section class="app-1" id="unlock">
         <h2>Keyless unlock</h2>
-        <div class="app-container">
+        <div class="app-container gs_reveal gs_reveal_fromLeft">
             <div class="app-lock">
                 <div class="app-lock-txt">
                     <h3>Digital key</h3>
@@ -353,7 +763,7 @@
                     <p>Phone running low? With a turn of the key, take out the bike's battery and push it back in to kickstart the motor.</p>
                 </div>
             </div>
-            <div class="app-lock">
+            <div class="app-lock gs_reveal gs_reveal_fromRight">
                 <video autoplay="" muted="" loop="" playsinline="" id="lock-video">
                     <source src="UR-pic/touch-unlock.mp4">
                 </video>
@@ -362,12 +772,12 @@
         </div>
     </section>
 
-    <section class="app-1">
-        <div class="track-title">
+    <section class="app-1" id="track">
+        <div class="track-title gs_reveal gs_reveal_fromLeft">
             <h2 class="track-border">Track Your Activities</h2>
             <p>You can enable your bike to automatically track your rides, without using GPS. Measure your distance, speed, and battery usage. </p>
         </div>
-        <div class="app-container">
+        <div class="app-container gs_reveal gs_reveal_fromRight">
             <div class="app-track">
                 <img class="float" src="UR-pic/track4.png" alt="">
             </div>
@@ -377,7 +787,7 @@
         </div>
     </section>
 
-    <section class="app-1">
+    <section class="app-1 gs_reveal" id="achievement">
         <div class="app-achieve-txt">
             <h2 class="track-border">Achievements</h2>
             <p>Collect badges for your achievements and show them off with pride.</p>
@@ -444,5 +854,15 @@
         </div>
     </div>
 
+    <!-- <script>
+        $('.menu > ul > li').click(function(){
+          if($(window).width() < 769){
+              $(menuBrand).slideDown(2000)
+              $('.menu-bike').hide()
+              $('.brandLogo').hide()
+          }
+      })
+    </script> -->
+    
 </body>
 </html>

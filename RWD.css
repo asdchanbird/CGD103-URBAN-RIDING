@@ -49,13 +49,13 @@
     /* .header {
         height: 100px;
     } */
-    .hb {
+    /* .hb {
         width: 40px;
         height: 40px;
         background-color: #fff;
         position: relative;
         margin: 15px 30px;
-    }
+    } */
     .header-logo {
         width: 30%;
     }
@@ -67,7 +67,7 @@
         width: 100%;
         justify-content: space-between;
     }
-    .hb span {
+    /* .hb span {
         width: 32px;
         height: 2px;
         background-color: #3a3a3a;
@@ -77,7 +77,7 @@
         right: 0;
         margin: auto;
         transform: rotate(0);
-      }
+      } */
    
     .menu {
         position: absolute;
@@ -108,10 +108,10 @@
         animation: no3 1s 1s forwards;
     }
     #menu-switch:checked + .header .menu {/*不是任何東西都可以被check*/
-        /* display: block; */
+        display: block;
         left: 0;
         opacity: 1;
-        transition: opacity 1s 2s;
+        transition: opacity 1s 0.5s;
     }
     @keyframes no1 {
         0%{ top: 7px; transform: rotate(0deg);}
@@ -244,7 +244,7 @@
 }
 @media screen and (max-width:768px){
     .support-banner-title h1 {
-        font-size: 32px;
+        font-size: 24px;
     }
 }
 /*=============support=============*/
@@ -362,12 +362,12 @@
     }
 }
 @media screen and (max-width:768px){
-    .about-banner-txt h1 {
-        font-size: 24px;
-    }
-    .about-banner-txt h2 {
-        font-size: 18px;
-    }
+        .about-banner-txt h1 {
+            font-size: 32px;
+        }
+        .about-banner-txt h2 {
+            font-size: 24px;
+        }
     .about-story-container {
         width:  94.6666666667%;
     }
@@ -406,7 +406,8 @@
     .blog-banner-title {
         display: flex;
         justify-content: center;
-        left: 0;
+        /* left: 20%; */
+        /* left: 0; */
     }
     .blog-wrap {
         padding: 0;
@@ -418,6 +419,12 @@
 @media screen and (max-width:768px){
     .blog-banner-title h1 {
         font-size: 24px;
+    }
+    .blog-card-txt p {
+        font-size: 16px;
+    }
+    .blog-card-txt h3 {
+        font-size: 18px;
     }
 }
 /*--------------blog-card----------*/
@@ -746,7 +753,10 @@
     .product-pop .product-pop-txt,.product-pop .product-pop-pic {
         width: 50%;
     }
-
+    .product-pop-pic img {
+        width: 70%;
+    }
+    .sw
     /*=============hp-app=======*/
     .app-section {
         height: 1200px;
@@ -772,11 +782,24 @@
     }
     .product-sub {
         width: 45%;
-        /* margin: 20px auto; */
     }
     /*=============hp-app=======*/
-
-
+    .media {
+        height: 600px;
+    }
+    .app-animation img:nth-child(1){
+        top: 60%;
+    }
+    .app-animation img:nth-child(2){
+        top: 65%;
+    }
+    .app-animation img:nth-child(3){
+        top: 70%;
+    }
+    /*====================casural*/
+    .swiper-txt {
+        height: 210px;
+    }
     /*=============hp-support=======*/
     .home-support-card {
         width: 45%;
@@ -808,8 +831,32 @@
         flex-direction: column;
     }
     /*=============hp-app=======*/
-    .app-section {
+    /* .app-section {
         height: 900px;
+    } */
+    .media {
+        height: 300px;
+    }
+    .appTxt-pic img {
+        width: 40%;
+    }
+    .swiper-txt {
+        height: 200px;
+    }
+    .media {
+        grid-template-columns: 1fr 1fr 1.8fr 1fr 1fr;
+    }
+    .media .app-animation:first-child,.media .app-animation:last-child {
+        display: none;
+    }
+    .app-animation img:nth-child(1){
+        top: 60%;
+    }
+    .app-animation img:nth-child(2){
+        top: 62.5%;
+    }
+    .app-animation img:nth-child(3){
+        top: 65%;
     }
 
     /*=============hp-support=======*/
@@ -818,4 +865,44 @@
     }
 
     
+}
+/*ebike-purshase*/
+@media screen and (max-width:1024px){
+    .photoBike-main {
+        height: 350px;
+        display: flex;
+        justify-content: center;
+    }   
+    .photoBike-main img {
+        width: 100%;
+        object-fit: cover;
+    } 
+    .mouseover img {
+        bottom: 30%;
+        width: 60%;
+        left: 20%;
+    }
+    .mouseover-small img{
+        left: 20%;
+        bottom: 20%;
+    }
+}
+@media screen and (max-width: 768px){
+    .photoBike-main {
+        height: 200px;
+    }   
+}
+@media screen and (max-width: 380px){
+    .photoBike-main {
+        height: 150px;
+    }  
+    .mouseover img {
+        bottom: 40%;
+        width: 60%;
+        left: 20%;
+    } 
+    .mouseover-small img{
+        left: 20%;
+        bottom: 30%;
+    }
 }
