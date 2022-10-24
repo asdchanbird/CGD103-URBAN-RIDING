@@ -359,7 +359,9 @@
         #loader .loading {
             display: flex;
             justify-content: center;
-            /* background: url("UR-pic/loading.gif") center / center; */
+        }
+        .loading video {
+            width: 80%;
         }
     </style>
     <link rel="stylesheet" href="CSS/RWD.css">
@@ -368,7 +370,7 @@
 
     <div id="loader">
         <div class="loading">
-            <video autoplay="" muted="" loop="" playsinline="" id="">
+            <video autoplay="" muted="" loop="" playsinline="">
                 <source src="UR-pic/loading.mp4" type="video/mp4">
             </video>
         </div>
