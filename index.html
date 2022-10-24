@@ -378,7 +378,11 @@
 
 	<script>
         let loader =$('#loader')
-        $(loader).delay(5000).fadeOut()
+        $(window).load(function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+            $("#loader").delay(5000).fadeOut(300); //delay --> 延遲幾秒才fadeOut
+            $('#promotion').delay(1000)
+        })
+        // $(loader).delay(5000).fadeOut()
 	</script>
 
 
@@ -461,7 +465,7 @@
     <div class="video">
         <div class="video-section">
             <a href="#">
-                <video autoplay="" muted="" loop="" playsinline="" id="">
+                <video autoplay="" muted="" loop="" playsinline="" id="promotion">
                     <source src="UR-pic/VanMoof Electrified S2 X2 – Ride the future01.mp4" type="video/mp4">
                 </video>
             </a>
