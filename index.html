@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBAN RIDING</title>
     <link rel="icon" href="UR-pic/TAB.png">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="grid.css">
-    <link rel="stylesheet" href="general-set.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/grid.css">
+    <link rel="stylesheet" href="CSS/general-set.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
@@ -182,6 +182,8 @@
         }
         .motion {
             position: relative;
+            display: flex;
+            justify-content: center;
         }
        
         .media {
@@ -347,10 +349,39 @@
             width: 100%;
             object-fit: cover;
         }
+        #loader {
+            background-color: #000;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 1000;
+	    }
+        #loader .loading {
+            display: flex;
+            justify-content: center;
+        }
     </style>
-    <link rel="stylesheet" href="RWD.css">
+    <link rel="stylesheet" href="CSS/RWD.css">
 </head>
 <body>
+
+    <div id="loader">
+        <div class="loading">
+            <img src="_gif_ radiohalo.gif" alt="Loading">
+        </div>
+	</div>
+
+	<script>
+        let loader =$('#loader')
+        // $(document).ready(function(){
+        //     $(
+
+        //     )
+        // })
+        $(loader).delay(5000).fadeOut()
+	</script>
+
+
     <input type="checkbox" id="menu-switch">
     <div class="header">
         <div class="header-container">
@@ -380,10 +411,10 @@
                                 </ul>
 
                                 <ul class="menu-select1">
+                                    <li><a href="EBIKE-purchase.html">Cowboy 4 ST</a></li>
                                     <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
                                     <li><a href="EBIKE-purchase.html">Cowboy 3</a></li>
                                     <li><a href="EBIKE-purchase.html">Cowboy 2</a></li>
-                                    <li><a href="EBIKE-purchase.html">Cowboy 4</a></li>
                                 </ul>
                                 <ul class="menu-select1">
                                     <li><a href="EBIKE-purchase.html">Gogoro eeyo 4</a></li>
@@ -750,7 +781,7 @@
 
     <section class="homepage-section">
         <div class="slogan">
-            <h1><span class="orange">SUPPORT</span>&CONTACT US</h1>
+            <h1><span class="orange">SUPPORT </span> & CONTACT US</h1>
         </div>
 
         <div class="support-wrap home-support-wrap gs_reveal">

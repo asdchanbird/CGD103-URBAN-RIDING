@@ -507,10 +507,7 @@
 /*=========key unlock=======*/
 @media screen and (max-width:1200px){
     .app-lock {
-        width: 50%;
-    }
-    #lock-video {
-        margin: 10px;
+        width: 48%;
     }
     .app-unlock-phone {
         left: -30px;
@@ -518,23 +515,23 @@
 }
 @media screen and (max-width:1024px){
     .app-lock {
-        width: 100%;
+        width: 95%;
     }
     #lock-video {
-        margin: 50px 10px 50px 50px;
+        width: 95%;
+        margin: 20px auto;
     }
     .app-unlock-phone {
-        width: 20%;
+        display: none;
+        /* width: 20%;
         top: 230px;
-        left: -10px;
+        left: -10px; */
     }
     .banner-container {
-        /* margin: auto; */
         align-items: center;
     }
     .banner-app-pic,.banner-app-txt {
         text-align: center;
-        /* margin:  0 auto; */
     }
 }
 @media screen and (max-width:768px){
@@ -809,6 +806,9 @@
     .product-sub {
         width: 88%;
     }
+    .blog-swiper h1 {
+        font-size: 32px;
+    }
     .video {
         /* overflow: hidden; */
         padding-top: 70px;
@@ -831,9 +831,6 @@
         flex-direction: column;
     }
     /*=============hp-app=======*/
-    /* .app-section {
-        height: 900px;
-    } */
     .media {
         height: 300px;
     }

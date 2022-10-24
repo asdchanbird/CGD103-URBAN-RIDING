@@ -1,4 +1,7 @@
 /* =========================================header============================================*/
+.underline {
+    text-decoration: underline;
+}
 #menu-switch {
     display: none;
 }
@@ -475,9 +478,7 @@ label:hover, label:focus {
     top: 5vh;
 }
 }
-.navbar .underline {
-    text-decoration: underline;
-}
+
 @media screen and (max-width: 768px){
     .clearfix {
         flex-direction: column;
