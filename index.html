@@ -378,10 +378,16 @@
 
 	<script>
         let loader =$('#loader')
-        $(window).load(function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
-            $("#loader").delay(5000).fadeOut(300); //delay --> 延遲幾秒才fadeOut
+        $("#loader").delay(5000).fadeOut(300); //delay --> 延遲幾秒才fadeOut
             $('#promotion').delay(1000)
-        })
+
+        // $(document).ready(function(){
+        //     if($(window).width <= delay)
+        // })
+        // $(window).load(function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+        //     $("#loader").delay(5000).fadeOut(300); //delay --> 延遲幾秒才fadeOut
+        //     $('#promotion').delay(500)
+        // })
         // $(loader).delay(5000).fadeOut()
 	</script>
 
