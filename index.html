@@ -40,7 +40,7 @@
             text-align: center; 
             padding: 20px;
             margin-top: 50px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
             margin: 100px 0 30px;
         }
 
@@ -179,6 +179,7 @@
             width: 25%;
             margin: 0 10px;
             object-fit: cover;
+            cursor: pointer;
         }
         .motion {
             position: relative;
@@ -241,7 +242,7 @@
             color:#3a3a3a;
             text-align: center;
             margin: 30px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
         }
         .carousel {
             width:90%;
@@ -370,7 +371,7 @@
 
     <div id="loader">
         <div class="loading">
-            <video autoplay="" muted="" loop="" playsinline="">
+            <video autoplay="" muted="" loop="" playsinline="" autoplay="" preload="auto">
                 <source src="UR-pic/loading.mp4" type="video/mp4">
             </video>
         </div>
@@ -379,7 +380,7 @@
 	<script>
         let loader =$('#loader')
         $("#loader").delay(5000).fadeOut(300); //delay --> 延遲幾秒才fadeOut
-            $('#promotion').delay(1000)
+        $('#promotion').delay(1000)
 
         // $(document).ready(function(){
         //     if($(window).width <= delay)
@@ -482,7 +483,7 @@
     
     <section class="homepage-section">
         <div class="slogan">
-            <h1>CHOOSE YOUR <span class="orange">E-BIKE</span></h1>
+            <h1>CHOOSE YOUR <span class="orange"> E-BIKE</span></h1>
         </div>
 
         <div class="homepage-wrap">
@@ -514,8 +515,8 @@
             </div>
         </div>
 
-        <div class="homepage-wrap gs_reveal">
-            <div class="product-sub">
+        <div class="homepage-wrap">
+            <div class="product-sub gs_reveal">
                 <div class="product-sub-txt">
                     <h2>Vanmoof S3</h2>
                     <p>Classic straight-frame geometry</p>
@@ -526,7 +527,7 @@
                     <img src="UR-pic/vf a5-1remove.png" alt="">
                 </div>
             </div>
-            <div class="product-sub">
+            <div class="product-sub gs_reveal">
                 <div class="product-sub-txt">
                     <h2>Gogoro eeyo</h2>
                     <p>Eeyo 1s</p>
@@ -537,7 +538,7 @@
                     <img src="UR-pic/gogoro-hp.png" alt="">
                 </div>
             </div>
-            <div class="product-sub">
+            <div class="product-sub gs_reveal">
                 <div class="product-sub-txt">
                     <h2>Cowboy 4</h2>
                     <p>The Oringinal</p>
@@ -607,40 +608,6 @@
                         <img src="UR-pic/appfloat9.webp" alt="">
                     </div>
                 </div>
-                <!-- <div class="media">
-                    <div class="app-animation" style="transform: translate3d(0px, 164.8px, 0px)" data-scrub="0.7">
-                        <img src="UR-pic/appfloat7.webp" alt="">
-                        <img src="UR-pic/appfloat6.webp" alt="">
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 184.8px, 0px)" data-scrub="0.8">
-                            <img src="UR-pic/appfloat2.webp" alt="">
-                            <img src="UR-pic/appfloat3.webp" alt="">
-                            <img src="UR-pic/appfloat1.webp" alt="">
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 158.7px, 0px)" data-scrub="0.2">
-                        <img src="UR-pic/appfloat4.webp" alt="">
-                        <img src="UR-pic/APPHONEPAGE1.png" alt="">
-                    </div>
-                    <div class="motion">
-                        <picture class="media-item">
-                            <img src="UR-pic/app2定位.png" alt="">
-                        </picture>
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 157.4px, 0px)" data-scrub="0.4">
-                        <img src="UR-pic/APPHONEPAGE2.png" alt="">
-                        <img src="UR-pic/APPHONEPAGE4.png" alt="">
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 176.1px, 0px)" data-scrub="0.8">
-                        <img src="UR-pic/APPHONEPAGE3.png" alt="">
-                        <img src="UR-pic/appfloat5.webp" alt="">
-                        <img src="UR-pic/appfloat10.webp" alt="">
-        
-                    </div>
-                    <div class="app-animation" style="transform: translate3d(0px, 164.8px, 0px)" data-scrub="0.7">
-                        <img src="UR-pic/appfloat8.webp" alt="">
-                        <img src="UR-pic/appfloat9.webp" alt="">
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -794,8 +761,8 @@
             <h1><span class="orange">SUPPORT </span> & CONTACT US</h1>
         </div>
 
-        <div class="support-wrap home-support-wrap gs_reveal">
-            <div class="card home-support-card">
+        <div class="support-wrap home-support-wrap">
+            <div class="card home-support-card gs_reveal">
                 <img src="UR-pic/support1.jpg" alt="">
                 <h4>Start fixing</h4>
                 <p>We’ll guide you step by step to help solve the problem. </p>
@@ -803,7 +770,7 @@
                     <button class="learn-more">Learn more</button>
                 </a>
             </div>
-            <div class="card home-support-card">
+            <div class="card home-support-card gs_reveal">
                 <img src="UR-pic/support2.jpg" alt="">
                 <h4>Contact us</h4>
                 <p>Our virtual assistant Boost is always available for instant answers. </p>
@@ -811,7 +778,7 @@
                     <button class="learn-more">Learn more</button>
                 </a>
             </div>
-            <div class="card home-support-card">
+            <div class="card home-support-card gs_reveal">
                 <img src="UR-pic/support3.jpg" alt="">
                 <h4>Book appointment</h4>
                 <p>Need a repair check-up? Plan an appointment with a Bike Doctor first.</p>

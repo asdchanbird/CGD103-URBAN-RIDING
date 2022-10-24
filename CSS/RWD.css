@@ -806,6 +806,13 @@
     .product-sub {
         width: 88%;
     }
+    .slogan h1 {
+        margin: 0;
+        padding: 40px 20px 20px 20px;
+    }
+    .blog-swiper {
+        padding-top: 40px;
+    }
     .blog-swiper h1 {
         font-size: 32px;
     }
