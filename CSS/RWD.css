@@ -58,6 +58,7 @@
     } */
     .header-logo {
         width: 30%;
+        margin-left: 20px;
     }
     .header-logo img {
         width: 60%;
@@ -246,6 +247,9 @@
     .support-banner-title h1 {
         font-size: 24px;
     }
+    .support-banner-pic img {
+        height: 580px;
+    }
 }
 /*=============support=============*/
 @media screen and (max-width:1200px){
@@ -362,18 +366,26 @@
     }
 }
 @media screen and (max-width:768px){
-        .about-banner-txt h1 {
-            font-size: 32px;
-        }
-        .about-banner-txt h2 {
-            font-size: 24px;
-        }
+    .about-banner-pic img {
+        height: 580px;
+        object-fit: cover;
+    }
+    .about-banner-txt h1 {
+        font-size: 32px;
+    }
+    .about-banner-txt h2 {
+        font-size: 24px;
+    }
     .about-story-container {
         width:  94.6666666667%;
     }
     .about-banner-txt h1, .about-banner-txt h2 {
         margin: 10px;
     }
+    /* .banner {
+        background:
+        url("UR-pic/vf-app-banner.png") right center / auto 100%;
+    } */
 }
 
 /*=============BLOG RWD=================*/
@@ -425,6 +437,11 @@
     }
     .blog-card-txt h3 {
         font-size: 18px;
+    }
+    .blog-banner-pic img {
+        height: 580px;
+        object-fit: cover;
+        object-position: 83% bottom;
     }
 }
 /*--------------blog-card----------*/
@@ -532,6 +549,12 @@
     }
     .banner-app-pic,.banner-app-txt {
         text-align: center;
+    }
+    .banner-app-txt h1 {
+        font-size: 32px;
+    }
+    .banner-app-txt h2 {
+        font-size: 18px;
     }
 }
 @media screen and (max-width:768px){
@@ -803,6 +826,9 @@
     }
 }
 @media screen and (max-width:768px){
+    .video-section video {
+        height: 380px;
+    }
     .product-sub {
         width: 80%;
     }
