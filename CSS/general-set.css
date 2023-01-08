@@ -526,7 +526,7 @@ a {
 }
 /*========================================================h2.h3.h4.p 文字大小設定=====================================*/
 h1 {font-size: 48px;color: #3a3a3a;line-height: 42px;letter-spacing: 2px;}
-h2 {font-size: 32px;color: #3a3a3a;line-height: 42px;letter-spacing: 1px;}
+h2 {font-size: 32px;color: #3a3a3a;line-height: 42px;letter-spacing: 1px; }
 h3 {font-size: 24px;color: #3a3a3a;line-height: 32px;letter-spacing: 1px;}
 h4 {font-size: 18px;color: #3a3a3a;line-height: 32px;letter-spacing: 1px;}
 p {font-size: 16px;color: #4a4a4a;line-height: 32px;letter-spacing: 1px;}
@@ -550,49 +550,7 @@ a {letter-spacing: 1px;}
     border: 3px solid #3a3a3a;
 }
 
-/*button-read*/
-.button-read {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: transparent;
-    border: none;
-    color: #3a3a3a;
-    text-align: left;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.button-read span {
-    margin: auto;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.8s;
-    /* text-decoration: underline; */
-}
-
-.button-read span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -30px;
-    transition: 0.8s;
-}
-
-.button-read:hover span {
-    padding-left: 25px;
-}
-
-.button-read:hover span:after {
-    opacity: 1;
-    right: -50;
-}
+ 
 /*====explore===*/
 .explore {
     background-color: #F8A151;
